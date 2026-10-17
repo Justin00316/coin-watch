@@ -1,0 +1,11 @@
+{
+  "_help": "Locked-screen alerts. Checked in the cloud every 10 minutes. Edit the numbers, save, and upload this file to GitHub. type can be: below, above, drop24h (value = percent). currency can be: gbp, krw, usd. language can be: ko, en, both.",
+  "language": "both",
+  "repeatHours": 6,
+  "alerts": [
+    { "coin": "bitcoin",  "type": "below",   "value": 58000, "currency": "gbp", "on": true },
+    { "coin": "ethereum", "type": "below",   "value": 1700,  "currency": "gbp", "on": true },
+    { "coin": "bitcoin",  "type": "drop24h", "value": 7,     "currency": "gbp", "on": true },
+    { "coin": "ethereum", "type": "drop24h", "value": 9,     "currency": "gbp", "on": true }
+  ]
+}

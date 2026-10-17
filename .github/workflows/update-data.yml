@@ -1,0 +1,41 @@
+name: Update news and price history
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # every hour
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Latest headlines
+        run: python checker/build_news.py
+      - name: Price history (once a day, or when run by hand)
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "03" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ ! -f history.json ]; then
+            python checker/build_history.py
+          else
+            echo "Not 03:00 UTC, history left as it is."
+          fi
+      - name: Save changes
+        run: |
+          git config user.name "coin-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json history.json
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Update news and price history"
+          git push

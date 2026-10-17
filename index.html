@@ -1,0 +1,1324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Coin Watch</title>
+<meta name="theme-color" content="#0D1015">
+<meta name="description" content="Bitcoin and Ethereum prices with alarms, in English and Korean.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one phone-width column of instrument panels; two columns on tablets and wider.
+   Coin identity colours (orange for Bitcoin, violet for Ethereum) carry through cards, charts and alerts. */
+:root{
+  --bg:#EEF0F4; --surface:#FFFFFF; --sunk:#F5F6F9; --ink:#131722; --muted:#586174; --line:#DADEE6;
+  --btc:#D97A06; --eth:#4F57C9; --up:#0E7A55; --down:#C8323A; --warn:#A86200;
+  --alarm-bg:#C8323A; --alarm-ink:#FFFFFF;
+  --f-body:"IBM Plex Sans KR",system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
+  --f-num:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --r:14px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1015; --surface:#161A22; --sunk:#11151B; --ink:#ECEFF5; --muted:#9AA3B5; --line:#272D38;
+    --btc:#F5A33A; --eth:#8E95F2; --up:#3CC48F; --down:#FF6B70; --warn:#F2B44C;
+    --alarm-bg:#B3242C; --alarm-ink:#FFFFFF; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1015; --surface:#161A22; --sunk:#11151B; --ink:#ECEFF5; --muted:#9AA3B5; --line:#272D38;
+  --btc:#F5A33A; --eth:#8E95F2; --up:#3CC48F; --down:#FF6B70; --warn:#F2B44C;
+  --alarm-bg:#B3242C; --alarm-ink:#FFFFFF; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--f-body);-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px 40px;display:flex;flex-direction:column;gap:14px}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+:lang(ko) h2{letter-spacing:0;text-transform:none;font-size:14px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--eth);outline-offset:2px}
+
+/* Top bar */
+.top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
+.brand img{width:34px;height:34px;border-radius:9px}
+.brand h1{font-size:19px;font-weight:700;line-height:1.1}
+.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.dot.live{background:var(--up);box-shadow:0 0 0 0 var(--up);animation:pulse 2s infinite}
+.dot.bad{background:var(--down)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--up) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;padding:6px 12px;border-radius:999px;font-weight:600;font-size:14px;min-width:40px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* Panels */
+.panel{scroll-margin-top:120px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:760px){.grid.two{grid-template-columns:1fr 1fr}}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+/* Sound banner */
+.arm{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--ink);color:var(--bg);border-radius:var(--r);padding:14px 16px}
+.arm p{margin:0;flex:1 1 220px;min-width:0}
+.arm .btn{background:var(--bg);color:var(--ink)}
+.arm.ready{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.arm.ready .btn{background:var(--ink);color:var(--bg)}
+.btn{border:0;border-radius:999px;padding:10px 18px;font-weight:600;background:var(--ink);color:var(--bg);white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.small{padding:6px 12px;font-size:13px}
+.switch{display:inline-flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;user-select:none}
+.switch input{width:38px;height:22px;appearance:none;background:var(--line);border-radius:999px;position:relative;cursor:pointer;transition:background .2s;margin:0}
+.switch input::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--surface);transition:left .2s}
+.switch input:checked{background:var(--up)}
+.switch input:checked::after{left:19px}
+
+/* Coin cards */
+.coin{--c:var(--btc);position:relative;overflow:hidden}
+.coin.eth{--c:var(--eth)}
+.coin-name{display:flex;align-items:center;gap:10px}
+.sym{width:34px;height:34px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:700;font-size:18px;flex:none}
+.coin-name h3{font-size:17px;font-weight:600}
+.coin-name .tick{font-size:12px;color:var(--muted);font-family:var(--f-num)}
+.price{font-size:clamp(28px,8vw,40px);font-weight:600;line-height:1.05;letter-spacing:-.01em;word-break:break-all}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--f-num);font-size:13px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--sunk);border:1px solid var(--line)}
+.chip.up{color:var(--up)}
+.chip.down{color:var(--down)}
+.chip small{font-family:var(--f-body);font-weight:500;color:var(--muted);margin-left:4px}
+.spark{width:100%;height:56px;display:block}
+.range{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}
+.range-bar{position:relative;height:6px;border-radius:3px;background:linear-gradient(90deg,color-mix(in srgb,var(--down) 55%,var(--sunk)),var(--sunk) 50%,color-mix(in srgb,var(--up) 55%,var(--sunk)))}
+.range-bar i{position:absolute;top:-4px;width:4px;height:14px;border-radius:2px;background:var(--ink);transform:translateX(-50%)}
+.range-ends{display:flex;justify-content:space-between;gap:8px}
+.ath{font-size:12px;color:var(--muted)}
+
+/* Chart */
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--sunk);border-radius:8px;padding:5px 10px;font-size:13px;font-weight:600}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chart-box{position:relative;height:240px;touch-action:pan-y}
+.chart-box canvas{width:100%;height:100%;display:block}
+.readout{font-family:var(--f-num);font-size:13px;min-height:20px;color:var(--muted)}
+.readout b{color:var(--ink);font-weight:600}
+
+/* Alerts */
+.alert-list{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.alert-row{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--sunk)}
+.alert-row .bar{width:4px;align-self:stretch;border-radius:2px;background:var(--btc)}
+.alert-row.eth .bar{background:var(--eth)}
+.alert-row .txt{min-width:0}
+.alert-row .txt b{font-weight:600}
+.alert-row .state{font-size:12px;color:var(--muted)}
+.alert-row .state.fired{color:var(--down);font-weight:600}
+.alert-row.off{opacity:.55}
+.icon-btn{border:0;background:transparent;width:34px;height:34px;border-radius:8px;display:grid;place-items:center;color:var(--muted)}
+.icon-btn:hover{background:var(--line);color:var(--ink)}
+.add-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.add-form select,.add-form input,.field input{border:1px solid var(--line);background:var(--sunk);border-radius:8px;padding:8px 10px;min-width:0}
+.add-form input{width:130px}
+.cloud-list{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none;font-size:14px}
+.cloud-list li{display:flex;gap:8px;align-items:center}
+.cloud-list li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c,var(--btc));flex:none}
+.cloud-list li.eth{--c:var(--eth)}
+.note{font-size:13px;color:var(--muted);margin:0}
+.empty{font-size:14px;color:var(--muted);padding:10px 12px;border:1px dashed var(--line);border-radius:10px;margin:0}
+
+/* Portfolio */
+.hold{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:0}
+.field input{width:100%;color:var(--ink);font-family:var(--f-num)}
+.hold-sum{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px;padding-top:4px;border-top:1px solid var(--line)}
+.pl.up{color:var(--up)}.pl.down{color:var(--down)}
+.total{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.total .big{font-size:26px;font-weight:600}
+
+/* Mood + premium */
+.gauge{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.gauge svg{width:150px;height:86px;flex:none}
+.gauge .val{font-size:34px;font-weight:600;line-height:1}
+.prem{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.prem div{background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.prem .p{font-size:20px;font-weight:600}
+
+/* Converter */
+.conv{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:end}
+.conv .eq{padding-bottom:9px;color:var(--muted);font-family:var(--f-num)}
+
+/* Tips */
+.tip{font-size:16px;line-height:1.55;margin:0;max-width:62ch}
+.tip-foot{display:flex;justify-content:space-between;align-items:center;gap:10px}
+
+/* News */
+.news-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.news-list li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 0;border-top:1px solid var(--line)}
+.news-list li:first-child{border-top:0}
+.news-list li.speaking a{color:var(--eth)}
+.news-list a{color:var(--ink);text-decoration:none;font-weight:500;line-height:1.4}
+.news-list a:hover{text-decoration:underline}
+.news-meta{font-size:12px;color:var(--muted);margin-top:2px}
+.say{border:1px solid var(--line);background:var(--sunk);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:15px}
+.say[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* Cycles */
+.sub{font-size:16px;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.tile{background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tile .k{font-size:12px;color:var(--muted)}
+.tile .v{font-size:20px;font-weight:600;font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.tile .s{font-size:12px;color:var(--muted)}
+.cycle-sum{margin:0;font-size:15px;max-width:70ch}
+.chart-box.tall{height:300px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:18px;height:3px;border-radius:2px;background:var(--c,var(--btc))}
+.sw.line{background:var(--btc)}
+.sw.ma{background:repeating-linear-gradient(90deg,var(--muted) 0 4px,transparent 4px 7px)}
+.sw.halv{background:var(--warn);width:3px;height:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+.ctable{border-collapse:collapse;width:100%;font-size:13px;min-width:620px}
+.ctable th,.ctable td{padding:8px 10px;text-align:right;white-space:nowrap;border-top:1px solid var(--line)}
+.ctable th{font-weight:600;color:var(--muted);font-size:12px;border-top:0;background:var(--sunk)}
+.ctable th:first-child,.ctable td:first-child{text-align:left}
+.ctable td{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.ctable tr.now td{font-weight:600}
+.years{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:6px}
+.yr{border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:2px;border:1px solid var(--line)}
+.yr b{font-size:12px;font-weight:600;color:var(--muted)}
+.yr span{font-family:var(--f-num);font-size:14px;font-weight:600}
+.timeline-box summary{cursor:pointer;font-weight:600;font-size:15px;padding:4px 0}
+.timeline{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:0}
+.timeline li{display:grid;grid-template-columns:86px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.timeline li b{font-family:var(--f-num);font-size:13px;color:var(--muted);font-weight:600}
+.timeline li.halving b{color:var(--warn)}
+
+footer{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:4px;padding-top:6px}
+footer p{margin:0}
+
+/* Full-screen alarm */
+.alarm{position:fixed;inset:0;z-index:50;background:var(--alarm-bg);color:var(--alarm-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:calc(24px + env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px))}
+.alarm .ring{font-size:64px;line-height:1;animation:shake .5s infinite}
+.alarm h2{color:inherit;font-size:clamp(24px,6vw,36px);text-transform:none;letter-spacing:0;font-weight:700;max-width:22ch}
+.alarm .now{font-size:20px;opacity:.95}
+.alarm .stop{background:#fff;color:#7A1015;font-size:20px;padding:16px 36px;border:0;border-radius:999px;font-weight:700;margin-top:10px}
+.alarm .calm{font-size:14px;opacity:.9;max-width:40ch;margin:0}
+@keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+@media (prefers-reduced-motion:reduce){.alarm .ring,.dot.live{animation:none}}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;z-index:40;max-width:calc(100% - 32px)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <img src="icon.svg" alt="">
+      <div>
+        <h1 data-t="appName">Coin Watch</h1>
+        <div class="status"><span class="dot" id="dot"></span><span id="status" data-t="loading">Loading prices…</span></div>
+      </div>
+    </div>
+    <div class="seg" role="group" aria-label="Language">
+      <button id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button id="lang-ko" data-lang="ko" aria-pressed="false">한국어</button>
+    </div>
+    <div class="seg" role="group" aria-label="Currency">
+      <button id="cur-gbp" data-cur="gbp" aria-pressed="true">£</button>
+      <button id="cur-krw" data-cur="krw" aria-pressed="false">₩</button>
+      <button id="cur-usd" data-cur="usd" aria-pressed="false">$</button>
+    </div>
+  </header>
+
+  <section class="arm" id="arm">
+    <p id="arm-text" data-t="armOff">Tap the button so the alarm can make a sound. Alerts on this screen ring, vibrate and speak while the app is open.</p>
+    <label class="switch" id="awake-wrap" hidden><input type="checkbox" id="awake"><span data-t="keepAwake">Keep screen on</span></label>
+    <button class="btn" id="arm-btn" data-t="armBtn">Turn on alarm</button>
+  </section>
+
+  <div class="grid two" id="cards">
+    <article class="panel coin btc" id="card-bitcoin" data-coin="bitcoin">
+      <div class="coin-name"><span class="sym">₿</span><div><h3 data-t="bitcoin">Bitcoin</h3><span class="tick">BTC</span></div></div>
+      <div class="price num" data-f="price">–</div>
+      <div class="chips"><span class="chip" data-f="c24">–</span><span class="chip" data-f="c7">–</span></div>
+      <svg class="spark" data-f="spark" viewBox="0 0 300 56" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="range"><span data-t="range24">24-hour range</span><div class="range-bar"><i data-f="marker" style="left:50%"></i></div><div class="range-ends num"><span data-f="low">–</span><span data-f="high">–</span></div></div>
+      <div class="ath" data-f="ath"></div>
+    </article>
+    <article class="panel coin eth" id="card-ethereum" data-coin="ethereum">
+      <div class="coin-name"><span class="sym">Ξ</span><div><h3 data-t="ethereum">Ethereum</h3><span class="tick">ETH</span></div></div>
+      <div class="price num" data-f="price">–</div>
+      <div class="chips"><span class="chip" data-f="c24">–</span><span class="chip" data-f="c7">–</span></div>
+      <svg class="spark" data-f="spark" viewBox="0 0 300 56" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="range"><span data-t="range24">24-hour range</span><div class="range-bar"><i data-f="marker" style="left:50%"></i></div><div class="range-ends num"><span data-f="low">–</span><span data-f="high">–</span></div></div>
+      <div class="ath" data-f="ath"></div>
+    </article>
+  </div>
+
+  <section class="panel" id="chart-panel">
+    <div class="panel-head">
+      <h2 data-t="chart">Price chart</h2>
+      <div class="tabs" id="chart-coin">
+        <button data-coin="bitcoin" aria-pressed="true" data-t="bitcoin">Bitcoin</button>
+        <button data-coin="ethereum" aria-pressed="false" data-t="ethereum">Ethereum</button>
+      </div>
+    </div>
+    <div class="tabs" id="chart-range">
+      <button data-days="1" aria-pressed="false" data-t="r1">24H</button>
+      <button data-days="7" aria-pressed="true" data-t="r7">7D</button>
+      <button data-days="30" aria-pressed="false" data-t="r30">1M</button>
+      <button data-days="365" aria-pressed="false" data-t="r365">1Y</button>
+    </div>
+    <div class="readout" id="readout">&nbsp;</div>
+    <div class="chart-box"><canvas id="chart"></canvas></div>
+    <p class="note" data-t="chartNote">Dashed lines are your alert levels. Touch and drag along the chart to read a price.</p>
+  </section>
+
+  <section class="panel" id="news-panel">
+    <div class="panel-head">
+      <h2 data-t="newsTitle">Latest news</h2>
+      <button class="btn small" id="news-listen"><span aria-hidden="true">🔊</span> <span id="news-listen-label" data-t="listenAll">Listen to headlines</span></button>
+    </div>
+    <ul class="news-list" id="news-list"><li class="empty" data-t="newsLoading">Loading headlines…</li></ul>
+    <p class="note" id="news-note" data-t="newsNote">Headlines from established news outlets, updated every hour. Tap a headline to read the full story on the publisher's site.</p>
+  </section>
+
+  <div class="grid two">
+    <section class="panel" id="alerts-panel">
+      <div class="panel-head">
+        <h2 data-t="alertsTitle">Alarms on this screen</h2>
+        <button class="btn ghost small" id="test-btn" data-t="test">Test alarm</button>
+      </div>
+      <ul class="alert-list" id="alert-list"></ul>
+      <form class="add-form" id="add-form">
+        <select id="a-coin" aria-label="Coin"><option value="bitcoin" data-t="bitcoin">Bitcoin</option><option value="ethereum" data-t="ethereum">Ethereum</option></select>
+        <select id="a-type" aria-label="Condition"><option value="below" data-t="below">falls below</option><option value="above" data-t="above">rises above</option><option value="drop" data-t="drop">drops % in 24h</option></select>
+        <input id="a-value" type="number" inputmode="decimal" min="0" step="any" aria-label="Value" required>
+        <button class="btn small" type="submit" data-t="add">Add alarm</button>
+      </form>
+      <p class="note" data-t="alertsNote">These ring only while the app is open on screen. Turn on "Keep screen on" if you leave it on a stand.</p>
+    </section>
+
+    <section class="panel" id="cloud-panel">
+      <div class="panel-head"><h2 data-t="cloudTitle">Alerts when the phone is locked</h2></div>
+      <p class="note" data-t="cloudNote">Checked in the cloud every 10 minutes and sent to the ntfy app, even when this app is closed. These are set up from the computer.</p>
+      <ul class="cloud-list" id="cloud-list"></ul>
+    </section>
+  </div>
+
+  <section class="panel" id="cycle-panel">
+    <div class="panel-head">
+      <h2 data-t="cycleTitle">History and the four-year cycle</h2>
+      <span class="small muted" data-t="usdNote">In US dollars, the usual measure for cycles</span>
+    </div>
+    <p class="note" data-t="cycleIntro">Every four years or so, the number of new bitcoins created is cut in half (a "halving"). In every cycle so far, a big rise followed each halving, then a deep fall. Here is how the pattern looks.</p>
+    <div class="tiles" id="cycle-tiles"></div>
+    <p class="cycle-sum" id="cycle-sum"></p>
+
+    <div class="panel-head">
+      <h3 class="sub" data-t="longChart">The long view</h3>
+      <div class="tabs" id="hist-range">
+        <button data-span="1461" aria-pressed="true" data-t="h4">4 years</button>
+        <button data-span="2922" aria-pressed="false" data-t="h8">8 years</button>
+        <button data-span="0" aria-pressed="false" data-t="hAll">All</button>
+      </div>
+    </div>
+    <div class="tabs" id="hist-coin">
+      <button data-coin="bitcoin" aria-pressed="true" data-t="bitcoin">Bitcoin</button>
+      <button data-coin="ethereum" aria-pressed="false" data-t="ethereum">Ethereum</button>
+    </div>
+    <div class="readout" id="hist-readout">&nbsp;</div>
+    <div class="chart-box tall"><canvas id="hist"></canvas></div>
+    <div class="legend">
+      <span><i class="sw line"></i><span data-t="lgPrice">Price</span></span>
+      <span><i class="sw ma"></i><span data-t="lgMa">200-week average</span></span>
+      <span><i class="sw halv"></i><span data-t="lgHalving">Bitcoin halving</span></span>
+    </div>
+    <p class="note" data-t="logNote">Log scale: each step up the side is the same percentage rise, so 2013 and 2025 can share one chart. The 200-week average has marked the floor of most past crashes.</p>
+
+    <h3 class="sub" data-t="overlayTitle">Cycles side by side</h3>
+    <div class="chart-box"><canvas id="overlay"></canvas></div>
+    <div class="legend" id="overlay-legend"></div>
+    <p class="note" data-t="overlayNote">Each line starts on a halving day at 1× (the price that day). It shows how many times higher or lower Bitcoin was in the days that followed. Each cycle has risen less than the one before.</p>
+
+    <div class="table-wrap"><table class="ctable" id="cycle-table"></table></div>
+
+    <h3 class="sub"><span data-t="yearsTitle">Year by year</span> · <span id="years-coin"></span></h3>
+    <div class="years" id="years"></div>
+
+    <details class="timeline-box">
+      <summary data-t="timelineTitle">Timeline since 2008</summary>
+      <ol class="timeline" id="timeline"></ol>
+    </details>
+    <p class="note" data-t="cycleCaution">A cycle's peak here means its highest price in the 2½ years after the halving. Only four cycles have ever happened, which is a small sample. Past patterns are useful context, not a forecast.</p>
+  </section>
+
+  <section class="panel" id="hold-panel">
+    <div class="panel-head"><h2 data-t="holdTitle">My coins</h2><span class="small muted" data-t="holdPrivate">Saved on this device only</span></div>
+    <div class="grid two">
+      <div class="hold" data-coin="bitcoin">
+        <label class="field"><span><span data-t="bitcoin">Bitcoin</span> · <span data-t="amount">amount held</span></span><input id="h-bitcoin-amt" type="number" inputmode="decimal" min="0" step="any" placeholder="0.00"></label>
+        <label class="field"><span data-t="paid">Total paid (£)</span><input id="h-bitcoin-paid" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></label>
+        <div class="hold-sum" style="grid-column:1/-1"><span data-f="val">–</span><span class="pl" data-f="pl"></span></div>
+      </div>
+      <div class="hold" data-coin="ethereum">
+        <label class="field"><span><span data-t="ethereum">Ethereum</span> · <span data-t="amount">amount held</span></span><input id="h-ethereum-amt" type="number" inputmode="decimal" min="0" step="any" placeholder="0.00"></label>
+        <label class="field"><span data-t="paid">Total paid (£)</span><input id="h-ethereum-paid" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></label>
+        <div class="hold-sum" style="grid-column:1/-1"><span data-f="val">–</span><span class="pl" data-f="pl"></span></div>
+      </div>
+    </div>
+    <div class="total"><span data-t="totalValue">Total value</span><span><span class="big num" id="tot-val">–</span> <span class="pl num" id="tot-pl"></span></span></div>
+  </section>
+
+  <div class="grid two">
+    <section class="panel" id="mood-panel">
+      <h2 data-t="moodTitle">Market mood</h2>
+      <div class="gauge">
+        <svg viewBox="0 0 150 86" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="var(--down)"/><stop offset=".5" stop-color="var(--warn)"/><stop offset="1" stop-color="var(--up)"/></linearGradient></defs>
+          <path d="M12 78 A63 63 0 0 1 138 78" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
+          <line id="needle" x1="75" y1="78" x2="75" y2="26" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="75" cy="78" r="6" fill="var(--ink)"/>
+        </svg>
+        <div><div class="val num" id="fng-val">–</div><div id="fng-label" class="small">–</div></div>
+      </div>
+      <p class="note" data-t="moodNote">The Fear and Greed Index (0 to 100) sums up how nervous or excited crypto traders are today.</p>
+    </section>
+
+    <section class="panel" id="prem-panel">
+      <h2 data-t="premTitle">Korea premium</h2>
+      <div class="prem">
+        <div><span class="small muted" data-t="bitcoin">Bitcoin</span><span class="p num" id="prem-bitcoin">–</span><span class="small muted num" id="upbit-bitcoin"></span></div>
+        <div><span class="small muted" data-t="ethereum">Ethereum</span><span class="p num" id="prem-ethereum">–</span><span class="small muted num" id="upbit-ethereum"></span></div>
+      </div>
+      <p class="note" data-t="premNote">How much more (or less) coins cost on Upbit, Korea's biggest exchange, than the world average. Often called the "kimchi premium".</p>
+    </section>
+  </div>
+
+  <div class="grid two">
+    <section class="panel" id="conv-panel">
+      <div class="panel-head"><h2 data-t="convTitle">Converter</h2>
+        <select id="conv-coin" aria-label="Coin"><option value="bitcoin" data-t="bitcoin">Bitcoin</option><option value="ethereum" data-t="ethereum">Ethereum</option></select>
+      </div>
+      <div class="conv">
+        <label class="field"><span id="conv-cur-label">£</span><input id="conv-money" type="number" inputmode="decimal" min="0" step="any" value="100"></label>
+        <span class="eq">=</span>
+        <label class="field"><span id="conv-coin-label">BTC</span><input id="conv-coins" type="number" inputmode="decimal" min="0" step="any"></label>
+      </div>
+    </section>
+
+    <section class="panel" id="tip-panel">
+      <h2 data-t="tipTitle">Beginner tip</h2>
+      <p class="tip" id="tip"></p>
+      <div class="tip-foot"><span class="small muted num" id="tip-n"></span><button class="btn ghost small" id="tip-next" data-t="nextTip">Next tip</button></div>
+    </section>
+  </div>
+
+  <footer>
+    <p data-t="disclaimer">This app shows prices only. It is not financial advice.</p>
+    <p data-t="sources">Prices: CoinGecko. Korea prices: Upbit. Market mood: alternative.me.</p>
+  </footer>
+</div>
+
+<div class="alarm" id="alarm" hidden role="alertdialog" aria-live="assertive">
+  <div class="ring" aria-hidden="true">🔔</div>
+  <h2 id="alarm-title"></h2>
+  <div class="now num" id="alarm-now"></div>
+  <button class="stop" id="alarm-stop" data-t="stop">Stop alarm</button>
+  <p class="calm" data-t="calm">An alert means it's time to look, not that you must act. Take a breath before you decide anything.</p>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ---------- Words in both languages ---------- */
+const T = {
+  en: {
+    appName:'Coin Watch', loading:'Loading prices…', live:'Live', ago:s=>`updated ${s}s ago`, offline:'Can’t reach the price service. Trying again…',
+    armOff:'Tap the button so the alarm can make a sound. Alerts on this screen ring, vibrate and speak while the app is open.',
+    armOn:'Alarm is ready. It will ring, vibrate and speak while this app is open.', armBtn:'Turn on alarm', armTest:'Test alarm', keepAwake:'Keep screen on',
+    bitcoin:'Bitcoin', ethereum:'Ethereum', range24:'24-hour range', athLine:p=>`${p}% below its all-time high`, athNew:'At an all-time high',
+    d24:'24h', d7:'7d', chart:'Price chart', r1:'24H', r7:'7D', r30:'1M', r365:'1Y',
+    chartNote:'Dashed lines are your alert levels. Touch and drag along the chart to read a price.',
+    alertsTitle:'Alarms on this screen', test:'Test alarm', below:'falls below', above:'rises above', drop:'drops % in 24h', add:'Add alarm',
+    alertsNote:'These ring only while the app is open on screen. Turn on “Keep screen on” if you leave it on a stand.',
+    rowBelow:(c,v)=>`${c} falls below <b>${v}</b>`, rowAbove:(c,v)=>`${c} rises above <b>${v}</b>`, rowDrop:(c,v)=>`${c} drops <b>${v}%</b> in 24 hours`,
+    stWatching:'Watching', stFired:'Rang. Resets when the price moves back.', stOff:'Paused', noAlerts:'No alarms yet. Add one below.',
+    del:'Delete', pause:'Pause', resume:'Turn on',
+    cloudTitle:'Alerts when the phone is locked', cloudNote:'Checked in the cloud every 10 minutes and sent to the ntfy app, even when this app is closed. These are set up from the computer.',
+    cloudNone:'None set up yet.', cloudLoadFail:'Couldn’t load the list right now.',
+    holdTitle:'My coins', holdPrivate:'Saved on this device only', amount:'amount held', paid:'Total paid (£)', totalValue:'Total value', worth:v=>`Worth ${v}`,
+    moodTitle:'Market mood', moodNote:'The Fear and Greed Index (0 to 100) sums up how nervous or excited crypto traders are today.',
+    fng:{'Extreme Fear':'Extreme fear','Fear':'Fear','Neutral':'Neutral','Greed':'Greed','Extreme Greed':'Extreme greed'},
+    premTitle:'Korea premium', premNote:'How much more (or less) coins cost on Upbit, Korea’s biggest exchange, than the world average. Often called the “kimchi premium”.',
+    upbitAt:v=>`Upbit ${v}`,
+    convTitle:'Converter', tipTitle:'Beginner tip', nextTip:'Next tip',
+    stop:'Stop alarm', calm:'An alert means it’s time to look, not that you must act. Take a breath before you decide anything.',
+    disclaimer:'This app shows prices only. It is not financial advice.', sources:'Prices: CoinGecko. Korea prices: Upbit. Market mood: alternative.me.',
+    added:'Alarm added', soundOn:'Alarm sound is on', testTitle:'This is a test alarm',
+    fireBelow:(c,v)=>`${c} fell below ${v}`, fireAbove:(c,v)=>`${c} rose above ${v}`, fireDrop:(c,v)=>`${c} dropped ${v}% in 24 hours`, nowAt:v=>`Now ${v}`,
+    sayBelow:(c,v,n)=>`Price alert. ${c} has fallen below ${v}. It is now ${n}.`,
+    sayAbove:(c,v,n)=>`Price alert. ${c} has risen above ${v}. It is now ${n}.`,
+    sayDrop:(c,v,n)=>`Price alert. ${c} has dropped ${v} percent in the last 24 hours. It is now ${n}.`,
+    sayTest:'This is a test of the Coin Watch alarm. Everything is working.',
+    curWord:{gbp:'pounds',krw:'won',usd:'dollars'},
+    newsTitle:'Latest news', listenAll:'Listen to headlines', stopListen:'Stop', newsLoading:'Loading headlines…', newsNone:'No headlines right now. They update every hour.',
+    newsNote:'Headlines from established news outlets, updated every hour. Tap a headline to read the full story on the publisher’s site.',
+    newsIntro:'Here are the latest crypto headlines.', newsFrom:s=>`From ${s}.`, listenOne:'Listen',
+    cycleTitle:'History and the four-year cycle', usdNote:'In US dollars, the usual measure for cycles',
+    cycleIntro:'Every four years or so, the number of new bitcoins created is cut in half (a “halving”). In every cycle so far, a big rise followed each halving, then a deep fall. Here is how the pattern looks.',
+    longChart:'The long view', h4:'4 years', h8:'8 years', hAll:'All',
+    lgPrice:'Price', lgMa:'200-week average', lgHalving:'Bitcoin halving',
+    logNote:'Log scale: each step up the side is the same percentage rise, so 2013 and 2025 can share one chart. The 200-week average has marked the floor of most past crashes.',
+    overlayTitle:'Cycles side by side', overlayNote:'Each line starts on a halving day at 1× (the price that day). It shows how many times higher or lower Bitcoin was in the days that followed. Each cycle has risen less than the one before.',
+    yearsTitle:'Year by year', timelineTitle:'Timeline since 2008',
+    cycleCaution:'A cycle’s peak here means its highest price in the 2½ years after the halving. Only four cycles have ever happened, which is a small sample. Past patterns are useful context, not a forecast.',
+    tSince:'Days since last halving', tSinceS:d=>`Halving on ${d}`, tNext:'Next halving', tNextV:'About April 2028', tNextS:n=>`Roughly ${n} days away`,
+    tPeak:'This cycle’s high so far', tPeakS:(d,n)=>`${d} · day ${n}`, tFrom:'Now compared with that high', tMa:'200-week average', tMaS:p=>`Price is ${p} this line`,
+    wAbove:'above', wBelow:'below',
+    cycleSum:(peaks,falls,gaps,now,pk)=>`In past cycles Bitcoin peaked ${peaks} days after the halving, then fell ${falls}% to a low ${gaps} days after that peak. This cycle’s high so far came on day ${pk}; today is day ${now}.`,
+    thCycle:'Cycle', thHalv:'Price at halving', thPeak:'Peak', thDays:'Days to peak', thRise:'Rise', thLow:'Low after peak', thFall:'Fall from peak', thLowDays:'Days peak → low', soFar:'so far',
+    histAt:(p,d)=>`<b>${p}</b> · ${d}`, overlayLeg:y=>`${y} cycle`, partial:'part year',
+    timeline:[
+      ['Oct 2008','Satoshi Nakamoto publishes the Bitcoin white paper during the global financial crisis.'],
+      ['Jan 2009','The first Bitcoin block is mined. Bitcoin has no price yet.'],
+      ['May 2010','Someone pays 10,000 bitcoins for two pizzas: the first known purchase.'],
+      ['Jul 2010','Bitcoin trades on an exchange for the first time, at under 10 cents.'],
+      ['Nov 2012','First halving. Price about $12.', 'h'],
+      ['Nov 2013','Bitcoin passes $1,000 for the first time.'],
+      ['Feb 2014','Mt. Gox, the biggest exchange, collapses. Price falls over 80% in the following year.'],
+      ['Jul 2015','Ethereum launches.'],
+      ['Jul 2016','Second halving. Price about $650.', 'h'],
+      ['Dec 2017','Bitcoin nears $20,000, then falls about 84% over the next year.'],
+      ['May 2020','Third halving, during the pandemic. Price about $8,700.', 'h'],
+      ['Nov 2021','Bitcoin reaches about $69,000.'],
+      ['2022','Crash year: the Terra/Luna and FTX collapses. Ethereum switches to a low-energy system (“the Merge”).'],
+      ['Jan 2024','US regulators approve Bitcoin funds (ETFs) that ordinary investors can buy.'],
+      ['Apr 2024','Fourth halving. Price about $64,000.', 'h'],
+      ['Dec 2024','Bitcoin passes $100,000 for the first time.'],
+      ['~Apr 2028','Fifth halving expected.', 'h']
+    ],
+    tips:[
+      'Crypto prices often move 5 to 10% in a single day. A big move is normal and doesn’t always mean something is wrong.',
+      'Only put in money you could afford to lose. Crypto can fall a long way and stay down for months or years.',
+      'Nobody genuine will message you offering to double your coins. That is always a scam.',
+      'Never share your recovery phrase (the 12 or 24 secret words) with anyone, ever. Not even “support staff”.',
+      'Every buy and sell has fees. Check what your exchange charges before you trade.',
+      'An alert is a prompt to look, not an instruction to sell. Many people regret decisions made in a panic.',
+      'Some people buy a small, fixed amount on a regular schedule rather than trying to time the market. It smooths out the ups and downs.',
+      'Keep a simple note of what you bought, when, and for how much. It helps you stay calm and helps at tax time.',
+      'The Korea premium shows when Korean exchanges price coins higher than the rest of the world. A large gap usually closes over time.'
+    ]
+  },
+  ko: {
+    appName:'코인 워치', loading:'가격 불러오는 중…', live:'실시간', ago:s=>`${s}초 전 업데이트`, offline:'가격 정보를 불러올 수 없습니다. 다시 시도 중…',
+    armOff:'알람 소리가 나도록 버튼을 눌러 주세요. 앱이 화면에 켜져 있는 동안 소리, 진동, 음성으로 알려 드립니다.',
+    armOn:'알람 준비 완료. 앱이 켜져 있는 동안 소리, 진동, 음성으로 알려 드립니다.', armBtn:'알람 켜기', armTest:'알람 테스트', keepAwake:'화면 켜두기',
+    bitcoin:'비트코인', ethereum:'이더리움', range24:'24시간 가격 범위', athLine:p=>`역대 최고가보다 ${p}% 낮음`, athNew:'역대 최고가',
+    d24:'24시간', d7:'7일', chart:'가격 차트', r1:'24시간', r7:'7일', r30:'1개월', r365:'1년',
+    chartNote:'점선은 설정한 알림 가격입니다. 차트를 누른 채 움직이면 가격을 볼 수 있습니다.',
+    alertsTitle:'화면 알람', test:'알람 테스트', below:'아래로 떨어지면', above:'위로 오르면', drop:'24시간 % 하락하면', add:'알람 추가',
+    alertsNote:'앱이 화면에 켜져 있을 때만 울립니다. 거치대에 두실 때는 ‘화면 켜두기’를 켜 주세요.',
+    rowBelow:(c,v)=>`${c} <b>${v}</b> 아래로 떨어지면`, rowAbove:(c,v)=>`${c} <b>${v}</b> 위로 오르면`, rowDrop:(c,v)=>`${c} 24시간 동안 <b>${v}%</b> 하락하면`,
+    stWatching:'감시 중', stFired:'울림. 가격이 돌아오면 다시 켜집니다.', stOff:'일시 정지', noAlerts:'아직 알람이 없습니다. 아래에서 추가하세요.',
+    del:'삭제', pause:'일시 정지', resume:'켜기',
+    cloudTitle:'휴대폰이 잠겨 있을 때 알림', cloudNote:'클라우드에서 10분마다 확인하고 ntfy 앱으로 보냅니다. 이 앱이 꺼져 있어도 작동합니다. 설정은 컴퓨터에서 합니다.',
+    cloudNone:'아직 설정된 알림이 없습니다.', cloudLoadFail:'지금은 목록을 불러올 수 없습니다.',
+    holdTitle:'내 코인', holdPrivate:'이 기기에만 저장됩니다', amount:'보유 수량', paid:'총 매수 금액 (£)', totalValue:'총 평가액', worth:v=>`평가액 ${v}`,
+    moodTitle:'시장 심리', moodNote:'공포·탐욕 지수(0~100)는 오늘 코인 투자자들이 얼마나 불안하거나 들떠 있는지 보여 줍니다.',
+    fng:{'Extreme Fear':'극단적 공포','Fear':'공포','Neutral':'중립','Greed':'탐욕','Extreme Greed':'극단적 탐욕'},
+    premTitle:'김치 프리미엄', premNote:'한국 최대 거래소인 업비트 가격이 세계 평균보다 얼마나 높은지(또는 낮은지) 보여 줍니다.',
+    upbitAt:v=>`업비트 ${v}`,
+    convTitle:'환산기', tipTitle:'초보자 팁', nextTip:'다음 팁',
+    stop:'알람 끄기', calm:'알림은 확인해 보라는 신호이지, 꼭 행동하라는 뜻이 아닙니다. 결정하기 전에 잠시 숨을 고르세요.',
+    disclaimer:'이 앱은 가격 정보만 보여 줍니다. 투자 조언이 아닙니다.', sources:'가격: CoinGecko. 한국 가격: 업비트. 시장 심리: alternative.me.',
+    added:'알람이 추가되었습니다', soundOn:'알람 소리가 켜졌습니다', testTitle:'테스트 알람입니다',
+    fireBelow:(c,v)=>`${c} ${v} 아래로 하락`, fireAbove:(c,v)=>`${c} ${v} 위로 상승`, fireDrop:(c,v)=>`${c} 24시간 동안 ${v}% 하락`, nowAt:v=>`현재 ${v}`,
+    sayBelow:(c,v,n)=>`가격 알림입니다. ${c}이 ${v} 아래로 떨어졌습니다. 현재 가격은 ${n}입니다.`,
+    sayAbove:(c,v,n)=>`가격 알림입니다. ${c}이 ${v} 위로 올랐습니다. 현재 가격은 ${n}입니다.`,
+    sayDrop:(c,v,n)=>`가격 알림입니다. ${c}이 지난 24시간 동안 ${v}퍼센트 하락했습니다. 현재 가격은 ${n}입니다.`,
+    sayTest:'코인 워치 알람 테스트입니다. 모두 잘 작동하고 있습니다.',
+    curWord:{gbp:'파운드',krw:'원',usd:'달러'},
+    newsTitle:'최신 뉴스', listenAll:'헤드라인 듣기', stopListen:'멈추기', newsLoading:'뉴스 불러오는 중…', newsNone:'지금은 뉴스가 없습니다. 매시간 업데이트됩니다.',
+    newsNote:'주요 언론사의 헤드라인을 매시간 업데이트합니다. 제목을 누르면 언론사 사이트에서 전체 기사를 볼 수 있습니다.',
+    newsIntro:'최신 코인 뉴스 헤드라인입니다.', newsFrom:s=>`출처, ${s}.`, listenOne:'듣기',
+    cycleTitle:'역사와 4년 주기', usdNote:'주기 분석의 일반적인 기준인 미국 달러 기준',
+    cycleIntro:'약 4년마다 새로 만들어지는 비트코인의 양이 절반으로 줄어듭니다(‘반감기’). 지금까지는 매번 반감기 이후 큰 상승이 있었고, 그 뒤 큰 하락이 이어졌습니다. 그 패턴을 아래에서 볼 수 있습니다.',
+    longChart:'장기 차트', h4:'4년', h8:'8년', hAll:'전체',
+    lgPrice:'가격', lgMa:'200주 이동평균', lgHalving:'비트코인 반감기',
+    logNote:'로그 스케일: 세로축의 한 칸은 같은 비율의 상승을 뜻합니다. 그래서 2013년과 2025년을 한 차트에서 볼 수 있습니다. 과거 대부분의 폭락은 200주 이동평균 근처에서 바닥을 찍었습니다.',
+    overlayTitle:'주기별 비교', overlayNote:'각 선은 반감기 당일 가격을 1배로 놓고 시작합니다. 그 뒤 비트코인이 몇 배 오르거나 내렸는지 보여 줍니다. 주기가 거듭될수록 상승 폭은 작아졌습니다.',
+    yearsTitle:'연도별 수익률', timelineTitle:'2008년부터의 연표',
+    cycleCaution:'여기서 주기의 고점은 반감기 후 2년 반 안의 최고가를 뜻합니다. 지금까지 주기는 네 번뿐이라 표본이 작습니다. 과거 패턴은 참고 자료일 뿐 예측이 아닙니다.',
+    tSince:'지난 반감기 이후', tSinceS:d=>`반감기: ${d}`, tNext:'다음 반감기', tNextV:'2028년 4월경', tNextS:n=>`약 ${n}일 남음`,
+    tPeak:'이번 주기 최고가(현재까지)', tPeakS:(d,n)=>`${d} · ${n}일째`, tFrom:'최고가 대비 현재', tMa:'200주 이동평균', tMaS:p=>`현재 가격은 이 선보다 ${p}`,
+    wAbove:'위', wBelow:'아래',
+    cycleSum:(peaks,falls,gaps,now,pk)=>`과거 주기에서 비트코인은 반감기 후 ${peaks}일째에 고점을 찍고, 그 뒤 ${gaps}일에 걸쳐 ${falls}% 하락해 저점에 도달했습니다. 이번 주기의 최고가는 지금까지 ${pk}일째에 나왔고, 오늘은 ${now}일째입니다.`,
+    thCycle:'주기', thHalv:'반감기 가격', thPeak:'고점', thDays:'고점까지 일수', thRise:'상승', thLow:'고점 후 저점', thFall:'고점 대비 하락', thLowDays:'고점→저점 일수', soFar:'현재까지',
+    histAt:(p,d)=>`<b>${p}</b> · ${d}`, overlayLeg:y=>`${y}년 주기`, partial:'일부 기간',
+    timeline:[
+      ['2008년 10월','글로벌 금융위기 중 사토시 나카모토가 비트코인 백서를 발표합니다.'],
+      ['2009년 1월','첫 비트코인 블록이 채굴됩니다. 아직 가격은 없습니다.'],
+      ['2010년 5월','누군가 비트코인 1만 개로 피자 두 판을 삽니다. 알려진 최초의 구매입니다.'],
+      ['2010년 7월','비트코인이 처음으로 거래소에서 거래됩니다. 가격은 10센트 미만.'],
+      ['2012년 11월','첫 번째 반감기. 가격 약 12달러.', 'h'],
+      ['2013년 11월','비트코인이 처음으로 1,000달러를 넘습니다.'],
+      ['2014년 2월','최대 거래소 마운트곡스가 파산합니다. 이후 1년간 가격이 80% 넘게 하락합니다.'],
+      ['2015년 7월','이더리움이 출시됩니다.'],
+      ['2016년 7월','두 번째 반감기. 가격 약 650달러.', 'h'],
+      ['2017년 12월','비트코인이 2만 달러 가까이 오른 뒤, 이듬해 약 84% 하락합니다.'],
+      ['2020년 5월','팬데믹 중 세 번째 반감기. 가격 약 8,700달러.', 'h'],
+      ['2021년 11월','비트코인이 약 69,000달러에 도달합니다.'],
+      ['2022년','폭락의 해: 테라·루나와 FTX가 무너집니다. 이더리움은 에너지를 적게 쓰는 방식(‘머지’)으로 전환합니다.'],
+      ['2024년 1월','미국 규제 당국이 일반 투자자도 살 수 있는 비트코인 펀드(ETF)를 승인합니다.'],
+      ['2024년 4월','네 번째 반감기. 가격 약 64,000달러.', 'h'],
+      ['2024년 12월','비트코인이 처음으로 10만 달러를 넘습니다.'],
+      ['2028년 4월경','다섯 번째 반감기 예정.', 'h']
+    ],
+    tips:[
+      '코인 가격은 하루에 5~10%씩 움직이는 일이 흔합니다. 크게 움직인다고 해서 꼭 문제가 생긴 것은 아닙니다.',
+      '잃어도 괜찮은 돈만 투자하세요. 코인은 크게 떨어진 뒤 몇 달, 몇 년씩 회복하지 못할 수도 있습니다.',
+      '코인을 두 배로 불려 주겠다고 먼저 연락하는 사람은 진짜가 아닙니다. 언제나 사기입니다.',
+      '복구 문구(12개 또는 24개의 비밀 단어)는 누구에게도, 절대 알려 주지 마세요. ‘고객센터 직원’이라고 해도 마찬가지입니다.',
+      '사고팔 때마다 수수료가 붙습니다. 거래하기 전에 거래소 수수료를 확인하세요.',
+      '알림은 확인해 보라는 신호이지, 팔라는 지시가 아닙니다. 당황해서 내린 결정을 후회하는 사람이 많습니다.',
+      '타이밍을 맞추려 하기보다 정해진 금액을 정기적으로 조금씩 사는 사람도 있습니다. 오르내림이 완만해지는 효과가 있습니다.',
+      '언제, 무엇을, 얼마에 샀는지 간단히 기록해 두세요. 마음이 차분해지고 세금 신고 때도 도움이 됩니다.',
+      '김치 프리미엄은 한국 거래소 가격이 해외보다 비쌀 때 나타납니다. 차이가 크면 시간이 지나며 줄어드는 경우가 많습니다.'
+    ]
+  }
+};
+
+/* ---------- Saved settings (this device only) ---------- */
+const KEY = 'coinwatch.v1';
+const defaults = () => ({
+  lang:'en', cur:'gbp', awake:false, tip:0,
+  // Starter alarms near today's prices (Oct 2026), so the screen isn't empty. Edit or delete freely.
+  alerts:[
+    {id:1, coin:'bitcoin', type:'below', value:58000, cur:'gbp', on:true, armed:true},
+    {id:2, coin:'ethereum', type:'below', value:1700, cur:'gbp', on:true, armed:true}
+  ],
+  hold:{bitcoin:{amt:'',paid:''}, ethereum:{amt:'',paid:''}}
+});
+let S;
+try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY) || '{}')); } catch { S = defaults(); }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} };
+
+/* ---------- Helpers ---------- */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const t = k => T[S.lang][k];
+const COINS = ['bitcoin','ethereum'];
+const TICK = {bitcoin:'BTC', ethereum:'ETH'};
+const locale = () => S.lang === 'ko' ? 'ko-KR' : 'en-GB';
+function money(v, cur = S.cur, compact = false) {
+  if (v == null || isNaN(v)) return '–';
+  const abs = Math.abs(v);
+  const digits = cur === 'krw' ? 0 : abs >= 1000 ? 0 : abs >= 1 ? 2 : 4;
+  return new Intl.NumberFormat(locale(), {style:'currency', currency:cur.toUpperCase(), maximumFractionDigits:digits, minimumFractionDigits:digits, notation: compact ? 'compact' : 'standard'}).format(v);
+}
+const pct = v => (v == null || isNaN(v)) ? '–' : `${v > 0 ? '+' : ''}${v.toFixed(2)}%`;
+const coinName = c => t(c);
+function spokenMoney(v, cur) {
+  const n = Math.round(v).toLocaleString(locale());
+  return S.lang === 'ko' ? `${n}${t('curWord')[cur]}` : `${n} ${t('curWord')[cur]}`;
+}
+function toast(msg) { const el = $('#toast'); el.textContent = msg; el.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => el.hidden = true, 2200); }
+async function getJSON(url) { const r = await fetch(url, {cache:'no-store'}); if (!r.ok) throw new Error(r.status); return r.json(); }
+const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- Live data ---------- */
+const CG = 'https://api.coingecko.com/api/v3';
+let prices = null;            // {bitcoin:{gbp,krw,usd,gbp_24h_change,...}, ethereum:{...}}
+let markets = {};             // per coin, in the chosen currency: high/low/sparkline/ath
+let marketsCur = null;
+let lastOk = 0, failing = false;
+let upbit = {};
+
+// Backup when CoinGecko is busy: Coinbase prices, keeping the last known 24-hour change.
+async function backupPrices() {
+  const out = {};
+  for (const [c, tk] of [['bitcoin', 'BTC'], ['ethereum', 'ETH']]) {
+    const r = (await getJSON(`https://api.coinbase.com/v2/exchange-rates?currency=${tk}`)).data.rates;
+    out[c] = {...(prices?.[c] || {}), gbp:+r.GBP, usd:+r.USD, krw:+r.KRW};
+  }
+  return out;
+}
+async function refreshPrices() {
+  try {
+    try { prices = await getJSON(`${CG}/simple/price?ids=bitcoin,ethereum&vs_currencies=gbp,krw,usd&include_24hr_change=true`); }
+    catch { prices = await backupPrices(); }
+    lastOk = Date.now(); failing = false;
+    checkAlerts();
+    if (hist && Date.now() - lastCycleDraw > 10 * 60e3) { lastCycleDraw = Date.now(); renderCycles(); }
+  } catch { failing = true; }
+  renderAll();
+}
+// Coinbase Exchange backup for cards and charts. Coinbase has no won market, so won figures are
+// converted from US dollars at today's rate.
+const CBX = 'https://api.exchange.coinbase.com/products';
+const cbProduct = (c, cur) => `${TICK[c]}-${cur === 'krw' ? 'USD' : cur.toUpperCase()}`;
+const cbFactor = (c, cur) => cur === 'krw' && prices?.[c]?.usd ? prices[c].krw / prices[c].usd : 1;
+async function cbCandles(c, cur, gran, startMs) {
+  const q = startMs ? `&start=${new Date(startMs).toISOString()}&end=${new Date().toISOString()}` : '';
+  const rows = await getJSON(`${CBX}/${cbProduct(c, cur)}/candles?granularity=${gran}${q}`);
+  const f = cbFactor(c, cur);
+  return rows.map(r => [r[0] * 1000, r[4] * f]).sort((a, b) => a[0] - b[0]);
+}
+async function backupMarkets(cur) {
+  const out = {};
+  for (const c of COINS) {
+    const st = await getJSON(`${CBX}/${cbProduct(c, cur)}/stats`), f = cbFactor(c, cur);
+    const spark = (await cbCandles(c, cur, 3600)).map(r => r[1]);
+    const ch24 = (st.last / st.open - 1) * 100;
+    out[c] = {current_price:st.last * f, high_24h:st.high * f, low_24h:st.low * f, price_change_percentage_24h_in_currency:ch24,
+      price_change_percentage_7d_in_currency:spark.length ? (spark[spark.length - 1] / spark[0] - 1) * 100 : null, sparkline_in_7d:{price:spark}};
+    if (prices?.[c] && prices[c][`${cur}_24h_change`] == null) prices[c][`${cur}_24h_change`] = ch24;
+  }
+  return out;
+}
+async function refreshMarkets() {
+  const cur = S.cur;
+  try {
+    const rows = await getJSON(`${CG}/coins/markets?vs_currency=${cur}&ids=bitcoin,ethereum&sparkline=true&price_change_percentage=24h,7d`);
+    markets = {}; rows.forEach(r => markets[r.id] = r); marketsCur = cur;
+  } catch {
+    try { markets = await backupMarkets(cur); marketsCur = cur; } catch {}
+  }
+  renderCards(); renderAlerts();
+}
+async function refreshUpbit() {
+  try {
+    const rows = await getJSON('https://api.upbit.com/v1/ticker?markets=KRW-BTC,KRW-ETH');
+    rows.forEach(r => upbit[r.market === 'KRW-BTC' ? 'bitcoin' : 'ethereum'] = r.trade_price);
+  } catch {}
+  renderPremium();
+}
+let fng = null;
+async function refreshMood() {
+  try { const d = await getJSON('https://api.alternative.me/fng/?limit=1'); fng = d.data[0]; } catch {}
+  renderMood();
+}
+
+/* ---------- Rendering ---------- */
+function applyLang() {
+  document.documentElement.lang = S.lang;
+  $$('[data-t]').forEach(el => { const v = t(el.dataset.t); if (typeof v === 'string') el.textContent = v; });
+  document.title = t('appName');
+  $$('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === S.lang));
+  $$('[data-cur]').forEach(b => b.setAttribute('aria-pressed', b.dataset.cur === S.cur));
+  stopNews(); renderArm(); renderAll(); renderCloud(); renderTip(); renderNews(); renderCycles();
+}
+function renderStatus() {
+  const dot = $('#dot'), st = $('#status');
+  if (failing && !prices) { dot.className = 'dot bad'; st.textContent = t('offline'); return; }
+  if (failing) { dot.className = 'dot bad'; st.textContent = t('offline'); return; }
+  if (!lastOk) { dot.className = 'dot'; st.textContent = t('loading'); return; }
+  dot.className = 'dot live';
+  st.textContent = `${t('live')} · ${t('ago')(Math.max(0, Math.round((Date.now() - lastOk) / 1000)))}`;
+}
+function renderCards() {
+  COINS.forEach(c => {
+    const card = $(`#card-${c}`), f = n => card.querySelector(`[data-f="${n}"]`);
+    const p = prices?.[c]?.[S.cur];
+    f('price').textContent = money(p);
+    const m = marketsCur === S.cur ? markets[c] : null;
+    const c24 = prices?.[c]?.[`${S.cur}_24h_change`] ?? m?.price_change_percentage_24h_in_currency;
+    const c7 = m?.price_change_percentage_7d_in_currency;
+    const chip = (el, v, label) => { el.className = 'chip ' + (v > 0 ? 'up' : v < 0 ? 'down' : ''); el.innerHTML = `${v > 0 ? '▲' : v < 0 ? '▼' : ''} ${pct(v)}<small>${label}</small>`; };
+    chip(f('c24'), c24, t('d24')); chip(f('c7'), c7, t('d7'));
+    if (m) {
+      f('low').textContent = money(m.low_24h); f('high').textContent = money(m.high_24h);
+      const pos = m.high_24h > m.low_24h ? (( (p ?? m.current_price) - m.low_24h) / (m.high_24h - m.low_24h)) * 100 : 50;
+      f('marker').style.left = Math.min(100, Math.max(0, pos)) + '%';
+      const athGap = -m.ath_change_percentage;
+      f('ath').textContent = m.ath_change_percentage == null ? '' : athGap > 0.5 ? t('athLine')(athGap.toFixed(0)) : t('athNew');
+      drawSpark(f('spark'), m.sparkline_in_7d?.price || [], c);
+    }
+  });
+}
+function drawSpark(svg, pts, coin) {
+  if (pts.length < 2) { svg.innerHTML = ''; return; }
+  const step = Math.max(1, Math.floor(pts.length / 80)); const d = pts.filter((_, i) => i % step === 0);
+  const min = Math.min(...d), max = Math.max(...d), W = 300, H = 56, pad = 4;
+  const xy = d.map((v, i) => [i / (d.length - 1) * W, H - pad - (v - min) / (max - min || 1) * (H - pad * 2)]);
+  const line = xy.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+  const col = coin === 'bitcoin' ? 'var(--btc)' : 'var(--eth)';
+  const id = 'sg-' + coin;
+  const end = xy[xy.length - 1];
+  svg.innerHTML = `<defs><linearGradient id="${id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".28"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+    <path d="${line} L${W} ${H} L0 ${H} Z" fill="url(#${id})"/>
+    <path d="${line}" fill="none" stroke="${col}" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+    <circle cx="${end[0] - 3}" cy="${end[1]}" r="3.5" fill="${col}"/>`;
+}
+function renderAlerts() {
+  const ul = $('#alert-list'); ul.innerHTML = '';
+  if (!S.alerts.length) { ul.innerHTML = `<li class="empty">${t('noAlerts')}</li>`; return; }
+  S.alerts.forEach(a => {
+    const li = document.createElement('li');
+    li.className = `alert-row ${a.coin === 'ethereum' ? 'eth' : ''} ${a.on ? '' : 'off'}`;
+    const label = a.type === 'drop' ? t('rowDrop')(coinName(a.coin), a.value) : t(a.type === 'below' ? 'rowBelow' : 'rowAbove')(coinName(a.coin), money(a.value, a.cur));
+    const state = !a.on ? t('stOff') : a.armed ? t('stWatching') : t('stFired');
+    li.innerHTML = `<span class="bar"></span><div class="txt"><div>${label}</div><div class="state ${a.on && !a.armed ? 'fired' : ''}">${state}</div></div>
+      <button class="icon-btn" data-act="toggle" title="${a.on ? t('pause') : t('resume')}" aria-label="${a.on ? t('pause') : t('resume')}">${a.on ? '❚❚' : '▶'}</button>
+      <button class="icon-btn" data-act="del" title="${t('del')}" aria-label="${t('del')}">✕</button>`;
+    li.querySelector('[data-act="toggle"]').onclick = () => { a.on = !a.on; a.armed = true; save(); renderAlerts(); drawChart(); };
+    li.querySelector('[data-act="del"]').onclick = () => { S.alerts = S.alerts.filter(x => x !== a); save(); renderAlerts(); drawChart(); };
+    ul.appendChild(li);
+  });
+}
+function renderHoldings() {
+  let totG = 0, paidG = 0, any = false;
+  COINS.forEach(c => {
+    const box = $(`.hold[data-coin="${c}"]`), h = S.hold[c];
+    const amt = parseFloat(h.amt), paid = parseFloat(h.paid);
+    const pg = prices?.[c]?.gbp, pc = prices?.[c]?.[S.cur];
+    const val = box.querySelector('[data-f="val"]'), pl = box.querySelector('[data-f="pl"]');
+    if (!(amt > 0) || !pg) { val.textContent = '–'; pl.textContent = ''; return; }
+    any = true;
+    const vG = amt * pg; totG += vG;
+    val.textContent = t('worth')(money(amt * pc));
+    if (paid > 0) {
+      paidG += paid; const diffG = vG - paid, rate = pc / pg;
+      pl.className = 'pl num ' + (diffG >= 0 ? 'up' : 'down');
+      pl.textContent = `${diffG >= 0 ? '+' : '−'}${money(Math.abs(diffG * rate))} (${pct(diffG / paid * 100)})`;
+    } else { pl.textContent = ''; }
+  });
+  const rateTot = prices ? prices.bitcoin[S.cur] / prices.bitcoin.gbp : 1;
+  $('#tot-val').textContent = any ? money(totG * rateTot) : '–';
+  const tp = $('#tot-pl');
+  if (any && paidG > 0) { const d = totG - paidG; tp.className = 'pl num ' + (d >= 0 ? 'up' : 'down'); tp.textContent = pct(d / paidG * 100); } else tp.textContent = '';
+}
+function renderMood() {
+  if (!fng) return;
+  const v = +fng.value; $('#fng-val').textContent = v;
+  $('#fng-label').textContent = t('fng')[fng.value_classification] || fng.value_classification;
+  const ang = Math.PI * (1 - v / 100), r = 52;
+  const n = $('#needle'); n.setAttribute('x2', (75 + r * Math.cos(ang)).toFixed(1)); n.setAttribute('y2', (78 - r * Math.sin(ang)).toFixed(1));
+}
+function renderPremium() {
+  COINS.forEach(c => {
+    const u = upbit[c], g = prices?.[c]?.krw, el = $(`#prem-${c}`);
+    if (!u || !g) return;
+    const p = (u / g - 1) * 100;
+    el.textContent = pct(p); el.style.color = Math.abs(p) < 0.5 ? '' : p > 0 ? 'var(--up)' : 'var(--down)';
+    $(`#upbit-${c}`).textContent = t('upbitAt')(money(u, 'krw'));
+  });
+}
+function renderConverter(from = 'money') {
+  const c = $('#conv-coin').value, p = prices?.[c]?.[S.cur];
+  $('#conv-cur-label').textContent = ({gbp:'£ GBP', krw:'₩ KRW', usd:'$ USD'})[S.cur];
+  $('#conv-coin-label').textContent = TICK[c];
+  if (!p) return;
+  if (from === 'money') { const m = parseFloat($('#conv-money').value); $('#conv-coins').value = m > 0 ? +(m / p).toPrecision(6) : ''; }
+  else { const k = parseFloat($('#conv-coins').value); $('#conv-money').value = k > 0 ? (k * p).toFixed(S.cur === 'krw' ? 0 : 2) : ''; }
+}
+function renderTip() {
+  const tips = t('tips'); const i = S.tip % tips.length;
+  $('#tip').textContent = tips[i]; $('#tip-n').textContent = `${i + 1} / ${tips.length}`;
+}
+function renderAll() { renderStatus(); renderCards(); renderAlerts(); renderHoldings(); renderPremium(); renderMood(); renderConverter(); }
+let lastCycleDraw = 0;
+
+/* ---------- Locked-screen (cloud) alert list, read from alerts.json ---------- */
+let cloud = null, cloudFail = false;
+async function loadCloud() { try { cloud = await getJSON('alerts.json?' + Date.now()); } catch { cloudFail = true; } renderCloud(); }
+function renderCloud() {
+  const ul = $('#cloud-list'); ul.innerHTML = '';
+  if (!cloud) { if (cloudFail) ul.innerHTML = `<li>${t('cloudLoadFail')}</li>`; return; }
+  const list = (cloud.alerts || []).filter(a => a.on !== false);
+  if (!list.length) { ul.innerHTML = `<li>${t('cloudNone')}</li>`; return; }
+  list.forEach(a => {
+    const li = document.createElement('li'); if (a.coin === 'ethereum') li.className = 'eth';
+    const html = a.type === 'drop24h' ? t('rowDrop')(coinName(a.coin), a.value) : t(a.type === 'below' ? 'rowBelow' : 'rowAbove')(coinName(a.coin), money(a.value, a.currency || 'gbp'));
+    li.innerHTML = `<span>${html}</span>`; ul.appendChild(li);
+  });
+}
+
+/* ---------- Chart ---------- */
+let chartCoin = 'bitcoin', chartDays = 7, series = [], hoverI = null;
+const chartCache = {};
+async function loadChart() {
+  const key = `${chartCoin}-${S.cur}-${chartDays}`;
+  const hit = chartCache[key];
+  if (hit && Date.now() - hit.at < 5 * 60e3) { series = hit.data; drawChart(); return; }
+  try {
+    const d = await getJSON(`${CG}/coins/${chartCoin}/market_chart?vs_currency=${S.cur}&days=${chartDays}`);
+    series = d.prices; chartCache[key] = {at:Date.now(), data:series};
+  } catch {
+    try {
+      const gran = {1:300, 7:3600, 30:21600, 365:86400}[chartDays];
+      const start = chartDays === 365 ? Date.now() - 299 * DAY : null;
+      series = await cbCandles(chartCoin, S.cur, gran, start); chartCache[key] = {at:Date.now(), data:series};
+    } catch { if (hit) series = hit.data; }
+  }
+  drawChart();
+}
+function drawChart() {
+  const cv = $('#chart'), box = cv.parentElement, dpr = window.devicePixelRatio || 1;
+  const W = box.clientWidth, H = box.clientHeight; if (!W) return;
+  cv.width = W * dpr; cv.height = H * dpr; const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+  if (series.length < 2) return;
+  const col = cssVar(chartCoin === 'bitcoin' ? '--btc' : '--eth'), ink = cssVar('--ink'), muted = cssVar('--muted'), line = cssVar('--line'), down = cssVar('--down'), up = cssVar('--up');
+  const vals = series.map(p => p[1]);
+  let min = Math.min(...vals), max = Math.max(...vals);
+  const last = vals[vals.length - 1];
+  const lines = S.alerts.filter(a => a.on && a.coin === chartCoin && a.type !== 'drop' && a.cur === S.cur && Math.abs(a.value / last - 1) < 0.25);
+  lines.forEach(a => { min = Math.min(min, a.value); max = Math.max(max, a.value); });
+  const span = max - min || 1; min -= span * 0.06; max += span * 0.06;
+  const L = 6, R = 6, Tp = 18, B = 22, iw = W - L - R, ih = H - Tp - B;
+  const X = i => L + i / (series.length - 1) * iw, Y = v => Tp + (1 - (v - min) / (max - min)) * ih;
+  // grid + price labels
+  g.font = `11px ${cssVar('--f-num')}`; g.fillStyle = muted; g.strokeStyle = line; g.lineWidth = 1;
+  for (let k = 0; k <= 3; k++) {
+    const v = min + (max - min) * k / 3, y = Y(v);
+    g.beginPath(); g.moveTo(L, y); g.lineTo(W - R, y); g.stroke();
+    g.textAlign = 'left'; g.fillText(money(v, S.cur, true), L + 2, y - 4);
+  }
+  // date labels
+  g.textAlign = 'center';
+  const fmtD = ms => new Date(ms).toLocaleString(locale(), chartDays <= 1 ? {hour:'2-digit', minute:'2-digit'} : chartDays <= 30 ? {day:'numeric', month:'short'} : {month:'short', year:'2-digit'});
+  [0.12, 0.5, 0.88].forEach(f => { const i = Math.round(f * (series.length - 1)); g.fillText(fmtD(series[i][0]), X(i), H - 6); });
+  // area + line
+  const grad = g.createLinearGradient(0, Tp, 0, Tp + ih); grad.addColorStop(0, col + '55'); grad.addColorStop(1, col + '00');
+  g.beginPath(); series.forEach((p, i) => i ? g.lineTo(X(i), Y(p[1])) : g.moveTo(X(i), Y(p[1])));
+  g.lineTo(X(series.length - 1), Tp + ih); g.lineTo(X(0), Tp + ih); g.closePath(); g.fillStyle = grad; g.fill();
+  g.beginPath(); series.forEach((p, i) => i ? g.lineTo(X(i), Y(p[1])) : g.moveTo(X(i), Y(p[1])));
+  g.strokeStyle = col; g.lineWidth = 2; g.lineJoin = 'round'; g.stroke();
+  // alert lines
+  lines.forEach(a => {
+    const y = Y(a.value); g.setLineDash([6, 5]); g.strokeStyle = a.type === 'below' ? down : up; g.lineWidth = 1.5;
+    g.beginPath(); g.moveTo(L, y); g.lineTo(W - R, y); g.stroke(); g.setLineDash([]);
+    g.fillStyle = a.type === 'below' ? down : up; g.textAlign = 'right'; g.fillText(`🔔 ${money(a.value, a.cur)}`, W - R - 2, y - 5);
+  });
+  // end point
+  g.beginPath(); g.arc(X(series.length - 1), Y(last), 4, 0, 7); g.fillStyle = col; g.fill();
+  // hover
+  const ro = $('#readout');
+  if (hoverI != null && series[hoverI]) {
+    const p = series[hoverI], x = X(hoverI), y = Y(p[1]);
+    g.strokeStyle = muted; g.lineWidth = 1; g.beginPath(); g.moveTo(x, Tp); g.lineTo(x, Tp + ih); g.stroke();
+    g.beginPath(); g.arc(x, y, 5, 0, 7); g.fillStyle = ink; g.fill();
+    ro.innerHTML = `<b>${money(p[1])}</b> · ${new Date(p[0]).toLocaleString(locale(), {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'})}`;
+  } else {
+    const ch = (last / vals[0] - 1) * 100;
+    ro.innerHTML = `<b>${money(last)}</b> · <span style="color:${ch >= 0 ? up : down}">${pct(ch)}</span>`;
+  }
+}
+function chartPointer(e) {
+  const r = $('#chart').getBoundingClientRect();
+  const f = Math.min(1, Math.max(0, (e.clientX - r.left - 6) / (r.width - 12)));
+  hoverI = Math.round(f * (series.length - 1)); drawChart();
+}
+
+/* ---------- Files the cloud job refreshes (news.json, history.json) ---------- */
+// On GitHub Pages, read the newest copy straight from the repository so hourly updates show at once.
+function dataUrls(name) {
+  const urls = [], h = location.hostname, repo = location.pathname.split('/').filter(Boolean)[0];
+  if (h.endsWith('.github.io') && repo) urls.push(`https://raw.githubusercontent.com/${h.split('.')[0]}/${repo}/main/${name}`);
+  urls.push(name);
+  return urls;
+}
+async function getData(name) {
+  const bust = 't=' + Math.floor(Date.now() / 300000);
+  for (const u of dataUrls(name)) { try { return await getJSON(`${u}?${bust}`); } catch {} }
+  throw new Error('unavailable');
+}
+
+/* ---------- News, read aloud on request ---------- */
+let news = null, newsFail = false, speakingNews = false;
+async function loadNews() { try { news = await getData('news.json'); newsFail = false; } catch { newsFail = true; } renderNews(); }
+function ago(iso) {
+  if (!iso) return '';
+  const s = (Date.now() - Date.parse(iso)) / 1000, rtf = new Intl.RelativeTimeFormat(locale(), {numeric:'auto'});
+  if (s < 3600) return rtf.format(-Math.max(1, Math.round(s / 60)), 'minute');
+  if (s < 86400) return rtf.format(-Math.round(s / 3600), 'hour');
+  return rtf.format(-Math.round(s / 86400), 'day');
+}
+function renderNews() {
+  const ul = $('#news-list');
+  $('#news-listen-label').textContent = speakingNews ? t('stopListen') : t('listenAll');
+  if (!news) { ul.innerHTML = `<li class="empty">${newsFail ? t('newsNone') : t('newsLoading')}</li>`; return; }
+  const list = (news[S.lang] || []).slice(0, 10);
+  if (!list.length) { ul.innerHTML = `<li class="empty">${t('newsNone')}</li>`; return; }
+  ul.innerHTML = '';
+  list.forEach((n, i) => {
+    const li = document.createElement('li'); li.dataset.i = i;
+    const b = document.createElement('button');
+    b.className = 'say'; b.textContent = '🔊'; b.setAttribute('aria-label', t('listenOne')); b.setAttribute('aria-pressed', 'false');
+    b.onclick = () => readNews([i]);
+    const div = document.createElement('div'), a = document.createElement('a'), m = document.createElement('div');
+    a.href = n.link; a.target = '_blank'; a.rel = 'noopener'; a.textContent = n.title;
+    m.className = 'news-meta'; m.textContent = [n.source, ago(n.time)].filter(Boolean).join(' · ');
+    div.append(a, m); li.append(b, div); ul.appendChild(li);
+  });
+}
+function markSpeaking(i) {
+  $$('#news-list li').forEach(li => { const on = +li.dataset.i === i; li.classList.toggle('speaking', on); li.querySelector('.say')?.setAttribute('aria-pressed', on); });
+}
+function stopNews() {
+  speakingNews = false;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  markSpeaking(-1); $('#news-listen-label').textContent = t('listenAll');
+}
+function readNews(idx) {
+  if (!('speechSynthesis' in window)) return;
+  if (speakingNews) { stopNews(); if (idx.length > 1) return; }
+  const list = news?.[S.lang] || [];
+  const items = idx.length > 1 ? [{text:t('newsIntro'), i:-1}] : [];
+  idx.forEach(i => { const n = list[i]; if (n) items.push({text:`${n.title}. ${n.source ? t('newsFrom')(n.source) : ''}`, i}); });
+  if (!items.length) return;
+  speechSynthesis.cancel(); speakingNews = true; $('#news-listen-label').textContent = t('stopListen');
+  items.forEach((it, k) => {
+    const u = utter(it.text);
+    u.onstart = () => markSpeaking(it.i);
+    if (k === items.length - 1) u.onend = () => { if (speakingNews) stopNews(); };
+    speechSynthesis.speak(u);
+  });
+}
+
+/* ---------- History and the four-year cycle (US dollars) ---------- */
+const DAY = 86400000;
+const HALVINGS = ['2012-11-28', '2016-07-09', '2020-05-11', '2024-04-20'].map(d => Date.parse(d) / DAY);
+const NEXT_HALVING = Date.parse('2028-04-15') / DAY; // estimate: halvings follow block count, not the calendar
+let hist = null, histCoin = 'bitcoin', histSpan = 1461, histHover = null;
+const histCache = {};
+const today = () => Math.floor(Date.now() / DAY);
+const fmtDay = (d, o = {day:'numeric', month:'short', year:'numeric'}) => new Date(d * DAY).toLocaleDateString(locale(), {timeZone:'UTC', ...o});
+async function loadHistory() { try { hist = await getData('history.json'); } catch {} renderCycles(); }
+function seriesFor(coin) {
+  if (!hist?.[coin]?.length) return null;
+  const live = prices?.[coin]?.usd || 0, key = live;
+  if (histCache[coin]?.key === key) return histCache[coin];
+  const s = hist[coin].slice(), td = today();
+  if (live) { if (s[s.length - 1][0] >= td) s[s.length - 1] = [s[s.length - 1][0], live]; else s.push([td, live]); }
+  // 200-week (1,400-day) moving average
+  const ma = new Array(s.length).fill(null); let sum = 0, j = 0;
+  for (let i = 0; i < s.length; i++) {
+    sum += s[i][1];
+    while (s[i][0] - s[j][0] >= 1400) { sum -= s[j][1]; j++; }
+    if (s[i][0] - s[0][0] >= 1400) ma[i] = sum / (i - j + 1);
+  }
+  return histCache[coin] = {key, s, ma};
+}
+function cycles() {
+  const d = seriesFor('bitcoin'); if (!d) return [];
+  const s = d.s, out = [];
+  HALVINGS.forEach((h, k) => {
+    const end = HALVINGS[k + 1] ?? Infinity;
+    const seg = s.filter(r => r[0] >= h && r[0] < end); if (!seg.length) return;
+    // The cycle top is the highest price in the 2½ years after the halving (every past top came 12-18 months in).
+    let pk = 0; seg.forEach((r, i) => { if (r[0] - h <= 913 && r[1] > seg[pk][1]) pk = i; });
+    let lo = pk; for (let i = pk; i < seg.length; i++) if (seg[i][1] < seg[lo][1]) lo = i;
+    out.push({year:new Date(h * DAY).getUTCFullYear(), h, hp:seg[0][1], peak:seg[pk], low:seg[lo], seg, current:end === Infinity});
+  });
+  return out;
+}
+const range = arr => { const a = Math.min(...arr), b = Math.max(...arr); return a === b ? `${a}` : `${a}–${b}`; };
+function renderCycles() {
+  const cyc = cycles(), d = seriesFor('bitcoin');
+  renderTimeline();
+  if (!d || !cyc.length) return;
+  const cur = cyc[cyc.length - 1], past = cyc.filter(c => !c.current), now = d.s[d.s.length - 1];
+  const lastH = HALVINGS[HALVINGS.length - 1], dayNo = today() - lastH, maNow = d.ma[d.ma.length - 1];
+  const fromPeak = (now[1] / cur.peak[1] - 1) * 100, vsMa = (now[1] / maNow - 1) * 100;
+  const tile = (k, v, s, cls = '') => `<div class="tile"><span class="k">${k}</span><span class="v ${cls}">${v}</span><span class="s">${s}</span></div>`;
+  $('#cycle-tiles').innerHTML =
+    tile(t('tSince'), dayNo.toLocaleString(locale()), t('tSinceS')(fmtDay(lastH))) +
+    tile(t('tNext'), t('tNextV'), t('tNextS')(Math.max(0, Math.round(NEXT_HALVING - today())).toLocaleString(locale()))) +
+    tile(t('tPeak'), money(cur.peak[1], 'usd'), t('tPeakS')(fmtDay(cur.peak[0]), cur.peak[0] - lastH)) +
+    tile(t('tFrom'), `<span style="color:${fromPeak < 0 ? 'var(--down)' : 'var(--up)'}">${pct(fromPeak)}</span>`, money(now[1], 'usd')) +
+    (maNow ? tile(t('tMa'), money(maNow, 'usd'), t('tMaS')(`${Math.abs(vsMa).toFixed(0)}% ${vsMa >= 0 ? t('wAbove') : t('wBelow')}`)) : '');
+  $('#cycle-sum').textContent = t('cycleSum')(
+    range(past.map(c => c.peak[0] - c.h)),
+    range(past.map(c => Math.round((1 - c.low[1] / c.peak[1]) * 100))),
+    range(past.map(c => c.low[0] - c.peak[0])),
+    dayNo, cur.peak[0] - lastH);
+  // table
+  const th = ['thCycle', 'thHalv', 'thPeak', 'thDays', 'thRise', 'thLow', 'thFall', 'thLowDays'].map(k => `<th>${t(k)}</th>`).join('');
+  const rows = cyc.map(c => `<tr class="${c.current ? 'now' : ''}"><td>${c.year}${c.current ? ` (${t('soFar')})` : ''}</td><td>${money(c.hp, 'usd')}</td>
+    <td>${money(c.peak[1], 'usd')} · ${fmtDay(c.peak[0], {month:'short', year:'numeric'})}</td><td>${c.peak[0] - c.h}</td>
+    <td>${(c.peak[1] / c.hp).toFixed(1)}×</td><td>${money(c.low[1], 'usd')}</td>
+    <td style="color:var(--down)">${Math.round((c.low[1] / c.peak[1] - 1) * 100)}%</td><td>${c.low[0] - c.peak[0]}</td></tr>`).join('');
+  $('#cycle-table').innerHTML = `<thead><tr>${th}</tr></thead><tbody>${rows}</tbody>`;
+  renderYears(); drawHist(); drawOverlay();
+}
+function renderYears() {
+  const d = seriesFor(histCoin); if (!d) return;
+  $('#years-coin').textContent = t(histCoin);
+  const by = {};
+  d.s.forEach(r => { const y = new Date(r[0] * DAY).getUTCFullYear(); (by[y] = by[y] || []).push(r); });
+  const thisYear = new Date().getUTCFullYear();
+  $('#years').innerHTML = Object.keys(by).map(y => {
+    const rows = by[y], first = rows[0], last = rows[rows.length - 1];
+    const p = (last[1] / first[1] - 1) * 100;
+    const startMonth = new Date(first[0] * DAY).getUTCMonth(), partial = startMonth > 0 || +y === thisYear;
+    const mix = p >= 0 ? `color-mix(in srgb, var(--up) ${Math.min(55, 8 + Math.sqrt(p) * 2.2)}%, var(--surface))` : `color-mix(in srgb, var(--down) ${Math.min(55, 8 + -p * 0.6)}%, var(--surface))`;
+    const shown = Math.abs(p) >= 1000 ? `${p > 0 ? '+' : ''}${Math.round(p).toLocaleString(locale())}%` : pct(p).replace(/\.\d+%/, '%');
+    return `<div class="yr" style="background:${mix}" ${partial ? `title="${t('partial')}"` : ''}><b>${y}${partial ? ' *' : ''}</b><span>${shown}</span></div>`;
+  }).reverse().join('');
+}
+function renderTimeline() {
+  $('#timeline').innerHTML = t('timeline').map(([d, txt, h]) => `<li class="${h ? 'halving' : ''}"><b>${d}</b><span>${txt}</span></li>`).join('');
+}
+function canvasSetup(cv) {
+  const box = cv.parentElement, dpr = window.devicePixelRatio || 1, W = box.clientWidth, H = box.clientHeight;
+  cv.width = W * dpr; cv.height = H * dpr; const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+  return {g, W, H};
+}
+function logTicks(lo, hi) {
+  const out = [];
+  for (let e = Math.floor(Math.log10(lo)); e <= Math.ceil(Math.log10(hi)); e++)
+    for (const m of [1, 2, 5]) { const v = m * 10 ** e; if (v >= lo && v <= hi) out.push(v); }
+  return out.length > 7 ? out.filter(v => Math.log10(v) % 1 === 0) : out;
+}
+function drawHist() {
+  const d = seriesFor(histCoin), cv = $('#hist'); if (!d || !cv.parentElement.clientWidth) return;
+  const {g, W, H} = canvasSetup(cv);
+  const start = histSpan ? today() - histSpan : d.s[0][0];
+  let i0 = d.s.findIndex(r => r[0] >= start); if (i0 < 0) i0 = 0;
+  const step = Math.max(1, Math.floor((d.s.length - i0) / (W * 1.5)));
+  const pts = [], ma = [];
+  for (let i = i0; i < d.s.length; i += step) { pts.push(d.s[i]); ma.push(d.ma[i]); }
+  if (pts[pts.length - 1] !== d.s[d.s.length - 1]) { pts.push(d.s[d.s.length - 1]); ma.push(d.ma[d.ma.length - 1]); }
+  const vals = pts.map(p => p[1]).concat(ma.filter(Boolean));
+  const lo = Math.min(...vals) * 0.85, hi = Math.max(...vals) * 1.15;
+  const L = 6, R = 6, Tp = 16, B = 22, iw = W - L - R, ih = H - Tp - B;
+  const x0 = pts[0][0], x1 = pts[pts.length - 1][0];
+  const X = day => L + (day - x0) / (x1 - x0 || 1) * iw, Y = v => Tp + (1 - (Math.log10(v) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo))) * ih;
+  const col = cssVar(histCoin === 'bitcoin' ? '--btc' : '--eth'), muted = cssVar('--muted'), line = cssVar('--line'), warn = cssVar('--warn'), ink = cssVar('--ink');
+  g.font = `11px ${cssVar('--f-num')}`; g.lineWidth = 1;
+  logTicks(lo, hi).forEach(v => { const y = Y(v); g.strokeStyle = line; g.beginPath(); g.moveTo(L, y); g.lineTo(W - R, y); g.stroke(); g.fillStyle = muted; g.textAlign = 'left'; g.fillText(money(v, 'usd', true), L + 2, y - 4); });
+  // year labels
+  const y0 = new Date(x0 * DAY).getUTCFullYear() + 1, y1 = new Date(x1 * DAY).getUTCFullYear(), every = Math.ceil((y1 - y0 + 1) / 6);
+  g.textAlign = 'center'; g.fillStyle = muted;
+  for (let y = y0; y <= y1; y++) if ((y - y0) % every === 0) { const dx = X(Date.UTC(y, 0, 1) / DAY); g.fillText(y, dx, H - 6); g.strokeStyle = line; g.beginPath(); g.moveTo(dx, Tp + ih); g.lineTo(dx, Tp + ih + 4); g.stroke(); }
+  // halvings
+  HALVINGS.concat(NEXT_HALVING).forEach((h, k) => {
+    if (h < x0 || h > x1) return; const x = X(h);
+    g.strokeStyle = warn; g.setLineDash(k === HALVINGS.length ? [2, 4] : [4, 4]); g.beginPath(); g.moveTo(x, Tp); g.lineTo(x, Tp + ih); g.stroke(); g.setLineDash([]);
+    g.fillStyle = warn; g.textAlign = 'center'; g.fillText('H', x, 11);
+  });
+  // 200-week average
+  g.strokeStyle = muted; g.lineWidth = 1.5; g.setLineDash([5, 4]); g.beginPath(); let started = false;
+  pts.forEach((p, i) => { if (!ma[i]) return; started ? g.lineTo(X(p[0]), Y(ma[i])) : g.moveTo(X(p[0]), Y(ma[i])); started = true; });
+  g.stroke(); g.setLineDash([]);
+  // price
+  g.strokeStyle = col; g.lineWidth = 2; g.lineJoin = 'round'; g.beginPath();
+  pts.forEach((p, i) => i ? g.lineTo(X(p[0]), Y(p[1])) : g.moveTo(X(p[0]), Y(p[1]))); g.stroke();
+  const last = pts[pts.length - 1]; g.beginPath(); g.arc(X(last[0]), Y(last[1]), 4, 0, 7); g.fillStyle = col; g.fill();
+  const ro = $('#hist-readout');
+  if (histHover != null) {
+    const day = x0 + histHover * (x1 - x0); let best = pts[0];
+    for (const p of pts) if (Math.abs(p[0] - day) < Math.abs(best[0] - day)) best = p;
+    const x = X(best[0]); g.strokeStyle = muted; g.lineWidth = 1; g.beginPath(); g.moveTo(x, Tp); g.lineTo(x, Tp + ih); g.stroke();
+    g.beginPath(); g.arc(x, Y(best[1]), 5, 0, 7); g.fillStyle = ink; g.fill();
+    ro.innerHTML = t('histAt')(money(best[1], 'usd'), fmtDay(best[0]));
+  } else ro.innerHTML = t('histAt')(money(last[1], 'usd'), fmtDay(last[0]));
+}
+function drawOverlay() {
+  const cyc = cycles(), cv = $('#overlay'); if (!cyc.length || !cv.parentElement.clientWidth) return;
+  const {g, W, H} = canvasSetup(cv);
+  const colors = [cssVar('--muted'), cssVar('--eth'), cssVar('--up'), cssVar('--btc')];
+  const maxX = Math.max(1460, ...cyc.map(c => c.seg[c.seg.length - 1][0] - c.h));
+  const ratios = cyc.flatMap(c => c.seg.filter(r => r[0] - c.h <= maxX).map(r => r[1] / c.hp));
+  const lo = Math.min(0.5, ...ratios) * 0.9, hi = Math.max(...ratios) * 1.1;
+  const L = 6, R = 6, Tp = 10, B = 22, iw = W - L - R, ih = H - Tp - B;
+  const X = dd => L + dd / maxX * iw, Y = v => Tp + (1 - (Math.log10(v) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo))) * ih;
+  const muted = cssVar('--muted'), line = cssVar('--line');
+  g.font = `11px ${cssVar('--f-num')}`; g.lineWidth = 1;
+  logTicks(lo, hi).forEach(v => { const y = Y(v); g.strokeStyle = line; g.beginPath(); g.moveTo(L, y); g.lineTo(W - R, y); g.stroke(); g.fillStyle = muted; g.textAlign = 'left'; g.fillText(`${v}×`, L + 2, y - 4); });
+  g.textAlign = 'center';
+  for (let yr = 0; yr <= 4; yr++) { const dd = yr * 365; if (dd > maxX) break; g.fillStyle = muted; g.fillText(S.lang === 'ko' ? `${yr}년` : `${yr}y`, Math.min(W - R - 10, Math.max(L + 10, X(dd))), H - 6); }
+  cyc.forEach((c, k) => {
+    const col = colors[(k + colors.length - cyc.length) % colors.length] || colors[k % 4];
+    g.strokeStyle = col; g.lineWidth = c.current ? 2.6 : 1.6; g.beginPath();
+    c.seg.forEach((r, i) => { if (i % 3 && i !== c.seg.length - 1) return; const xx = X(r[0] - c.h), yy = Y(r[1] / c.hp); i ? g.lineTo(xx, yy) : g.moveTo(xx, yy); });
+    g.stroke();
+    const pk = c.peak; g.beginPath(); g.arc(X(pk[0] - c.h), Y(pk[1] / c.hp), 3.5, 0, 7); g.fillStyle = col; g.fill();
+    if (c.current) { const e = c.seg[c.seg.length - 1]; g.beginPath(); g.arc(X(e[0] - c.h), Y(e[1] / c.hp), 5, 0, 7); g.fillStyle = col; g.fill(); }
+  });
+  $('#overlay-legend').innerHTML = cyc.map((c, k) => `<span><i class="sw" style="background:${colors[(k + colors.length - cyc.length) % colors.length]}"></i>${t('overlayLeg')(c.year)}${c.current ? ` (${t('soFar')})` : ''}</span>`).join('');
+}
+
+/* ---------- Alarm: sound, vibration, voice, notification ---------- */
+let actx = null, sirenTimer = null, buzzTimer = null, sayTimer = null, osc = null, gain = null;
+function unlockAudio() {
+  try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === 'suspended') actx.resume(); } catch {}
+}
+function startSiren() {
+  if (!actx) return;
+  stopSiren();
+  osc = actx.createOscillator(); gain = actx.createGain();
+  osc.type = 'square'; gain.gain.value = 0.18; osc.connect(gain).connect(actx.destination); osc.start();
+  let hi = true; osc.frequency.value = 880;
+  sirenTimer = setInterval(() => { hi = !hi; osc.frequency.setValueAtTime(hi ? 880 : 660, actx.currentTime); }, 380);
+}
+function stopSiren() { clearInterval(sirenTimer); try { osc && osc.stop(); } catch {} osc = null; }
+function utter(text) {
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = S.lang === 'ko' ? 'ko-KR' : 'en-GB';
+  const v = speechSynthesis.getVoices().find(v => v.lang.replace('_', '-').toLowerCase().startsWith(S.lang === 'ko' ? 'ko' : 'en-gb')) ||
+            speechSynthesis.getVoices().find(v => v.lang.toLowerCase().startsWith(S.lang));
+  if (v) u.voice = v;
+  u.rate = 0.95;
+  return u;
+}
+function speak(text) {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel(); speakingNews = false; markSpeaking(-1);
+  const u = utter(text);
+  // Pause the siren while the voice speaks so the words are clear.
+  u.onstart = () => { if (gain) gain.gain.value = 0.03; };
+  u.onend = () => { if (gain) gain.gain.value = 0.18; };
+  speechSynthesis.speak(u);
+}
+function ringAlarm(title, now, spoken) {
+  $('#alarm-title').textContent = title; $('#alarm-now').textContent = now || '';
+  $('#alarm').hidden = false;
+  startSiren();
+  if (navigator.vibrate) { navigator.vibrate([700, 250, 700, 250, 700]); buzzTimer = setInterval(() => navigator.vibrate([700, 250, 700, 250, 700]), 3000); }
+  let times = 0; const say = () => { if (times++ < 3) speak(spoken); };
+  setTimeout(say, 600); sayTimer = setInterval(say, 12000);
+  if ('Notification' in window && Notification.permission === 'granted' && navigator.serviceWorker) {
+    navigator.serviceWorker.ready.then(r => r.showNotification(title, {body: now, icon:'icon.svg', vibrate:[700, 250, 700], requireInteraction:true, tag:'coinwatch'})).catch(() => {});
+  }
+}
+function stopAlarm() {
+  $('#alarm').hidden = true; stopSiren(); clearInterval(buzzTimer); clearInterval(sayTimer);
+  if (navigator.vibrate) navigator.vibrate(0);
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+}
+function checkAlerts() {
+  if (!prices) return;
+  let fired = null, changed = false;
+  S.alerts.forEach(a => {
+    if (!a.on) return;
+    const p = prices[a.coin]?.[a.cur], ch = prices[a.coin]?.[`${a.cur}_24h_change`];
+    if (p == null) return;
+    let hit = false, reset = false;
+    if (a.type === 'below') { hit = p <= a.value; reset = p > a.value * 1.01; }
+    if (a.type === 'above') { hit = p >= a.value; reset = p < a.value * 0.99; }
+    if (a.type === 'drop') { hit = ch <= -a.value; reset = ch > -a.value + 1; }
+    if (a.armed && hit) { a.armed = false; changed = true; fired = fired || {a, p}; }
+    else if (!a.armed && reset) { a.armed = true; changed = true; }
+  });
+  if (changed) save();
+  if (fired) {
+    const {a, p} = fired, c = coinName(a.coin), nowTxt = t('nowAt')(money(p, a.cur));
+    const title = a.type === 'drop' ? t('fireDrop')(c, a.value) : t(a.type === 'below' ? 'fireBelow' : 'fireAbove')(c, money(a.value, a.cur));
+    const spoken = a.type === 'drop' ? t('sayDrop')(c, a.value, spokenMoney(p, a.cur)) : t(a.type === 'below' ? 'sayBelow' : 'sayAbove')(c, spokenMoney(a.value, a.cur), spokenMoney(p, a.cur));
+    ringAlarm(title, nowTxt, spoken);
+  }
+}
+function renderArm() {
+  const ready = actx && actx.state === 'running';
+  $('#arm').classList.toggle('ready', !!ready);
+  $('#arm-text').textContent = ready ? t('armOn') : t('armOff');
+  $('#arm-btn').textContent = ready ? t('armTest') : t('armBtn');
+  $('#awake-wrap').hidden = !ready || !('wakeLock' in navigator);
+  $('#awake').checked = S.awake;
+}
+
+/* ---------- Keep screen on ---------- */
+let lock = null;
+async function setAwake(on) {
+  S.awake = on; save();
+  try { if (on && 'wakeLock' in navigator) lock = await navigator.wakeLock.request('screen'); else if (lock) { await lock.release(); lock = null; } } catch {}
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') { if (S.awake) setAwake(true); refreshPrices(); }
+});
+
+/* ---------- Wiring ---------- */
+$$('[data-lang]').forEach(b => b.onclick = () => { S.lang = b.dataset.lang; save(); applyLang(); drawChart(); });
+$$('[data-cur]').forEach(b => b.onclick = () => {
+  S.cur = b.dataset.cur; save(); applyLang(); refreshMarkets(); loadChart();
+  const p = prices?.[$('#a-coin').value]?.[S.cur]; if (p && $('#a-type').value !== 'drop') $('#a-value').value = Math.round(p * 0.95);
+});
+$('#arm-btn').onclick = async () => {
+  const wasReady = actx && actx.state === 'running';
+  unlockAudio();
+  if ('speechSynthesis' in window) speechSynthesis.getVoices();
+  if ('Notification' in window && Notification.permission === 'default') { try { await Notification.requestPermission(); } catch {} }
+  if (wasReady) ringAlarm(t('testTitle'), '', t('sayTest'));
+  else { toast(t('soundOn')); setTimeout(renderArm, 150); }
+};
+$('#test-btn').onclick = () => { unlockAudio(); setTimeout(renderArm, 150); ringAlarm(t('testTitle'), '', t('sayTest')); };
+$('#alarm-stop').onclick = stopAlarm;
+$('#awake').onchange = e => setAwake(e.target.checked);
+document.addEventListener('pointerdown', () => { if (actx && actx.state === 'suspended') actx.resume(); }, {passive:true});
+
+function prefillValue() {
+  const c = $('#a-coin').value, type = $('#a-type').value, p = prices?.[c]?.[S.cur];
+  if (type === 'drop') $('#a-value').value = 5;
+  else if (p) { const v = p * (type === 'below' ? 0.95 : 1.05); const mag = Math.pow(10, Math.max(0, Math.floor(Math.log10(v)) - 2)); $('#a-value').value = Math.round(v / mag) * mag; }
+}
+$('#a-coin').onchange = prefillValue; $('#a-type').onchange = prefillValue;
+$('#add-form').onsubmit = e => {
+  e.preventDefault();
+  const value = parseFloat($('#a-value').value); if (!(value > 0)) return;
+  S.alerts.push({id:Date.now(), coin:$('#a-coin').value, type:$('#a-type').value, value, cur:S.cur, on:true, armed:true});
+  save(); checkAlerts(); renderAlerts(); drawChart(); toast(t('added'));
+};
+
+COINS.forEach(c => ['amt', 'paid'].forEach(k => {
+  const el = $(`#h-${c}-${k}`); el.value = S.hold[c][k] || '';
+  el.oninput = () => { S.hold[c][k] = el.value; save(); renderHoldings(); };
+}));
+$('#conv-money').oninput = () => renderConverter('money');
+$('#conv-coins').oninput = () => renderConverter('coins');
+$('#conv-coin').onchange = () => renderConverter('money');
+$('#tip-next').onclick = () => { S.tip++; save(); renderTip(); };
+
+$$('#chart-coin button').forEach(b => b.onclick = () => { chartCoin = b.dataset.coin; hoverI = null; $$('#chart-coin button').forEach(x => x.setAttribute('aria-pressed', x === b)); loadChart(); });
+$$('#chart-range button').forEach(b => b.onclick = () => { chartDays = +b.dataset.days; hoverI = null; $$('#chart-range button').forEach(x => x.setAttribute('aria-pressed', x === b)); loadChart(); });
+$$('.coin').forEach(card => card.onclick = () => { const b = $(`#chart-coin button[data-coin="${card.dataset.coin}"]`); b.click(); $('#chart-panel').scrollIntoView({behavior:'smooth', block:'start'}); });
+const cv = $('#chart');
+cv.addEventListener('pointerdown', e => { cv.setPointerCapture(e.pointerId); chartPointer(e); });
+cv.addEventListener('pointermove', e => { if (e.pointerType === 'mouse' || e.buttons) chartPointer(e); });
+cv.addEventListener('pointerleave', () => { hoverI = null; drawChart(); });
+cv.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') { hoverI = null; drawChart(); } });
+let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { drawChart(); drawHist(); drawOverlay(); }, 120); });
+$('#news-listen').onclick = () => readNews((news?.[S.lang] || []).slice(0, 10).map((_, i) => i));
+$$('#hist-coin button').forEach(b => b.onclick = () => { histCoin = b.dataset.coin; histHover = null; $$('#hist-coin button').forEach(x => x.setAttribute('aria-pressed', x === b)); renderYears(); drawHist(); document.querySelector('.sw.line').style.background = `var(${histCoin === 'bitcoin' ? '--btc' : '--eth'})`; });
+$$('#hist-range button').forEach(b => b.onclick = () => { histSpan = +b.dataset.span; histHover = null; $$('#hist-range button').forEach(x => x.setAttribute('aria-pressed', x === b)); drawHist(); });
+const hv = $('#hist');
+const histPointer = e => { const r = hv.getBoundingClientRect(); histHover = Math.min(1, Math.max(0, (e.clientX - r.left - 6) / (r.width - 12))); drawHist(); };
+hv.addEventListener('pointerdown', e => { hv.setPointerCapture(e.pointerId); histPointer(e); });
+hv.addEventListener('pointermove', e => { if (e.pointerType === 'mouse' || e.buttons) histPointer(e); });
+hv.addEventListener('pointerleave', () => { histHover = null; drawHist(); });
+hv.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') { histHover = null; drawHist(); } });
+if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => { drawChart(); drawHist(); drawOverlay(); });
+
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+/* ---------- Start ---------- */
+applyLang();
+refreshPrices().then(() => { prefillValue(); refreshUpbit(); loadHistory(); });
+refreshMarkets(); refreshMood(); loadChart(); loadCloud(); loadNews();
+setInterval(loadNews, 30 * 60e3);
+setInterval(refreshPrices, 60e3);
+setInterval(refreshMarkets, 3 * 60e3);
+setInterval(refreshUpbit, 2 * 60e3);
+setInterval(refreshMood, 30 * 60e3);
+setInterval(renderStatus, 5e3);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "Coin Watch",
+  "short_name": "Coin Watch",
+  "description": "Bitcoin and Ethereum prices with alarms, in English and Korean.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0D1015",
+  "theme_color": "#0D1015",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

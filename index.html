@@ -1240,14 +1240,17 @@ function renderArm() {
   $('#awake').checked = S.awake;
 }
 // Phones only allow sound after a tap, so the first tap anywhere switches the alarm sound on.
-let askedNotify = false;
+// Ask for notification permission only from the alarm buttons: on Android the permission
+// pop-up can swallow an ordinary tap (for example on the language button).
+function askNotify() {
+  if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission().catch(() => {});
+}
 function enableSound() {
   const wasReady = !!actx && actx.state === 'running';
   unlockAudio();
   if ('speechSynthesis' in window) speechSynthesis.getVoices();
   if (actx && actx.state !== 'running') actx.resume().then(renderArm).catch(() => {});
   setTimeout(renderArm, 150);
-  if (!askedNotify && 'Notification' in window && Notification.permission === 'default') { askedNotify = true; Notification.requestPermission().catch(() => {}); }
   return wasReady;
 }
 
@@ -1267,8 +1270,8 @@ $$('[data-cur]').forEach(b => b.onclick = () => {
   S.cur = b.dataset.cur; save(); applyLang(); refreshMarkets(); loadChart();
   const p = prices?.[$('#a-coin').value]?.[S.cur]; if (p && $('#a-type').value !== 'drop') $('#a-value').value = Math.round(p * 0.95);
 });
-$('#arm-btn').onclick = () => { if (!enableSound()) toast(t('soundOn')); };
-$('#test-btn').onclick = () => { enableSound(); ringAlarm(t('testTitle'), '', t('sayTest')); };
+$('#arm-btn').onclick = () => { enableSound(); askNotify(); toast(t('soundOn')); };
+$('#test-btn').onclick = () => { enableSound(); askNotify(); ringAlarm(t('testTitle'), '', t('sayTest')); };
 $('#alarm-stop').onclick = stopAlarm;
 $('#awake').onchange = e => setAwake(e.target.checked);
 document.addEventListener('pointerdown', () => { if (!actx || actx.state !== 'running') enableSound(); }, {passive:true});

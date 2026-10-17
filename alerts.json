@@ -3,9 +3,9 @@
   "language": "both",
   "repeatHours": 6,
   "alerts": [
-    { "coin": "bitcoin",  "type": "below",   "value": 58000, "currency": "gbp", "on": true },
-    { "coin": "ethereum", "type": "below",   "value": 1700,  "currency": "gbp", "on": true },
-    { "coin": "bitcoin",  "type": "drop24h", "value": 7,     "currency": "gbp", "on": true },
-    { "coin": "ethereum", "type": "drop24h", "value": 9,     "currency": "gbp", "on": true }
+    { "coin": "bitcoin",  "type": "below",   "value": 76000, "currency": "usd", "on": true },
+    { "coin": "ethereum", "type": "below",   "value": 2250,  "currency": "usd", "on": true },
+    { "coin": "bitcoin",  "type": "drop24h", "value": 7,     "currency": "usd", "on": true },
+    { "coin": "ethereum", "type": "drop24h", "value": 9,     "currency": "usd", "on": true }
   ]
 }

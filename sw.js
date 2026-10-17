@@ -1,6 +1,6 @@
 // Coin Watch service worker: lets the app install to the home screen,
 // open offline, and bring the app forward when an alert notification is tapped.
-const CACHE = 'coinwatch-v1';
+const CACHE = 'coinwatch-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', e => {

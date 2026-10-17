@@ -237,9 +237,9 @@ footer p{margin:0}
       <button id="lang-ko" data-lang="ko" aria-pressed="false">한국어</button>
     </div>
     <div class="seg" role="group" aria-label="Currency">
-      <button id="cur-gbp" data-cur="gbp" aria-pressed="true">£</button>
+      <button id="cur-usd" data-cur="usd" aria-pressed="true">$</button>
+      <button id="cur-gbp" data-cur="gbp" aria-pressed="false">£</button>
       <button id="cur-krw" data-cur="krw" aria-pressed="false">₩</button>
-      <button id="cur-usd" data-cur="usd" aria-pressed="false">$</button>
     </div>
   </header>
 
@@ -371,12 +371,12 @@ footer p{margin:0}
     <div class="grid two">
       <div class="hold" data-coin="bitcoin">
         <label class="field"><span><span data-t="bitcoin">Bitcoin</span> · <span data-t="amount">amount held</span></span><input id="h-bitcoin-amt" type="number" inputmode="decimal" min="0" step="any" placeholder="0.00"></label>
-        <label class="field"><span data-t="paid">Total paid (£)</span><input id="h-bitcoin-paid" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></label>
+        <label class="field"><span data-t="paid">Total paid ($)</span><input id="h-bitcoin-paid" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></label>
         <div class="hold-sum" style="grid-column:1/-1"><span data-f="val">–</span><span class="pl" data-f="pl"></span></div>
       </div>
       <div class="hold" data-coin="ethereum">
         <label class="field"><span><span data-t="ethereum">Ethereum</span> · <span data-t="amount">amount held</span></span><input id="h-ethereum-amt" type="number" inputmode="decimal" min="0" step="any" placeholder="0.00"></label>
-        <label class="field"><span data-t="paid">Total paid (£)</span><input id="h-ethereum-paid" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></label>
+        <label class="field"><span data-t="paid">Total paid ($)</span><input id="h-ethereum-paid" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></label>
         <div class="hold-sum" style="grid-column:1/-1"><span data-f="val">–</span><span class="pl" data-f="pl"></span></div>
       </div>
     </div>
@@ -462,7 +462,7 @@ const T = {
     del:'Delete', pause:'Pause', resume:'Turn on',
     cloudTitle:'Alerts when the phone is locked', cloudNote:'Checked in the cloud every 10 minutes and sent to the ntfy app, even when this app is closed. These are set up from the computer.',
     cloudNone:'None set up yet.', cloudLoadFail:'Couldn’t load the list right now.',
-    holdTitle:'My coins', holdPrivate:'Saved on this device only', amount:'amount held', paid:'Total paid (£)', totalValue:'Total value', worth:v=>`Worth ${v}`,
+    holdTitle:'My coins', holdPrivate:'Saved on this device only', amount:'amount held', paid:'Total paid ($)', totalValue:'Total value', worth:v=>`Worth ${v}`,
     moodTitle:'Market mood', moodNote:'The Fear and Greed Index (0 to 100) sums up how nervous or excited crypto traders are today.',
     fng:{'Extreme Fear':'Extreme fear','Fear':'Fear','Neutral':'Neutral','Greed':'Greed','Extreme Greed':'Extreme greed'},
     premTitle:'Korea premium', premNote:'How much more (or less) coins cost on Upbit, Korea’s biggest exchange, than the world average. Often called the “kimchi premium”.',
@@ -539,7 +539,7 @@ const T = {
     del:'삭제', pause:'일시 정지', resume:'켜기',
     cloudTitle:'휴대폰이 잠겨 있을 때 알림', cloudNote:'클라우드에서 10분마다 확인하고 ntfy 앱으로 보냅니다. 이 앱이 꺼져 있어도 작동합니다. 설정은 컴퓨터에서 합니다.',
     cloudNone:'아직 설정된 알림이 없습니다.', cloudLoadFail:'지금은 목록을 불러올 수 없습니다.',
-    holdTitle:'내 코인', holdPrivate:'이 기기에만 저장됩니다', amount:'보유 수량', paid:'총 매수 금액 (£)', totalValue:'총 평가액', worth:v=>`평가액 ${v}`,
+    holdTitle:'내 코인', holdPrivate:'이 기기에만 저장됩니다', amount:'보유 수량', paid:'총 매수 금액 ($)', totalValue:'총 평가액', worth:v=>`평가액 ${v}`,
     moodTitle:'시장 심리', moodNote:'공포·탐욕 지수(0~100)는 오늘 코인 투자자들이 얼마나 불안하거나 들떠 있는지 보여 줍니다.',
     fng:{'Extreme Fear':'극단적 공포','Fear':'공포','Neutral':'중립','Greed':'탐욕','Extreme Greed':'극단적 탐욕'},
     premTitle:'김치 프리미엄', premNote:'한국 최대 거래소인 업비트 가격이 세계 평균보다 얼마나 높은지(또는 낮은지) 보여 줍니다.',
@@ -607,11 +607,11 @@ const T = {
 /* ---------- Saved settings (this device only) ---------- */
 const KEY = 'coinwatch.v1';
 const defaults = () => ({
-  lang:'en', cur:'gbp', awake:false, tip:0,
+  lang:'en', cur:'usd', awake:false, tip:0,
   // Starter alarms near today's prices (Oct 2026), so the screen isn't empty. Edit or delete freely.
   alerts:[
-    {id:1, coin:'bitcoin', type:'below', value:58000, cur:'gbp', on:true, armed:true},
-    {id:2, coin:'ethereum', type:'below', value:1700, cur:'gbp', on:true, armed:true}
+    {id:1, coin:'bitcoin', type:'below', value:76000, cur:'usd', on:true, armed:true},
+    {id:2, coin:'ethereum', type:'below', value:2250, cur:'usd', on:true, armed:true}
   ],
   hold:{bitcoin:{amt:'',paid:''}, ethereum:{amt:'',paid:''}}
 });
@@ -630,7 +630,7 @@ function money(v, cur = S.cur, compact = false) {
   if (v == null || isNaN(v)) return '–';
   const abs = Math.abs(v);
   const digits = cur === 'krw' ? 0 : abs >= 1000 ? 0 : abs >= 1 ? 2 : 4;
-  return new Intl.NumberFormat(locale(), {style:'currency', currency:cur.toUpperCase(), maximumFractionDigits:digits, minimumFractionDigits:digits, notation: compact ? 'compact' : 'standard'}).format(v);
+  return new Intl.NumberFormat(locale(), {style:'currency', currency:cur.toUpperCase(), currencyDisplay:'narrowSymbol', maximumFractionDigits:digits, minimumFractionDigits:digits, notation: compact ? 'compact' : 'standard'}).format(v);
 }
 const pct = v => (v == null || isNaN(v)) ? '–' : `${v > 0 ? '+' : ''}${v.toFixed(2)}%`;
 const coinName = c => t(c);
@@ -787,7 +787,7 @@ function renderHoldings() {
   COINS.forEach(c => {
     const box = $(`.hold[data-coin="${c}"]`), h = S.hold[c];
     const amt = parseFloat(h.amt), paid = parseFloat(h.paid);
-    const pg = prices?.[c]?.gbp, pc = prices?.[c]?.[S.cur];
+    const pg = prices?.[c]?.usd, pc = prices?.[c]?.[S.cur];
     const val = box.querySelector('[data-f="val"]'), pl = box.querySelector('[data-f="pl"]');
     if (!(amt > 0) || !pg) { val.textContent = '–'; pl.textContent = ''; return; }
     any = true;
@@ -799,7 +799,7 @@ function renderHoldings() {
       pl.textContent = `${diffG >= 0 ? '+' : '−'}${money(Math.abs(diffG * rate))} (${pct(diffG / paid * 100)})`;
     } else { pl.textContent = ''; }
   });
-  const rateTot = prices ? prices.bitcoin[S.cur] / prices.bitcoin.gbp : 1;
+  const rateTot = prices ? prices.bitcoin[S.cur] / prices.bitcoin.usd : 1;
   $('#tot-val').textContent = any ? money(totG * rateTot) : '–';
   const tp = $('#tot-pl');
   if (any && paidG > 0) { const d = totG - paidG; tp.className = 'pl num ' + (d >= 0 ? 'up' : 'down'); tp.textContent = pct(d / paidG * 100); } else tp.textContent = '';

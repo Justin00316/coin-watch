@@ -19,6 +19,7 @@ FEEDS = {
     "ko": ("비트코인 OR 이더리움 OR 가상자산 when:2d", "ko", "KR", "KR:ko"),
 }
 PER_LANG = 15
+MAX_PER_SITE = 3
 # Established outlets only. Crypto news is full of paid adverts for risky tokens dressed up as articles,
 # so headlines from other sites only fill in if the trusted list runs short, and never if they look promotional.
 TRUSTED = {
@@ -69,10 +70,22 @@ def items(lang):
             when = None
         out.append({"title": title, "source": source, "link": (it.findtext("link") or "").strip(), "time": when})
     out = [x for x in out if not PROMO.search(x["title"])]
+    out.sort(key=lambda x: x["time"] or "", reverse=True)
     trusted = lambda x: any(n in x["source"].lower() for n in TRUSTED[lang])  # noqa: E731
-    good = [x for x in out if trusted(x)]
+
+    # At most MAX_PER_SITE stories from any one site, so the list is a mix of outlets.
+    per_site = {}
+
+    def take(x):
+        n = per_site.get(x["source"], 0)
+        if n >= MAX_PER_SITE:
+            return False
+        per_site[x["source"]] = n + 1
+        return True
+
+    good = [x for x in out if trusted(x) and take(x)]
     if len(good) < 8:
-        good += [x for x in out if not trusted(x)][: 8 - len(good)]
+        good += [x for x in out if not trusted(x) and take(x)][: 8 - len(good)]
     good.sort(key=lambda x: x["time"] or "", reverse=True)
     return good[:PER_LANG]
 

@@ -173,6 +173,7 @@ button{cursor:pointer}
 .news-list a{color:var(--ink);text-decoration:none;font-weight:500;line-height:1.4}
 .news-list a:hover{text-decoration:underline}
 .news-meta{font-size:12px;color:var(--muted);margin-top:2px}
+.news-tip{margin:0;font-size:14px;background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .say{border:1px solid var(--line);background:var(--sunk);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:15px}
 .say[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 
@@ -294,6 +295,7 @@ footer p{margin:0}
       <button class="btn small" id="news-listen"><span aria-hidden="true">🔊</span> <span id="news-listen-label" data-t="listenAll">Listen to headlines</span></button>
     </div>
     <ul class="news-list" id="news-list"><li class="empty" data-t="newsLoading">Loading headlines…</li></ul>
+    <p class="news-tip" data-t="newsTip">🎧 To hear the whole story: tap a headline to open it, then in Chrome tap ⋮ (top right) and choose “Listen to this page”.</p>
     <p class="note" id="news-note" data-t="newsNote">Headlines from established news outlets, updated every hour. Tap a headline to read the full story on the publisher's site.</p>
   </section>
 
@@ -482,6 +484,7 @@ const T = {
     curWord:{gbp:'pounds',krw:'won',usd:'dollars'},
     newsTitle:'Latest news', listenAll:'Listen to headlines', stopListen:'Stop', newsLoading:'Loading headlines…', newsNone:'No headlines right now. They update every hour.',
     newsNote:'Headlines from established news outlets, updated every hour. Tap a headline to read the full story on the publisher’s site.',
+    newsTip:'🎧 To hear the whole story: tap a headline to open it, then in Chrome tap ⋮ (top right) and choose “Listen to this page”.',
     newsIntro:'Here are the latest crypto headlines.', newsFrom:s=>`From ${s}.`, listenOne:'Listen',
     cycleTitle:'History and the four-year cycle', usdNote:'In US dollars, the usual measure for cycles',
     cycleIntro:'Every four years or so, the number of new bitcoins created is cut in half (a “halving”). In every cycle so far, a big rise followed each halving, then a deep fall. Here is how the pattern looks.',
@@ -558,6 +561,7 @@ const T = {
     curWord:{gbp:'파운드',krw:'원',usd:'달러'},
     newsTitle:'최신 뉴스', listenAll:'헤드라인 듣기', stopListen:'멈추기', newsLoading:'뉴스 불러오는 중…', newsNone:'지금은 뉴스가 없습니다. 매시간 업데이트됩니다.',
     newsNote:'주요 언론사의 헤드라인을 매시간 업데이트합니다. 제목을 누르면 언론사 사이트에서 전체 기사를 볼 수 있습니다.',
+    newsTip:'🎧 기사 전체를 들으려면: 제목을 눌러 기사를 연 뒤, 크롬 오른쪽 위의 ⋮ 를 누르고 ‘이 페이지 듣기’를 선택하세요.',
     newsIntro:'최신 코인 뉴스 헤드라인입니다.', newsFrom:s=>`출처, ${s}.`, listenOne:'듣기',
     cycleTitle:'역사와 4년 주기', usdNote:'주기 분석의 일반적인 기준인 미국 달러 기준',
     cycleIntro:'약 4년마다 새로 만들어지는 비트코인의 양이 절반으로 줄어듭니다(‘반감기’). 지금까지는 매번 반감기 이후 큰 상승이 있었고, 그 뒤 큰 하락이 이어졌습니다. 그 패턴을 아래에서 볼 수 있습니다.',

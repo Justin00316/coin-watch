@@ -55,7 +55,8 @@ button{cursor:pointer}
 .brand{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
 .brand img{width:34px;height:34px;border-radius:9px}
 .brand h1{font-size:19px;font-weight:700;line-height:1.1}
-.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.brand>div{min-width:0}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
 .dot.live{background:var(--up);box-shadow:0 0 0 0 var(--up);animation:pulse 2s infinite}
 .dot.bad{background:var(--down)}
@@ -76,8 +77,9 @@ button{cursor:pointer}
 .arm{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--ink);color:var(--bg);border-radius:var(--r);padding:14px 16px}
 .arm p{margin:0;flex:1 1 220px;min-width:0}
 .arm .btn{background:var(--bg);color:var(--ink)}
-.arm.ready{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
-.arm.ready .btn{background:var(--ink);color:var(--bg)}
+.armed{white-space:nowrap;padding:1px 8px;border-radius:999px;background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up);font-weight:600}
+.head-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.arm{padding-block:10px}
 .btn{border:0;border-radius:999px;padding:10px 18px;font-weight:600;background:var(--ink);color:var(--bg);white-space:nowrap}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .btn.small{padding:6px 12px;font-size:13px}
@@ -229,7 +231,7 @@ footer p{margin:0}
       <img src="icon.svg" alt="">
       <div>
         <h1 data-t="appName">Coin Watch</h1>
-        <div class="status"><span class="dot" id="dot"></span><span id="status" data-t="loading">Loading prices…</span></div>
+        <div class="status"><span class="dot" id="dot"></span><span id="status" data-t="loading">Loading prices…</span><span class="armed" id="armed" hidden>🔔 <span data-t="armedChip">Alarm on</span></span></div>
       </div>
     </div>
     <div class="seg" role="group" aria-label="Language">
@@ -244,8 +246,7 @@ footer p{margin:0}
   </header>
 
   <section class="arm" id="arm">
-    <p id="arm-text" data-t="armOff">Tap the button so the alarm can make a sound. Alerts on this screen ring, vibrate and speak while the app is open.</p>
-    <label class="switch" id="awake-wrap" hidden><input type="checkbox" id="awake"><span data-t="keepAwake">Keep screen on</span></label>
+    <p id="arm-text" data-t="armOff">Tap anywhere to turn on the alarm sound.</p>
     <button class="btn" id="arm-btn" data-t="armBtn">Turn on alarm</button>
   </section>
 
@@ -300,7 +301,10 @@ footer p{margin:0}
     <section class="panel" id="alerts-panel">
       <div class="panel-head">
         <h2 data-t="alertsTitle">Alarms on this screen</h2>
-        <button class="btn ghost small" id="test-btn" data-t="test">Test alarm</button>
+        <div class="head-tools">
+          <label class="switch" id="awake-wrap" hidden><input type="checkbox" id="awake"><span data-t="keepAwake">Keep screen on</span></label>
+          <button class="btn ghost small" id="test-btn" data-t="test">Test alarm</button>
+        </div>
       </div>
       <ul class="alert-list" id="alert-list"></ul>
       <form class="add-form" id="add-form">
@@ -450,8 +454,7 @@ footer p{margin:0}
 const T = {
   en: {
     appName:'Coin Watch', loading:'Loading prices…', live:'Live', ago:s=>`updated ${s}s ago`, offline:'Can’t reach the price service. Trying again…',
-    armOff:'Tap the button so the alarm can make a sound. Alerts on this screen ring, vibrate and speak while the app is open.',
-    armOn:'Alarm is ready. It will ring, vibrate and speak while this app is open.', armBtn:'Turn on alarm', armTest:'Test alarm', keepAwake:'Keep screen on',
+    armOff:'Tap anywhere to turn on the alarm sound.', armBtn:'Turn on alarm', armedChip:'Alarm on', keepAwake:'Keep screen on',
     bitcoin:'Bitcoin', ethereum:'Ethereum', range24:'24-hour range', athLine:p=>`${p}% below its all-time high`, athNew:'At an all-time high',
     d24:'24h', d7:'7d', chart:'Price chart', r1:'24H', r7:'7D', r30:'1M', r365:'1Y',
     chartNote:'Dashed lines are your alert levels. Touch and drag along the chart to read a price.',
@@ -527,8 +530,7 @@ const T = {
   },
   ko: {
     appName:'코인 워치', loading:'가격 불러오는 중…', live:'실시간', ago:s=>`${s}초 전 업데이트`, offline:'가격 정보를 불러올 수 없습니다. 다시 시도 중…',
-    armOff:'알람 소리가 나도록 버튼을 눌러 주세요. 앱이 화면에 켜져 있는 동안 소리, 진동, 음성으로 알려 드립니다.',
-    armOn:'알람 준비 완료. 앱이 켜져 있는 동안 소리, 진동, 음성으로 알려 드립니다.', armBtn:'알람 켜기', armTest:'알람 테스트', keepAwake:'화면 켜두기',
+    armOff:'화면을 아무 곳이나 누르면 알람 소리가 켜집니다.', armBtn:'알람 켜기', armedChip:'알람 켜짐', keepAwake:'화면 켜두기',
     bitcoin:'비트코인', ethereum:'이더리움', range24:'24시간 가격 범위', athLine:p=>`역대 최고가보다 ${p}% 낮음`, athNew:'역대 최고가',
     d24:'24시간', d7:'7일', chart:'가격 차트', r1:'24시간', r7:'7일', r30:'1개월', r365:'1년',
     chartNote:'점선은 설정한 알림 가격입니다. 차트를 누른 채 움직이면 가격을 볼 수 있습니다.',
@@ -630,7 +632,7 @@ function money(v, cur = S.cur, compact = false) {
   if (v == null || isNaN(v)) return '–';
   const abs = Math.abs(v);
   const digits = cur === 'krw' ? 0 : abs >= 1000 ? 0 : abs >= 1 ? 2 : 4;
-  return new Intl.NumberFormat(locale(), {style:'currency', currency:cur.toUpperCase(), currencyDisplay:'narrowSymbol', maximumFractionDigits:digits, minimumFractionDigits:digits, notation: compact ? 'compact' : 'standard'}).format(v);
+  return new Intl.NumberFormat(locale(), {style:'currency', currency:cur.toUpperCase(), currencyDisplay:'narrowSymbol', maximumFractionDigits:compact ? 2 : digits, minimumFractionDigits:compact ? 0 : digits, notation: compact ? 'compact' : 'standard'}).format(v);
 }
 const pct = v => (v == null || isNaN(v)) ? '–' : `${v > 0 ? '+' : ''}${v.toFixed(2)}%`;
 const coinName = c => t(c);
@@ -1227,12 +1229,22 @@ function checkAlerts() {
   }
 }
 function renderArm() {
-  const ready = actx && actx.state === 'running';
-  $('#arm').classList.toggle('ready', !!ready);
-  $('#arm-text').textContent = ready ? t('armOn') : t('armOff');
-  $('#arm-btn').textContent = ready ? t('armTest') : t('armBtn');
-  $('#awake-wrap').hidden = !ready || !('wakeLock' in navigator);
+  const ready = !!actx && actx.state === 'running';
+  $('#arm').hidden = ready;
+  $('#armed').hidden = !ready;
+  $('#awake-wrap').hidden = !('wakeLock' in navigator);
   $('#awake').checked = S.awake;
+}
+// Phones only allow sound after a tap, so the first tap anywhere switches the alarm sound on.
+let askedNotify = false;
+function enableSound() {
+  const wasReady = !!actx && actx.state === 'running';
+  unlockAudio();
+  if ('speechSynthesis' in window) speechSynthesis.getVoices();
+  if (actx && actx.state !== 'running') actx.resume().then(renderArm).catch(() => {});
+  setTimeout(renderArm, 150);
+  if (!askedNotify && 'Notification' in window && Notification.permission === 'default') { askedNotify = true; Notification.requestPermission().catch(() => {}); }
+  return wasReady;
 }
 
 /* ---------- Keep screen on ---------- */
@@ -1251,18 +1263,11 @@ $$('[data-cur]').forEach(b => b.onclick = () => {
   S.cur = b.dataset.cur; save(); applyLang(); refreshMarkets(); loadChart();
   const p = prices?.[$('#a-coin').value]?.[S.cur]; if (p && $('#a-type').value !== 'drop') $('#a-value').value = Math.round(p * 0.95);
 });
-$('#arm-btn').onclick = async () => {
-  const wasReady = actx && actx.state === 'running';
-  unlockAudio();
-  if ('speechSynthesis' in window) speechSynthesis.getVoices();
-  if ('Notification' in window && Notification.permission === 'default') { try { await Notification.requestPermission(); } catch {} }
-  if (wasReady) ringAlarm(t('testTitle'), '', t('sayTest'));
-  else { toast(t('soundOn')); setTimeout(renderArm, 150); }
-};
-$('#test-btn').onclick = () => { unlockAudio(); setTimeout(renderArm, 150); ringAlarm(t('testTitle'), '', t('sayTest')); };
+$('#arm-btn').onclick = () => { if (!enableSound()) toast(t('soundOn')); };
+$('#test-btn').onclick = () => { enableSound(); ringAlarm(t('testTitle'), '', t('sayTest')); };
 $('#alarm-stop').onclick = stopAlarm;
 $('#awake').onchange = e => setAwake(e.target.checked);
-document.addEventListener('pointerdown', () => { if (actx && actx.state === 'suspended') actx.resume(); }, {passive:true});
+document.addEventListener('pointerdown', () => { if (!actx || actx.state !== 'running') enableSound(); }, {passive:true});
 
 function prefillValue() {
   const c = $('#a-coin').value, type = $('#a-type').value, p = prices?.[c]?.[S.cur];

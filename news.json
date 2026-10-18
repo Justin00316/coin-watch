@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T02:43:08Z",
+ "updated": "2026-10-18T03:43:49Z",
  "en": [
   {
    "title": "How a Brooklyn crypto cop took down a global scam network",
@@ -68,6 +68,12 @@
    "time": "2026-10-17T02:30:00Z"
   },
   {
+   "title": "Bitcoin treasury stocks could lose their index privileges",
+   "source": "Yahoo Finance UK",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdkJ0aWF0d1NpNDIwYVJKNTJiWFU4UDdIREN4WnJIWlIzcTQ3RGVYRloySmEtZ2M4LU9uS0doemZPM3I3aDR4N19Qd19mR1I5UndjaFliSHVlQ25Fd2k2OGVGWTVkYmllZzFEVzlHc2M0dE5pTXlzRjROU1FCVW9Wa3N3bWhlYnJRQVhiag?oc=5",
+   "time": "2026-10-16T16:30:00Z"
+  },
+  {
    "title": "A rogue OpenAI agent robbed a crypto wallet to obtain funds to carry out a task",
    "source": "Fortune",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPenVUVDMyRmxZRlhiQlpNZnEzRUpFZVl2anlEQVZCaGU3N2hpUmtkak5oTUdYemRyNS1jUFFiQWJCbTZFaHFQNVFONk90QkJuZ3F2QWNFU3NkOFhTQVBWalVVZW03LWY2Wi03UlhrZUNQRGNKbHB2NGNCVjVSbndlUw?oc=5",
@@ -87,6 +93,30 @@
   }
  ],
  "ko": [
+  {
+   "title": "프랑스 하원, 스테이블코인 과세안 가결...상원 심의 남아",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1lTDZfcXpsV1BNYkF3bkZWZ0djNjJzM0piOHB1VnhVbkRHS1lJbnV2My1QXzItb2hrTWs3RDFJWjZxUllva0QwZWtERjJHc0Jj?oc=5",
+   "time": "2026-10-18T03:15:15Z"
+  },
+  {
+   "title": "경고등 켜진 AI, 기대 커진 비트코인 [이정훈의 코인 위클리뷰]",
+   "source": "이데일리",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaURZekZXU1k5TTFkOFg4M1ItelJWYWtCXy03V19sV29uZ2Z0TTl4c1ZDSVVWMTdQWktQVzZQSUNGazBNYk5feGtfQ2t6SUVTTVVLLVNRV09wS0Q1aVdBRlQteExzZGxvUnZPZnh4aUhPQlNIQnpsZ0ZIam8xYWtVTA?oc=5",
+   "time": "2026-10-18T03:05:45Z"
+  },
+  {
+   "title": "정부, 5대 코인거래소 소집…내년 과세 유예되나",
+   "source": "서울경제TV",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9UdktQczVzZHY5bEZWQWdnaG9lcFo4ZzduWmk4YzVOOUM4TmNLMHRPWmcwRmJTTWY1bnJ5aHNqdGxrRVJWcGo3RENXOHJ0ME9qVlBEM1JjeGhyZU9sdllUTWRsaW4?oc=5",
+   "time": "2026-10-18T03:00:05Z"
+  },
+  {
+   "title": "스트래티지, MSCI 지수 퇴출 위기…비트코인 매수 동력 꺾이나",
+   "source": "한국경제",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1USndwYWpYdDVYQUVuemNVaDBSWmktbW1ORmlRRXF2YXpDS2JGNUNOZ3dZLVBUQ1dqWkpDc0JWR1kyNm5ZNUVkZkZSOHI2dGRDcWpHLXh4RUdfZw?oc=5",
+   "time": "2026-10-18T02:41:00Z"
+  },
   {
    "title": "13년 잠자던 비트코인 416개 이동…평가액 321배로",
    "source": "블루밍비트",
@@ -118,12 +148,6 @@
    "time": "2026-10-17T14:32:19Z"
   },
   {
-   "title": "[분석] \"S&P 20% 조정 가정해도 비트코인 1만달러 가능성 낮아\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9SeXhKZTQ4ZXhqT2xHdWd0NzFjMXdWcFBPcVN2Y21ndVFkS2lXTnhKeUpEMkM1SlJhVmxSbVRtMlRhOFB0YTVJUG5sc2pZZEpF?oc=5",
-   "time": "2026-10-17T12:39:53Z"
-  },
-  {
    "title": "4대 거래소 비트코인 김프 평균 '1.42%'",
    "source": "디지털애셋",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9HMXI1cENNSUNhRU1XcU9fS2ZjRy1KN1l0LW9waW5pQkpsa1VmUEZ3b09TM29sVkxFQ0ZyQVpuS3doTnFYQWgtNjQ5a296bFJ5czZEMF9tZE45WWZyQ085TmJoNF9LVks0MzZGeG84QVZvQQ?oc=5",
@@ -142,22 +166,10 @@
    "time": "2026-10-17T05:48:00Z"
   },
   {
-   "title": "미국 이더리움 현물 ETF, 하루새 6970만달러 순유출",
-   "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9mUGx6YVpnX1d4bWRSY0pZd2dPbG1McDZlYktDWHVyZ2JGMlZ3OThGUmhUSXVmZDdZNDlaeGpYZXNYZy1LaEt2UkhRWXZIQl94c2NVSFl6UjZodXpxVVk2bmpqdzFMVnVzUHRVME5nYTE5dw?oc=5",
-   "time": "2026-10-17T03:50:00Z"
-  },
-  {
    "title": "\"AI 흥해도 망해도 비트코인엔 호재\"…전망 나온 이유",
    "source": "뉴시스",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE54c3lQaVdKNldHanNEV0oxMDlVdGx2ZVpDMXBVRTltTmdiZnJTZ29FYzlUMnBfZWJZSHFyM3Z4YlNFd1AtY01KQVRXMEx6X3otWHVKX0Vtb2RkR1ZmaU8tSNIBeEFVX3lxTE9MOXpOR3BRM2p0MjNVTjQwQnYyQVlzbUJaNFQxMTR4TzhGN3QzNy1Za2RkZk0yczBPRVppSFV4ZDduTF9Vb2xvZ0QtT1hjeWZYU005dnFjLVZ0cjF5a1dUbUV2cXlKZGV6ZHlFaWQwUEloZlRCZnZ0Mg?oc=5",
    "time": "2026-10-16T19:00:00Z"
-  },
-  {
-   "title": "금리향방에 울고웃고…비트코인 돌고돌아 8만2000달러 - 머니투데이",
-   "source": "머니투데이",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1LdllXZUswLXBKNWRSUl9ZVFpHT0U5UlFSemdtU3J2YVhSbGdhRXZXem1FR2JPR2ZXSDVKbU93bmpoWmJnTk82N2Z5cm9Lb25NbXFRLXl1ZThuSWJkazlJUEVRSkxaOFpt0gFuQVVfeXFMTjRNemJsQkR5Z0tXODNCVDk1T1Y5Q0VGY3B2OFQtUXhCekc2Z1dkQUhoaWVGODhwUXFVYjAxVkNlTlhONmYxREpZU1FmQkI0OVd6NTV5N3BiOWc4RW4xVWsxb2xBaEozVTdVS1RiVXc?oc=5",
-   "time": "2026-10-16T08:39:03Z"
   },
   {
    "title": "비트코인, 8만2천 달러 근접 반등에도 2주 연속 하락 전망",

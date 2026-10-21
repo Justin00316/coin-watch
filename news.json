@@ -1,12 +1,6 @@
 {
- "updated": "2026-10-21T19:45:04Z",
+ "updated": "2026-10-21T20:47:11Z",
  "en": [
-  {
-   "title": "Strategy Soars 7%, Galaxy Up 8% as Crypto Stocks Rally on “Clear, Practical Framework” for Stablecoin Rules",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPQTN6dzBteWI0UUpCSy1KVHF3MUhSanF3T25SR2JZUXhLMExXLW1IanlYOGUxNlY4aW9xV0dWaDlJWmR6VXdwZWR3aEZvVkJRZGJWS1lwOW13ZmVUR3ozaHFfeWljRHdSNmcwVmZJQnhpbmx2NUdTTV9FS1YtekowQ1ZVR0FhSDg2b0k4ZVRla3lsdTdO?oc=5",
-   "time": "2026-10-21T19:17:30Z"
-  },
   {
    "title": "Trump to tout crackdown on overseas crypto scams",
    "source": "Reuters",
@@ -18,12 +12,6 @@
    "source": "Yahoo Finance",
    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdVpIUmlHeDl3aG5RRXMxU1J0bHphdWlySUx6cXJ1QVNjdFlUbE1VbDF1R0M2WUUxTTVwX3NuY2FOMlJyNDlXREJBeWhmNlRCbi1OOThGMGJLQzB0X0JUbXBBSjUxU0dNTTRTTElva3NsUHk1NDNMQV8zYWsyMlZZcnZoakw4VTdqUTVTQmFxcmpod2I5RWR4aXBRWGNXcUE?oc=5",
    "time": "2026-10-21T18:40:00Z"
-  },
-  {
-   "title": "Ethereum’s Staking Yield Just Fell to 2.6%. Is Staking ETH Still Worth It?",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcXEyMlMzWi02YlNrcmxPcmZzYmM0VmVJMFZiNEVyMzZpQWYzSWpLbTlHZmlQT1psWWRzTXpLRGZBa05mOHh5TFZOTjR6cHVUNnhMQkVhV2t3RGFGdHY1M3BuY1dBbVpjVHg0c21CNFdnLU53eDJJdk5QMWt2RUlKRXljQ1V4RGRwbG11TlUtRW10ZzVvWDBvNkRIejBxdw?oc=5",
-   "time": "2026-10-21T18:00:14Z"
   },
   {
    "title": "What $500M+ In Bitcoin Hacks Teach Us About The Future Of Self-Custody",
@@ -44,10 +32,22 @@
    "time": "2026-10-21T17:30:28Z"
   },
   {
-   "title": "Current price of Ethereum for October 21, 2026",
-   "source": "Fortune",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9nZ2Z1TVk1bDV5cmRrS0hCOURvMm15bXR3aVc2R3E2TmNRaE95Y0RzbFZ6QXZqRTlWYXRZNWNyY1R4cHRkSWdTYldWajFuUVVNQXFRSFhYbU9EZmVXT1l1bVV2bTF3aU0x?oc=5",
-   "time": "2026-10-21T16:34:20Z"
+   "title": "What Is Strategy (MSTR)? The Bitcoin Treasury Company",
+   "source": "Decrypt",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVDZNNjhxbnlyeE5NYzl2Q1lKRktHZC1CWXFSMnJ2OWdWWnJic3A5Zm1vaF9jckxzUF9qVmlHWjE0U09jS3hqUjlCRXBETk5JUmlBb3AyckxzWl9mb2ZHbFhYQ1RzeWpjOUNaNGs1Zm5QX3ZibXBha3NfSUNQUF9kSkRfRzJocVRwMHpfbVdmX0U4dURncFhyYg?oc=5",
+   "time": "2026-10-21T17:28:22Z"
+  },
+  {
+   "title": "Grayscale Expands In-Kind Crypto Investments to 10 Funds and Trusts",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYXY2YVRpTVZRWlRxT0lzcGRaVnNyYmVsU1IweVJ1UkdwVWFaTkxJLWhBZVlsaVlJMlZwamxJanB0cmVadE9DczdDSEdPX0ZBUUE1TVRZQ1NET2loOUFZaDMtczdlSDZ2WXg1TjVMVlZZR18wTmZfbmRhY01xblZEUm5DZjNsdUxsVTFGdVlDV29GcXd5UmI1UFhiYU56N0dGX3R4QmU1Q25Zdw?oc=5",
+   "time": "2026-10-21T17:00:00Z"
+  },
+  {
+   "title": "Birdeye Launches Institutional Terminal as Bots Dominate Crypto",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUW82MjRtZzFPR1ZkY25mRjZfQkNUc2IwODR3VmFUMThNSjZNdExzM3pLakpiRmNvVzBQbVdJdldxc09kdzVPWDJVRzdwclNWZ2ZnTmZMcnpyTzZyREd3NURNWTcyemstNzJxdFFIeHUyV2Z4Z2l5X1lWTk9xdkdEZFBiRC1TOF80QV9hMkJuQnozd180UlZNM0RaSEZXY0M1TGVWNWJjT2FvN2xNN0E?oc=5",
+   "time": "2026-10-21T16:36:22Z"
   },
   {
    "title": "Current price of Bitcoin for October 21, 2026",
@@ -60,12 +60,6 @@
    "source": "CoinDesk",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZjBVNGNnUThHSHd2RjZlWkIzTUhybjhTUkpWSExBWlVEejY0ZUZ4ZEdCc1dkM0owMHR1U3FiNXRETWRhVTRFQmV2ejZnTXN4MVFVczZqMEIxeC1UcDU4c2ZLeWRFanZvMXAwczQteTg1dF85NWRQVEphdV81aXpDOVpURDdGYURwT0tYSVY5UTFaZExpa1pnY2ZkOTgxdFJpcXpWdG02M3lVVGxoQTB0aHBmeTA?oc=5",
    "time": "2026-10-21T16:23:44Z"
-  },
-  {
-   "title": "Musk’s SpaceX-Tesla Merger Would Create a Bitcoin Treasury Behemoth",
-   "source": "Decrypt",
-   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdmQyc0hjdHRTV0QyN3hOSS1jLTZfUlUwbWdlMmhIc3hfNnBXd1AwQjNnMUUtX1hwRzhxNDFjMGJURHBSeUp3TUZKSjBrbTlESHhFWEVvd0l1Rmg4NTg1aWdrZ3JOWmZJQTZjNVpjSVNHN3BXSmVLN3JuXzBYeURlSDVR?oc=5",
-   "time": "2026-10-21T16:16:05Z"
   },
   {
    "title": "Bitcoin Rallies Back as Tech Rebound Sparks Speculative Appetite",
@@ -90,9 +84,21 @@
    "source": "The Block",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcF9uR1hJQXBDQ2VGeHU2TXNWWW5hWG1UMGkwMUQzbmlmc0toclpKTmRFYXQta2pjeDRUZFRHR000Rl9TVWs4bGNuaGkybFhmNWlNcThWczFTY2YxZlVGYU1USWNmem1iaXlXdWJCRzFvZE1mempINXliZm01U3VBazNuOGh4UUFKUXplcVl3eVk1SS15RWpWWUtMMmlxOTQ4WWRyZUJjREpmOXY3cXc?oc=5",
    "time": "2026-10-21T15:12:00Z"
+  },
+  {
+   "title": "Kalshi to Allow Leveraged Futures Bets With Bitcoin-Backed Loans",
+   "source": "Yahoo Finance UK",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZHNaRzN4eUdrMWd6TVNVTHVwQVdsSUhKWkVYQi1fd2FPTzZ4YUN5TjFYTlROXzAzTlZBLU55XzlrSERvT0dMSm1wcDRTY2dnaVlUdHNSTENjaU5jbWZ3aE1xcVVTbWhLbU5QUXNXd1lJQ24wZVR2TGNNcW1QenJwZTFselZqRC1iZE53Uw?oc=5",
+   "time": "2026-10-21T14:26:12Z"
   }
  ],
  "ko": [
+  {
+   "title": "가상자산 반등에 파생상품 미결제약정 확대…비트코인 234억달러",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB4TFJQWWJCVzFUOU93MGpTRW45UlhMYnduNHNoenpfVjhWd0hIaVNOdkV2SjNQcFRkYXpSTXhyYnJiSW8xUF9xTDRNbEM2NkNN?oc=5",
+   "time": "2026-10-21T20:21:29Z"
+  },
   {
    "title": "캐나다 개인 간 가상자산 거래, 2024년 봄 월 65만건 근접 후 감소",
    "source": "블루밍비트",
@@ -104,12 +110,6 @@
    "source": "뉴시스",
    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5MNTJ4S3NGclpKNDVuNTU1Vl8wR2FUVkkzVldTd1RiSnppaEl2NTRyeWR3SUVwcVRHdlF2dDJ4Q2tyZGFmZm9ISzN3ckhvQ1VhX2N2cndXUFpTU2M4QllBNlNSVkRUektxZnpUdDdaOGxLajJBSjQ0QzEzM1NBZkHSAXhBVV95cUxNQjJlVmRqTHpDU0YwVzU4RlA1NmVOUTFsYWNNUG5sdEVOOG9oTFFCeFRvQk4zQmRtRkk5WU5yWVBQb1IzTzU2Y3F4WXU1Z3hOWG9rU0xpQ1V6czF2X1pubzZxVG1Ob3FjR1FHVEtheGl0RHNleTllNVA?oc=5",
    "time": "2026-10-21T15:35:00Z"
-  },
-  {
-   "title": "칼시, 비트고와 암호화폐 담보대출 연계…무기한선물 거래 지원",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB1NHJQZ0Z3aXJ3SzdLVTBhTTBVU1hONkE5eEV4UGpkRUdXZFQ5WXJ2YmR5aldZaFprakhoeW9zdnV0eGYwTDN1MkFRY2FlaU05?oc=5",
-   "time": "2026-10-21T15:05:11Z"
   },
   {
    "title": "Alpha Modus, 2억5,000만 달러 넘는 비트코인 보유 사실 공개",

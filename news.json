@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T00:58:05Z",
+ "updated": "2026-10-21T01:47:17Z",
  "en": [
   {
    "title": "On the Chain: Bitcoin rebounds towards US$83,000 as BlackRock drives strongest ETF inflow in a month",
@@ -12,6 +12,12 @@
    "source": "Yahoo Finance",
    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPLTczSXEtMkdMQ3Z2UFdtTkZHLU84MmpWZjVRNVpMM1FuUmxVUHFCejA3M0ViTW1WcXV6YXc3NzZmUDdLZThOY0c5VFpjNC10WjJxTkp4ck1ZVkctME4tZ1AzUHVGcEd1Y29pZ2l2eTB4WGNvOTJLazFPNmVVeTk2QnZTRVRzamlZN09MUkdZRFRWRTRzdVpCZTh5ZGs?oc=5",
    "time": "2026-10-20T22:33:38Z"
+  },
+  {
+   "title": "Sophon is shutting down: A cautionary tale for crypto investors",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZE94V1l0dGtjeG9ZdUtJZllmaFAzZGFqWVZjckUtSTF0OVdseXNKa1JseVR1UXc5dG56aFd2alllRTBfWjlrRTdCRWtNS2Q3ejRiNHlMOTZqNktZREdQdWx0Z1JZLVI1Z1JaSU1ZNDFJbHBhSEhrcFlyNEJheWRlbjd4NVRDd3BISWdB?oc=5",
+   "time": "2026-10-20T22:04:00Z"
   },
   {
    "title": "JPMorgan Puts a Number on Bitcoin for the First Time: 10% a Year, With a Big Caveat",
@@ -62,28 +68,22 @@
    "time": "2026-10-20T19:31:04Z"
   },
   {
+   "title": "Current price of Ethereum for October 20, 2026",
+   "source": "Fortune",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqQjZXRjctR1NwY1RjSlZsN3VhU2YzTk5MSzU0dlFObXdiWEYzM3BoRWdDYnFtbWRMSTNualZhUkZRWjZ2bXQ3eGVMZlBZamx5MmJzQjMyR2N4UnhtdDVkbjlRUUNMenR2?oc=5",
+   "time": "2026-10-20T19:04:13Z"
+  },
+  {
    "title": "Current price of Bitcoin for October 20, 2026",
    "source": "Fortune",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBYZGxkaDRrV0pqWHU5YVZmU2dvY1pEQ3gtOS1iWmdfS3BuaEdHN25HajJPUmxFR2Fmb2Z1UFNScHMzeUgxZXpSTDh4dHpwRTN1Q2dYNUVvSmNfTm13NXZwSml4blpZMW8?oc=5",
    "time": "2026-10-20T19:04:07Z"
   },
   {
-   "title": "Mesh and Visa Now Let You Spend Crypto at 175 Million Locations Without a Crypto Card. How Does It Work?",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOR3YyQzc2UVdnRklpaHY1SE01LV8yYjZpSXhfMjZTTG9jZGVSekRkNEx1c29hU29XeHllRWZQYzRlMFc1N280bEJjLUFWdml6MU9VWkRJMjFQUUFwRU8zTHVvV2ZCMlhnQ0NLNFV4TTcwZzhTelBTT2JmLVBzZERBWVllQWt6Z2g2RjFvSmFpbUdsZw?oc=5",
-   "time": "2026-10-20T18:30:23Z"
-  },
-  {
    "title": "JPMorgan issues first long-term bitcoin return forecast, projecting 10% annually",
    "source": "The Block",
    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbHlreXRlYXYzRXVGQlEwUzkzMExEbDNTVEVUUVg4TUx4SlVsMlRFUFFORl9xdFRISlh6T1VxSFBPUV9SbWNLMkd5RzNjTjFUcjdWd2RLR3ZaRDhHeEFWU2F6Rmk2Nl9zREtZWGNHbWZRbVdLMi1OdDY2M3JScGtLcHFiWjdlLUtoejl4YVBwZXhVdDQya0lKRmthS0R2N21ldGVB?oc=5",
    "time": "2026-10-20T18:14:00Z"
-  },
-  {
-   "title": "Current price of Ethereum for October 20, 2026",
-   "source": "Fortune",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqQjZXRjctR1NwY1RjSlZsN3VhU2YzTk5MSzU0dlFObXdiWEYzM3BoRWdDYnFtbWRMSTNualZhUkZRWjZ2bXQ3eGVMZlBZamx5MmJzQjMyR2N4UnhtdDVkbjlRUUNMenR2?oc=5",
-   "time": "2026-10-20T17:34:13Z"
   },
   {
    "title": "The Coinbase allegations expose Bitcoin's corporate governance gap",
@@ -94,10 +94,34 @@
  ],
  "ko": [
   {
+   "title": "올해 문 닫은 가상자산 프로젝트만 82개…디파이·인프라로 확산",
+   "source": "이데일리",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbjBXbzAyZF9vNmNudTl1N2dTbzZGRThIUWtpaGVpMVdWVUlxMktySTM1NVFkUWlBUkpORzhSQnZoOWgzTGhONG14Y0w2aFlNV0YwTzNJNnR4eGZ1VWpxMHFnQndMUWJYMG1fUjNwbU45b1ZCM2JBcGttVVBSeV9hTA?oc=5",
+   "time": "2026-10-21T01:35:47Z"
+  },
+  {
+   "title": "비트코인 8.3만달러 회복했지만…\"수익권 물량 54% 수준\"[코인브리핑]",
+   "source": "뉴스1",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBTLTBkcnQ0NmpnVVhOb3pleFVKdDN4SzVMYnpxQ0U1QVMwSTE5cVloZHNhTXp3TkVleHpuVDZwa1hLNjJhaVJpYnVab29NU0FuenR5MTVBWnhib2djMDFwOExheWRVUQ?oc=5",
+   "time": "2026-10-21T01:18:44Z"
+  },
+  {
+   "title": "비트마인, 이더리움 약 16만개 추가 스테이킹…누적 522만 ETH 돌파",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBNcF9iYXU4SUZtMkJhaWFSZXVuejdVUVZTOU1yVm1OZjU1Q09QcncyVVR6cmV5azljanNDV3BwUUtldzNKVXFsc0poMXRwTTlG?oc=5",
+   "time": "2026-10-21T01:14:19Z"
+  },
+  {
    "title": "케이뱅크, 블록체인 거래 분석 솔루션 도입…디지털 자산 리스크 선제 관리",
    "source": "아시아경제",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93U2hTaV9yVndzOW1jblFqNjlLeVlzWnRZdy11R1R0N3NFeXFWTGxxN2oyd3paQ1ZZTmFJVXQtS2JXclBHbUg3M3hBVDNRd3RINkV3M0daRzFXX3ZVMVZTUg?oc=5",
    "time": "2026-10-21T00:52:05Z"
+  },
+  {
+   "title": "조국 \"與, 가상자산 과세 유예·주52시간 예외 법안 제출…모두 반대\"",
+   "source": "뉴시스",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lZFRJTkdiSk03b1hlaFQyR3hadnN6ZUdZeTE0VlBqckhIa1ZCUWY3TU9JTDhwMGUyQWpsU1Y4eGZIb1ByWFM5RTYzQnZWaTgyRTdWMlhQYzlNc2pnbU9pTUJPcWdtYU9IY1kwWmx3SG1vc1dZcndzNdIBeEFVX3lxTE1lZFRJTkdiSk03b1hlaFQyR3hadnN6ZUdZeTE0VlBqckhIa1ZCUWY3TU9JTDhwMGUyQWpsU1Y4eGZIb1ByWFM5RTYzQnZWaTgyRTdWMlhQYzlNc2pnbU9pTUJPcWdtYU9IY1kwWmx3SG1vc1dZcndzNQ?oc=5",
+   "time": "2026-10-21T00:09:30Z"
   },
   {
    "title": "문페이·두나무, 글로벌 디지털자산 금융 인프라 협력…스테이블코인 결제 확대 추진",
@@ -114,7 +138,7 @@
   {
    "title": "조국 \"與 가상자산 과세·주 52시간 지켜야…정치공학적 표 계산\" - 머니투데이",
    "source": "머니투데이",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBVa1I3SGpXeUhyWm5VV2xvMnh6Si10dmdlek9fRWUtdkpwcnRwc3dNbU9BbnZlbzI4dGNDVVVvNXB1WnBlQm9qMnMxb0RuMnZkQzV3MS1ZRlNQOTBObzBOcGdfVFdnbFZOMnMxWTRKR1ZINF94TW9qU0w2RU43VEHSAX9BVV95cUxQVWtSN0hqV3lIclpuVVdsbzJ4ekotdHZnZXpPX0VlLXZKcHJ0cHN3TW1PQW52ZW8yOHRjQ1VVbzVwdVpwZUJvajJzMW9EbjJ2ZEM1dzEtWUZTUDkwTm8wTnBnX1RXZ2xWTjJzMVk0SkdWSDRfeE1valNMNkVON1RB?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zWXJITGhRVHNkLUNNbTFLZ3Rvc2FEQ3Exa2dhTHhjM1duR3VERVNkN05DZm1aQTkwV3VCWnJmSnVKUWhQenNIUFItcXhPZUs3R1FZN1dZRmY5Mk01bm9VRnV0MkpvTXF6dVRlVHI1TkY2ZUFMa29tZEpR0gF_QVVfeXFMUFVrUjdIald5SHJablVXbG8yeHpKLXR2Z2V6T19FZS12SnBydHBzd01tT0FudmVvMjh0Y0NVVW81cHVacGVCb2oyczFvRG4ydmRDNXcxLVlGU1A5ME5vME5wZ19UV2dsVk4yczFZNEpHVkg0X3hNb2pTTDZFTjdUQQ?oc=5",
    "time": "2026-10-21T00:00:01Z"
   },
   {
@@ -128,12 +152,6 @@
    "source": "뉴시스",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1WbDdlWDktckI3RWl0bHlTd09nVDNuWFJwT0pkRUsyZkpuUmlUODkyMm1uNHhLa2tTaEFZQm9ibFhhSnJGM3RsUnNfQTZRQVFxV3poaGVNWE1UQVZROWNoYtIBeEFVX3lxTE5XSUk4SmRvYWo1eVN6MEd3U18wR1ptdVhUaFRwaVRtWkZiZ3RyWXZoMWtoTHhhNXB3WUZkREM1TTdRTVlvMDBLUWU5ckNQQzU1TFlYN09UWWp5czExZnEyOWRuTWtCak9kN082Z0picWNJb2FFZkN4Zg?oc=5",
    "time": "2026-10-20T23:45:37Z"
-  },
-  {
-   "title": "美 SEC, 가상자산 규제안 의견 수렴 기한 종료…추가 의견 접수 결정",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE54anpfNDBWSTdxYkdkM0tvSTRFRUNOZVBiajNJY3FpS3pPVFZIdTRYYXhxM09ieHYzd181LU1LRi1mUVduTWdmLTFuNXZHVGRh?oc=5",
-   "time": "2026-10-20T22:49:47Z"
   },
   {
    "title": "비트코인 1억1055만 원대, JP모건 \"향후 10년 미국 주식보다 수익률 높을 것\"",
@@ -164,24 +182,6 @@
    "source": "머니투데이",
    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBIMWlsTU5HTlRQdUFEUVZUNTZoTV9mbWtIOVVmdHRhOFg1ZlNuUEtFRFlPb3ZoMGJoQ0RnX1p2am5BTC0yQ3Z6eDYxSXAxTHo5MHBWZnpneFhiT245SWhYTHZTcXlYNTBJdmlodnN1WdIBb0FVX3lxTFBIMWlsTU5HTlRQdUFEUVZUNTZoTV9mbWtIOVVmdHRhOFg1ZlNuUEtFRFlPb3ZoMGJoQ0RnX1p2am5BTC0yQ3Z6eDYxSXAxTHo5MHBWZnpneFhiT245SWhYTHZTcXlYNTBJdmlodnN1WQ?oc=5",
    "time": "2026-10-20T20:00:00Z"
-  },
-  {
-   "title": "US Tiger Securities, 비트코인 반등에 코인베이스 매수 의견 유지",
-   "source": "Investing.com 한국어",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1HamlFSXJ0UHZmVUpsamdiSzJ3ZjUzZ3hnSjlpMlpCZnlXbWt0bnY0YXc3TldjUFBsbWNCS0V4V2tUeDk2Z0hIMnNJNGp1VDFwNE1yRk9Qa1VNTHVOT1ZDR1RnOE1uaDhOdUp3MmlMQnRSWmpj?oc=5",
-   "time": "2026-10-20T19:23:00Z"
-  },
-  {
-   "title": "JP모간, 비트코인 연 10% 수익 전망…분산투자는 ‘아직’｜Global Money Club",
-   "source": "중앙일보",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBrSlZaUnhhLUN5Qmc4WklJVTR0VkFVOTdnRld3NFQ1eXhqSXVnWlExNzlHNU0zczJJOTFzcTZDT2xRZVJNOElFYWdaWTlPT0YyS2pOeUFSUVFjYlU?oc=5",
-   "time": "2026-10-20T16:40:15Z"
-  },
-  {
-   "title": "\"비트코인 사들인다더니\"…스트래티지, 우선주 매입에 9배 더 썼다",
-   "source": "뉴시스",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5oMFRoN091aG9BbEdwRjdTR1V5SF95NFZtQ2xmdlVJb090ZXF4OGVzYXU2YjUyeHhndFRNUE5yYjR0UmEzVFFXdFJFY1ZHX0JOMVBGUlYzTGxXSDFVM01uVNIBeEFVX3lxTE9JYVREYmhCREFjaE1hN3ItWWY4RGFmaGlZajIybmtsVV8zYjJlb29nVUtZXzBqQXFwdWtjZGQ5c3VqdF9MZHFJRlpVSS10Y0x2cUZJeVdLRWZyN2g1YUcyclFmNUpwampNRFRHcFFvY19MS0FVM181Ug?oc=5",
-   "time": "2026-10-20T15:37:00Z"
   }
  ]
 }

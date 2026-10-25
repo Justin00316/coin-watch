@@ -1,6 +1,12 @@
 {
- "updated": "2026-10-25T07:46:37Z",
+ "updated": "2026-10-25T08:45:10Z",
  "en": [
+  {
+   "title": "Bitcoin ‘Going To Zero’—Sudden Shock Flip Sparks Imminent Price Crash Fears",
+   "source": "Forbes",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR2RMVU11Wll4Q2RwVzVXT0lKNUJRSVFLUFVSTndSSWo0WnJNTVpMa2N3RXoxSFhUTzJIUThLMzh6WHNHSW9VazRRalFKWHpzVDkxVk84T2NmZktpUUg3LWVoOE9iMWtreFN3bTRDYUZMcGJJZlNLRkFBZDNDVjBJdnNTWDIwQmVjLTg5WEhRVHEydlBDaDBKTVpnNU1CSVpvWDdoYjB4UGI4MnNwN0d6ZFZZYjNVeUFnOHVTSUZrSDhuU1o5dDlYSA?oc=5",
+   "time": "2026-10-25T07:38:28Z"
+  },
   {
    "title": "Electrum Patches Flaw That Let Rogue Servers Hijack Bitcoin Fee Bumps",
    "source": "Startup Fortune",
@@ -68,12 +74,6 @@
    "time": "2026-10-24T15:20:32Z"
   },
   {
-   "title": "Bitcoin ‘Going To Zero’—Sudden Shock Flip Sparks Imminent Price Crash Fears",
-   "source": "Forbes",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR2RMVU11Wll4Q2RwVzVXT0lKNUJRSVFLUFVSTndSSWo0WnJNTVpMa2N3RXoxSFhUTzJIUThLMzh6WHNHSW9VazRRalFKWHpzVDkxVk84T2NmZktpUUg3LWVoOE9iMWtreFN3bTRDYUZMcGJJZlNLRkFBZDNDVjBJdnNTWDIwQmVjLTg5WEhRVHEydlBDaDBKTVpnNU1CSVpvWDdoYjB4UGI4MnNwN0d6ZFZZYjNVeUFnOHVTSUZrSDhuU1o5dDlYSA?oc=5",
-   "time": "2026-10-24T11:30:36Z"
-  },
-  {
    "title": "Argentina drops investigation into President Milei over crypto fraud",
    "source": "BBC",
    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1KRWI3SVAxUVBHczcxYTgxWTAyLWZSWUFzSFQ0MEhUXzNLYnIydlRGbkZTWXdsNndkeDllcFpnUWozME0yc3VXbWg3bHVvR3VmNG1tVG0zV09XTUtvYlE?oc=5",
@@ -94,6 +94,48 @@
  ],
  "ko": [
   {
+   "title": "가상자산 과세, 주요 투자자 청년층 민심 악화 우려해 연기",
+   "source": "동아일보",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5wV3lOd2lOUlFhazNkY1hvcVpzU3RIR2luMzNjSnVFMXNCMHNuQ2NybmdheUxYZklocTlrZ2thSzVsTTR1cTJtSDNIWWZGUzJadjVHbjFNTHBNMXBXa3pxOFBPenk0UWM2T1JZbklzZ0ROWllhaUHSAWZBVV95cUxOeXRRY2IxRDZKNERrUjFsemVTZDhnOU9mSVZSc3d4R3ZtOUVCemNZYnZMR1p3TzluQnZRVlB2NWZEQURuN3VVaVZzb2ZLUl9wUzVoMWpZMVJ2TG94Q2RxVDJWRkVZWmc?oc=5",
+   "time": "2026-10-25T08:23:00Z"
+  },
+  {
+   "title": "가상자산 공포·탐욕지수 54 '탐욕' 단계…전날 51서 상승",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5pMTc2Y21taVJ1VWU2TVV2aExsRUZMRmZzcS1jZG8tYWY1MUlISHhIMXFTbmhfWjNaSzYxNHhyV2VlQzVTVGVQeGs2c29CeFdF?oc=5",
+   "time": "2026-10-25T07:57:08Z"
+  },
+  {
+   "title": "\"비트코인 변동폭 13%→6% 축소…8만~8만6000달러 압축 지속\"",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBVRlN5UzR3YmpKOEhiWFNQZHlwNHNCYXk1cTV2VEZSZWQ2azYtZWNHbGxzQW9kemZtY0dUS0JIYlM2M09DRV9qZV9FNTVPaW5D?oc=5",
+   "time": "2026-10-25T07:55:26Z"
+  },
+  {
+   "title": "靑, 가상자산 과세 재유예 \"검토 중…결정 아냐\"",
+   "source": "연합뉴스TV",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5abW5ReWJObjNYMV9maEJZNGI4WVBBa2txQnNOMWlGTl9LT2w2UVprdk5VN25MQm1OTmhGNkgzTUtCSDhGRGYxYklPTnNqa2tYV1VnYV8zQmlmTzFXcEtudjJNQzZ5M28?oc=5",
+   "time": "2026-10-25T07:54:00Z"
+  },
+  {
+   "title": "가상자산 과세 네 번째 유예 가능성…靑 \"검토 중\"",
+   "source": "이데일리",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPLVA0dXVqU1V4cDZxVl94RnZyTnJCXzd6NUJURkhBRXoxVm96bkd2VVprSjNaREFuc0h1ckVGcHFCTG0wNGJ1RzFYc2FQT19tLTZ1blY4bVpHTENoWHZGQTVRcWVhWkIweDkzTW80b0FVdG1lSHNSdERaLU4zNDV2YQ?oc=5",
+   "time": "2026-10-25T07:50:54Z"
+  },
+  {
+   "title": "가상자산 과세 유예 '탄력'…비트코인 일단 잠잠, 반등 계기 될까",
+   "source": "뉴시스",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE52XzdYdDlsTjdtQ004dGgxVXZUcHNHRmtYVEF6b25JN0J6S3pQT3h1VDVXNWxXc29qTkIyaHBIRG1XWEVrWFVIMnJ3bzFaS3h1Q0toaVVKQjlpQjM2dU5ZVmxIYlhuRXRpMG8yQTZLMTdDWDRxWjdIWdIBeEFVX3lxTE52XzdYdDlsTjdtQ004dGgxVXZUcHNHRmtYVEF6b25JN0J6S3pQT3h1VDVXNWxXc29qTkIyaHBIRG1XWEVrWFVIMnJ3bzFaS3h1Q0toaVVKQjlpQjM2dU5ZVmxIYlhuRXRpMG8yQTZLMTdDWDRxWjdIWQ?oc=5",
+   "time": "2026-10-25T07:38:24Z"
+  },
+  {
+   "title": "靑, 가상자산 과세 유예 검토…당정협의 거쳐 조만간 결론",
+   "source": "연합인포맥스",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YNzVITC0tMWNoY1o0T2xTYmtva09Oa3J5V1dNNmFWX2pHTWhvZFJXQnloSUV2ZjhuaFpvR3ZqY21DZlV3cTYtSmNnV3hyLVA5enFNWnZYR1dfSzZpa2hDaHhKNE1TZU1JRDU4UmJlbVo?oc=5",
+   "time": "2026-10-25T07:32:27Z"
+  },
+  {
    "title": "靑, 가상자산 과세 ‘추가유예’ 방침...청년여론 의식한듯",
    "source": "조선일보",
    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPQmZwSmVyQXFnQi13WkxKNnN2SHkxZ05QRkxwa1JNMk9ON1YxejZsakFnMVRJTkhZVXRKYVpXWGVkUUFnUURFbnN4bXoyZlU4d0UxLU80WHhTTTFtWHFOUXdDWXZLUXd4UF9hWEZvTWVkeEZ4VVBBYTVVZU10OWNUaWZBeWE2TC02dmd6UFZJWVo?oc=5",
@@ -102,8 +144,8 @@
   {
    "title": "청와대, 내년 가상자산 과세 '유예' 가닥…\"검토중\"(종합)",
    "source": "뉴시스",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0tUmxTOTlFU2xwN1JPb2JQWkp6YU1YajdSYzAyNXdZRndDVGhENjFnclpZT3ZSeTdKb3daZHR0anltTjZuYlhTTWRqT21lZmd3cFBBaUl2cHBJZi0zOHM2MtIBeEFVX3lxTE5YNjVrREg5LWJudTU4dFEwMnNoQzZYSWVIVkFpbjlocUhObUJXYXAtNXhjQjVWLUxFOTR5RzFGVFFfdkNGQ1djZ3ZyNWJaR0E3WVA2bDdhY2V5b0ZoMDd5aTVsQXluZ040cjRFWkhWTXpsd3F5RGNMMg?oc=5",
-   "time": "2026-10-25T07:17:28Z"
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5YNjVrREg5LWJudTU4dFEwMnNoQzZYSWVIVkFpbjlocUhObUJXYXAtNXhjQjVWLUxFOTR5RzFGVFFfdkNGQ1djZ3ZyNWJaR0E3WVA2bDdhY2V5b0ZoMDd5aTVsQXluZ040cjRFWkhWTXpsd3F5RGNMMtIBeEFVX3lxTE5YNjVrREg5LWJudTU4dFEwMnNoQzZYSWVIVkFpbjlocUhObUJXYXAtNXhjQjVWLUxFOTR5RzFGVFFfdkNGQ1djZ3ZyNWJaR0E3WVA2bDdhY2V5b0ZoMDd5aTVsQXluZ040cjRFWkhWTXpsd3F5RGNMMg?oc=5",
+   "time": "2026-10-25T07:20:59Z"
   },
   {
    "title": "가상자산 과세 네 번째 유예 가능성…청와대, 시행 연기 가닥",
@@ -124,64 +166,22 @@
    "time": "2026-10-25T06:55:00Z"
   },
   {
+   "title": "청와대, 내년 가상자산 과세 ‘유예’ 가닥",
+   "source": "한겨레",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE40WDdEVEhLdEYwSGptYl9rZHNGVFBRejJ1SFBxanNsLW1TY2VRMGJYeEJrbzZKR3RaZExxVHQ5ZnZMNlZqMGhSYlRPam1CQWNyYm4zTHgwUHJIeEpMekNFOWRlaWtKd01Ba25v?oc=5",
+   "time": "2026-10-25T06:54:00Z"
+  },
+  {
    "title": "靑, 가상자산 과세 재유예 결론…청년층 여론, 준비 미비 고려",
    "source": "뉴스1",
    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9hdmpNNnRIbE1yWTNCNmhDRVhPbjN3YUxaRG9UVUw1dWNvdS0xaVZEU2Vhb2poeEtSSldSU3hDck9GRFZoSlRoU3NmS21Nb1VsVjBSSUZGWXpKQ2s?oc=5",
    "time": "2026-10-25T06:35:05Z"
   },
   {
-   "title": "청와대, 내년 가상자산 과세 ‘유예’…“미국 카프 참여 고려”",
-   "source": "한겨레",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE40WDdEVEhLdEYwSGptYl9rZHNGVFBRejJ1SFBxanNsLW1TY2VRMGJYeEJrbzZKR3RaZExxVHQ5ZnZMNlZqMGhSYlRPam1CQWNyYm4zTHgwUHJIeEpMekNFOWRlaWtKd01Ba25v?oc=5",
-   "time": "2026-10-25T06:31:00Z"
-  },
-  {
    "title": "청년 민심 부담됐나…청와대, 내년 가상자산 과세에 ‘급제동’",
    "source": "디지털데일리",
    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE44Q0o1b1NmR1h1Mi10eWV2Q05WR3BBaE5vdUNacmtlRE14OGhoVk1KM25OaDZSd3hmU2E2cmhXTnR0bGVqUWp3QUpPWGtrTC1mcXhaZjU1Sm1OU1FqRnZENWMzWEQ?oc=5",
    "time": "2026-10-25T06:30:14Z"
-  },
-  {
-   "title": "청와대 내년 가상자산 과세 '유예' 무게, 청년층 여론·과세 인프라 미비 고려",
-   "source": "비즈니스포스트",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0wa2lDZXZlTGdQeXdjTDAwd292T3RkQW9XOUthZlQtVXJTaHlQTFN5MTFHNVJQMldsZjdPdm52akJJNkNkVkplT19YRV9YZWhGR2l3SjNOS0FTdlRZd19KLV9EN0xTRUdkdWF0Z3Y4dmpwV3c?oc=5",
-   "time": "2026-10-25T06:19:34Z"
-  },
-  {
-   "title": "청와대, 가상자산 과세 재유예로 가나…‘4번째 유예’ 오락가락 조세 형평성 논란",
-   "source": "경향신문",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9HY2xwcUFRdEtWcC1IQXhFMHRhMHZRYkIwcVpfRXJWeHE0RjVJbzBWZFBnV1F6YWlKMnY5dDZfQlhDR1hBRGRoY21oTUpNYVprU0F0aTV0OF8yZ9IBX0FVX3lxTE41aDk5ZUgwWVBibk9YWkhLd2w2c0F4WnZyRHFZN1pFSlp3U2M5dG5UU2NheGxoTEVRV0xKcGVMZ0MwcXZiV0ZSY21VYlZ6ZWY3NjEyNzFFX0tjWHM5eUlV?oc=5",
-   "time": "2026-10-25T06:16:00Z"
-  },
-  {
-   "title": "'가상자산 과세' 재유예 무게…당정 협의 거쳐 조만간 결론",
-   "source": "news.sbs.co.kr",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBlUmthcEItSFo4U1l5VmN3YlFuVW92cFZpdUxoTGRwQlAzX0UzWU1kQTg5dzBWaWtvS3pZakRRMFpKXzBxU2hkWVhLNThTOFhHWTVuTzI5bklFMEhXenBOZGlFclNtdw?oc=5",
-   "time": "2026-10-25T06:14:00Z"
-  },
-  {
-   "title": "“내년엔 걷는다 하더니”…청와대, ‘가상자산 과세’ 유예에 무게",
-   "source": "매일경제 마켓",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBGbEE0b0l5TXdRNF9RTGdQNGxTLVEzYk1YOGVySGdtbmpFTkN1YVNhVHkzckxXcWpOMmN1QmRlX3piVjJEZ0pzNks5SEtsdlViZWc?oc=5",
-   "time": "2026-10-25T05:57:00Z"
-  },
-  {
-   "title": "청와대, 가상자산 과세 재유예 가닥…청년 여론 등 고려한 듯",
-   "source": "파이낸셜뉴스",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TSE1JQ3o2ZktrNV9FVzd3cjhob3ZZU2ZwNGd6SVJHcVFSOVJjQnZrMGhvUC16NTFVTTk3b2NVYVVsWng2T3NHNTR5clljZjlfX0lJdVVSWGlIUQ?oc=5",
-   "time": "2026-10-25T05:54:04Z"
-  },
-  {
-   "title": "가상자산 과세, 청와대 유예 방침에 '네 번째 연기' 수순",
-   "source": "한국경제",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE53Nlc5M01URzN4N3pyMzZDSjQyVkpWRWx4SE8wUzRRdWRXWE00dkRDSHNlbkVxVkZpWHFuUzd1NmJMbThva2R3VnNnc2hLUl9RY1V6NW5ESnBIQQ?oc=5",
-   "time": "2026-10-25T05:42:32Z"
-  },
-  {
-   "title": "세 번 미룬 가상자산 과세…靑, 또 ＇유예＇ 무게",
-   "source": "한국경제TV",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE03dExkcVhBUTlrSG1zYWpSUkdJaDN6eE1XeVQ1ckszX2JDZmZNa1NLZkdSbks2cjhFMHBrOUktSzVCNzdEM0h4elB0bk4zbEJFai1lSzVEb1RtM0h0QWJ2V3BtTk91SXAxc1RHZkgyaEdsaFdDRUw4?oc=5",
-   "time": "2026-10-25T05:31:00Z"
   }
  ]
 }

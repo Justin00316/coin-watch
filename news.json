@@ -1,12 +1,6 @@
 {
- "updated": "2026-10-27T04:46:28Z",
+ "updated": "2026-10-27T05:45:52Z",
  "en": [
-  {
-   "title": "Ripple gets a final go-ahead to launch its own U.S. national trust bank",
-   "source": "CoinDesk",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQzdvb1hSZTAyalZkWTY5bnNWUEVVYkRqdm1nRzRvdU10YUhnVzRBdmVnTThOald1d2tCcGpPMzhWSkdzeFpUX3FoSmVnemRLbXM3dE4xeXFyX2JaUXhRWU11X2JZa2FmR0NlM092X21uLVY4RXRtbWZPMDNqdzZfUXZua1BFTmdKelBBVERubFFuOEloVDMwdUtUOVhpRkFCc05SNElVUTlvZmdqR1lVdzBpSHc?oc=5",
-   "time": "2026-10-27T04:28:49Z"
-  },
   {
    "title": "StoneX lifts Strive price target 34% as new stock offering bolsters bitcoin strategy",
    "source": "The Block",
@@ -18,6 +12,12 @@
    "source": "Yahoo Finance",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcG9SLXZ2NkdVcFZXS1FRMDVkaWVTVHZKSThjeDVJd2dVS1JINWNEQmJCSXpMR21WUFRzdUNxUFBsZWpGWEp4WVhNcDZFTE1uNVUwQkZrSTVaY1k1bTV1WXVHTnZXOUxJaGJyOXYzTlEyaDlrTk01RUZUVHIwSHBUSzV5RnEyRFhJLXpMNF9kMml6WlF5Y3N3R3BFbWxMUQ?oc=5",
    "time": "2026-10-27T03:07:00Z"
+  },
+  {
+   "title": "JPMorgan Predicts Bitcoin Will Outpace Stocks, Bonds, and Gold Over the Next Decade. Is Bitcoin Now a Screaming Buy?",
+   "source": "The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMHNNLU85ZkhlSXdtUDA0cG5oZFF6MldzX21ZUWpCcEQ0QmtOQjN2Nk40dkVMNTVtaW5nV0FlSDIzVEJFVFV0MmUyYTVLal9aTU0xbXhsM3JYLTdKVC03VHUzaW5pTktheDNxS28xWEx1eWs5Si1GUGRSNDI3bGFsdEg1bFVlUHhEbkJiWXZLUVRoMHIwN3BWdg?oc=5",
+   "time": "2026-10-27T02:09:00Z"
   },
   {
    "title": "Crypto Payments Have a Hidden Cost Businesses Rarely Calculate",
@@ -32,16 +32,16 @@
    "time": "2026-10-27T01:50:00Z"
   },
   {
-   "title": "JPMorgan Predicts Bitcoin Will Outpace Stocks, Bonds, and Gold Over the Next Decade. Is Bitcoin Now a Screaming Buy?",
-   "source": "The Motley Fool",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMHNNLU85ZkhlSXdtUDA0cG5oZFF6MldzX21ZUWpCcEQ0QmtOQjN2Nk40dkVMNTVtaW5nV0FlSDIzVEJFVFV0MmUyYTVLal9aTU0xbXhsM3JYLTdKVC03VHUzaW5pTktheDNxS28xWEx1eWs5Si1GUGRSNDI3bGFsdEg1bFVlUHhEbkJiWXZLUVRoMHIwN3BWdg?oc=5",
-   "time": "2026-10-27T01:16:25Z"
-  },
-  {
    "title": "Bitcoin++ Announces Antarctica Edition For January 2028",
    "source": "Bitcoin Magazine",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE81VGJQYzh3TmItMmpINTFIWXA0dVNBcVFEeEcyWnlfbmhoRkVyUTREREVIQ2J1aXQ4ZndSMERDc0FyZU56TnJ0bGRxZDF3b1BxaWx2OHpCZzV4TThnYXJJVTVlZWR4ODVNOVFaTkxaaHg0Zw?oc=5",
    "time": "2026-10-27T00:01:49Z"
+  },
+  {
+   "title": "Crypto Market Today, Oct. 26: Bitcoin Slips Below $80,000 as Fed Decision Looms",
+   "source": "The Motley Fool",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONXVNSWNBZmJ1VXp0VUtVWHNHdVVpREtERzV3cmlCSzh2UjA2RUFmUjVqaW1zbGVlTW5nM3haSDFhYVl6WjU3SkdYLWNuYS04ek5UbWJfVzYwNExlWUNJcWJ3R045SUg4dm1taEY1RHNnUjZhYVhXaUExMThYR09MeElqeF9weFRiajlQSFlMUk93UFVqdlA1eTg1RmxmT2k0TElvckpHVVl0SWc3MTFfekJDTkVzVFJRRTUtU29xelZiTzlYSUdzWEpRSjI5Q0t4ZWZiaF93?oc=5",
+   "time": "2026-10-26T22:05:00Z"
   },
   {
    "title": "Bitcoin Dips Below $80,000 as AI-Related Market Selloff Deepens",
@@ -86,13 +86,31 @@
    "time": "2026-10-26T16:05:12Z"
   },
   {
-   "title": "South Korea weighs fourth delay on its crypto gains tax, pushing it to 2029",
-   "source": "CoinDesk",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPT3pucDRzMkdpa2gzdEt4d3dIdVhHOXQxVEJfMVlRRW1rV3RTNWJvbU5WemFQTDJlVG5GbDdRWjU0ZWdhOGh5Q3k3SUJYeldpb3M4RFlUZ19RSHgzSHU1N0l6WXhheHE2aE1KN1lKblgyUEJKQWVFbVhPOW1HT2dQQ216UkNXT3lzTkwtblJ2eWN2Y0FqVU43YmdwenAxYjFQNlN5aG9XVHVIQVBMbXRsOFRWSzNEcWZp?oc=5",
-   "time": "2026-10-26T14:51:07Z"
+   "title": "Tom Lee's Bitmine Keeps Buying Ethereum But Pivots to Record Share Buybacks",
+   "source": "Decrypt",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU2ZxTGJVUlRJeThncndBQXhIN0ZfNExqNzI5RFJBY2JtSEZhdXFpeXN0R1kxVl80amtLUktqR2hVR2FjalNBTDVKbEZ1c2MteHhpOV9DY0ZhTUdKbkRUeVdJU2wyc0dQUGJ1Z0dFUTV2Zk9tMFRXU1FQOTd3QlllQ3UtSmg?oc=5",
+   "time": "2026-10-26T15:36:03Z"
   }
  ],
  "ko": [
+  {
+   "title": "한병도 \"가상자산 과세 유예 여부, 당내 의견 모을 시점\"",
+   "source": "디지털애셋",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9KZHlmRWxrX2RhcGdkaHl4enJHWE9WMjlramMwV3JRQmNrcTdBNERxLVFEc19QOEJZM3laNDJtYzFpNXF6b1JKWmZUUjlhOHBvZTM1Um5VSU0tYk04ZXFyQm5kQVpNQW1HYlRLRDRiSUxzQQ?oc=5",
+   "time": "2026-10-27T05:19:07Z"
+  },
+  {
+   "title": "인스웨이브, 디지털자산 플랫폼 사업 확대…2028년 소상공인 1만곳 확보 목표",
+   "source": "지디넷코리아",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94NlRaeXFKTkk4QjhtNkdIWXVBTUhqUzFmTU5vRXlyWENuWlNsZlUzUWZHSGpQWnYxLXlQaTE5bjRndHo0THZtS2ZtVHQwaHlpX3g3SHFB?oc=5",
+   "time": "2026-10-27T04:56:20Z"
+  },
+  {
+   "title": "인스웨이브, 20년 금융 IT 기술력으로 디지털자산 플랫폼사업 본격화",
+   "source": "전자신문",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9wMlNHWWdfb1EwUUx6RkVkY0MzS2pRTDdmUERkR3M3dkhvcUg5UlBEVkZRRGJrSnVRTTRQY3ZPOHhralp0X0NiX29uRHZnZw?oc=5",
+   "time": "2026-10-27T04:25:13Z"
+  },
   {
    "title": "美 이더리움 현물 ETF, 약 1173억원 순유출…블랙록 ETHA서 자금 이탈",
    "source": "블루밍비트",
@@ -130,12 +148,6 @@
    "time": "2026-10-27T02:50:36Z"
   },
   {
-   "title": "가상자산 API 시세조종 사건 첫 공판 연기...11월 17일 재개",
-   "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9sME5RTDZPU2hsUjlUNzJIVnJBWUdhbWFDUDRZNEtkZHVTb05vdXl1OFlMeDdlVjVVQlA0UG1pQkNpbXdMajROaDE4VTlIRE9ycWhqb1BLM29xa2IxcXcySGxLa0ZSa2ozemlDV2Q5NEVLZw?oc=5",
-   "time": "2026-10-27T02:45:00Z"
-  },
-  {
    "title": "與 '가상자산 과세 유예' 시사…\"우려 알아, 최종 의견 정부 전달할 것\"",
    "source": "뉴스1",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94WHc0a1V2QmhoU0pZWFBhVkhQak1fbnNSUDB3eTFVNGIxSUc1clpGbWVJZGJIbmtEUzA0X19Hd09xUXNrV0ZITkVfenJzcl9QVHFDMHBFZ1lpZw?oc=5",
@@ -162,7 +174,7 @@
   {
    "title": "한병도 \"'가상자산 과세' 오늘 최종 의견 모아 정부 전달\"",
    "source": "MBC 뉴스",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9nbHc1QzRhanhRYnFDcFJ3dXk3REl1WDdLZ2ljWkV6ZWpWaGo4T0JNT1lCZFhUODJ6MzBzbWdYanAtMDctOXQ3MDVDczE2SXo1dGFZdDhGVHNLYmtSVzlaT1p0M3FvUzh4c3hBbUN6NDAta2VnYkVOYtIBeEFVX3lxTE9nbHc1QzRhanhRYnFDcFJ3dXk3REl1WDdLZ2ljWkV6ZWpWaGo4T0JNT1lCZFhUODJ6MzBzbWdYanAtMDctOXQ3MDVDczE2SXo1dGFZdDhGVHNLYmtSVzlaT1p0M3FvUzh4c3hBbUN6NDAta2VnYkVOYg?oc=5",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1Qak1kekhHOW5KNVNyUnRjdlFVLVhKSlhMMnJBYzF3RWlJNUw1TGZ4R292enI1SVpoY05HWHZ3VXYxc3RlZC01cG5mazI0NTVnUGtmMFItU1VOS0JzLXRsbjZxOVhidG1GTGVNXzBxeTZEMnV2cmJ3cNIBeEFVX3lxTE9nbHc1QzRhanhRYnFDcFJ3dXk3REl1WDdLZ2ljWkV6ZWpWaGo4T0JNT1lCZFhUODJ6MzBzbWdYanAtMDctOXQ3MDVDczE2SXo1dGFZdDhGVHNLYmtSVzlaT1p0M3FvUzh4c3hBbUN6NDAta2VnYkVOYg?oc=5",
    "time": "2026-10-27T01:43:18Z"
   },
   {
@@ -170,18 +182,6 @@
    "source": "경향신문",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zRzRqUWVNVzFObE1adVRfTGMydHlxQkZLT1BlY3VnckJTc0sxUlV3bmRBd1EtcWRtbFdCREJ4QUhsT21yRW15Q05laEVFOTVvSERNQ3NqSTBkQdIBX0FVX3lxTE1fX04wTmVVbXZJVTJMMHVILXhONzBzcG1fSm1idXhrb3NmMjZNM1ZMWXE0Wl9PckxkT0IzMlN6VFp0cldNRnlIaXJPLTNyUk8tQUNXRWszRVNfUC1BdS0w?oc=5",
    "time": "2026-10-27T01:40:00Z"
-  },
-  {
-   "title": "민주당 “‘가상자산 과세 유예’ 오늘 의원총회서 의견 수렴”",
-   "source": "KBS 뉴스",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95TDN3MWJIaDRNb2RWNUdnNTMteXMzcXpFMUFXQUowM0tSMnE1OHc5STZNXzR6dW05NkE0MVVaXzU5dUlFZXNsZ1gwV0xsUVBPUlRwZWZPQVpfdUk?oc=5",
-   "time": "2026-10-27T01:28:00Z"
-  },
-  {
-   "title": "한병도 \"가상자산 과세 우려 잘 알아…오늘 정부에 의견 전달\"",
-   "source": "연합뉴스TV",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4zMElwa01NSXA0VTFZcklyRE5GaWxzb1RKQno0bkJmZk5zcVk2b0RfM09hLXBkMzJuOXMxSjlEYXJLZTJSdjFNQ3BmUUkzd1BjdDl6MktRT2hoeF8zNE9iZnZKNDJHNk0?oc=5",
-   "time": "2026-10-27T01:27:00Z"
   }
  ]
 }

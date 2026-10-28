@@ -1,11 +1,17 @@
 {
- "updated": "2026-10-28T02:04:07Z",
+ "updated": "2026-10-28T02:56:35Z",
  "en": [
   {
    "title": "What Would Have to Happen for Ethereum to Hit $5,000?",
    "source": "Yahoo Finance",
    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVG5pUTVueWpqU05SQUswUVNzRTgyeU82ZmxCR0JJa1BxZ2tjMXItUkZ1WVhxR2kyVFRQZ0lveXZMaXRqYmRIN3BqS1lISng0Y3Y1eXpsaVRUeDhBUmI3LWhTQ0R5ZVQ0cy1XUTBza2U4WHYxajZUbG0yVXdzb0I5d3puUFZwc01uYmhmVndlelFmLWN2?oc=5",
    "time": "2026-10-28T01:31:00Z"
+  },
+  {
+   "title": "Will China’s Stock Market Crash Hit Bitcoin Price?",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSFhLc1BZU29oRzdyd2FJVzZSWVgxZ3lFRnA0bGt0TkdkYnR3bkxJOW5fLUZSV2pmWmVySVY2emtROXo4VUpDR3lqQ01YSldnUFFCWG1uN0xmYnN6cjBCb3BWYXJlb285c1plZ00yVWp3T0s2M2c1aTZabEtKREtSdUd6a2NMZDZ3NS10Tk0tWWxwZVZ5SmI5dQ?oc=5",
+   "time": "2026-10-28T00:37:00Z"
   },
   {
    "title": "Willy Woo’s Simulation Puts Bitcoin at $413,000 in 2028. What Would It Take for BTC to 5x?",
@@ -18,12 +24,6 @@
    "source": "Bloomberg.com",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUG5IYkpZcTBXMjBwZXJXRFA2My00XzlURjRRaEJFTXIteEZhLUNEVlZSWVNzWUFwQkFySFZkczBfdEh4d0RCSHFkYXBtdC1QZ04zam5aRVdPeW02TjJ6aEZUaXllVzBwRmRSTExvcmZta1JiX3Q2eEQ4d2FwZy01bnRrTk1ybklEeklvc0Y3aVZHWWV1RVUxcWJTWXNPN1VRZjdxa1VTbS1ZMm5oZ2c?oc=5",
    "time": "2026-10-27T23:00:04Z"
-  },
-  {
-   "title": "Is Bitcoin’s Bear Market Over? Galaxy Thinks It Might Be",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOTNJaUMwVVBHRFg5UG91aTlaeklUdFFOZ0M1VlA5T0NxZEtQbWc4TUJRSVZWbi1KTHE5SVdEemxzRzdOeHRjcEpRREJ6aWhJT1hSc0s3OXIzbC1BTHpwX0F4WEZQbkVXNXdVR3NjbUZIYWlZVFdIaENJQllCMkJiUGFVWnA3d0daU09TVU52S3B6a2hMc3kxcWs2Tk8?oc=5",
-   "time": "2026-10-27T22:21:34Z"
   },
   {
    "title": "Robinhood profit misses estimates as crypto trading slows",
@@ -94,22 +94,46 @@
  ],
  "ko": [
   {
+   "title": "이더리움 초기 투자자, 1년 만에 7594ETH 매도…약 1780만달러 규모",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE52X1I1VVBKUDNUVlZtMkNaVERRaW9Ba1VWcFB0OVFFMGpMMG1CblRLMXl4dURMY2NJbXh3eEpxcjl1X2d2eGZzWG95M003eU5X?oc=5",
+   "time": "2026-10-28T02:47:27Z"
+  },
+  {
+   "title": "비트코인, 美 기술주 훈풍에 반등…FOMC가 변수[코인브리핑]",
+   "source": "뉴스1",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0QmZtSUk4cGZGQXhMSjlaQzd1VnhvZ2FrN01IR2l4eGJSdkZ5bHJTc0pCU0dMWTdxWTQ3TGZUd1AtSGFPWEpDbVhDakJjakY2Q2VYMlN0Umc2Rmc5UW5adU8xUGNrZw?oc=5",
+   "time": "2026-10-28T02:20:09Z"
+  },
+  {
+   "title": "잠잠하던 금융권 해킹 다시 확산…보험·증권·가상자산까지 전방위 공격",
+   "source": "뉴스1",
+   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1McEhMZlpRaEpwUlB4QV9WdXo1NV8zd2p5OWc3cFZTMVBuTVU1a0txMW1qekltWFlzdWNmdkhaUGJoTjkyMS1UWlk1ZVd2SWxqUGFodXBOSmxqYjBmSTlnTFdn?oc=5",
+   "time": "2026-10-28T02:14:16Z"
+  },
+  {
+   "title": "당정, ‘가상자산 과세 유예’ 결론 못내…“실사구시적 태도 필요”",
+   "source": "경향신문",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRVhSMEFxd1dwNGc0MC1SS0ppZEZVVHRBdXl0VXo4ZXRteXBCTGFVMHpoaV9MOXRWeXMxZlJLaTh1akdqU1lBLXo5ZXo3eWJLVXZ3TkxJVGtvZ05EeWR0R0FMamJKTng1bGNEWlpoM25OR3loVEdKWVlmX3BrSU55UTdCS01MWW9tMmRKX1NYWmhWWTlUeUJ3QTZzMmRyNzdsMEpkOU5rN2Y1TW5k0gFfQVVfeXFMTXNwY1FGRU5ka0RyUFdQVENLWGljRi1iWFRNYnpOQ1Z3YkVUejhOZUZrcjFmZ3EyN1FuZlVFN25ocHp0Tk9QbmUzbTBnSGZfbDhiWFhyQlduQ3hzY3p4S3c?oc=5",
+   "time": "2026-10-28T02:03:00Z"
+  },
+  {
+   "title": "김민석 \"가상자산 과세 유예 의견 많아‥합리적 결과 도출\"",
+   "source": "MBC 뉴스",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5zYVdTLVRqY2dqRWt0NTkwN2pRNlNqOGlvSUQwSFZCa21wc25QOHN4NWN0SWM4ckgwUFNNTkVsLXpMMDh2T2t6NC1qbl9URDU3d3BoTW1wNERMb1F6R2NWaWhuS3oxV2xZUlpmV1BMazFKZ3F1SWZmQ9IBeEFVX3lxTE9aTV9VaUp4RUtLcnhXNXNfeGNlX1lMN2Rfc3ZWR2VsTHBBTGJ3STNBTm5kcEIxXzhsbXY3N1V0d3R3NERTelNneTlUczNhc2ZMQ0N6YjV1cloyQXVtWWhLemEyNGxqTjNNTHZwTmQwTDhCTlk3WEZNZA?oc=5",
+   "time": "2026-10-28T02:02:45Z"
+  },
+  {
    "title": "이더리움 ICO 참여 고래, 5000ETH 거래소 입금…매도 가능성 주목",
    "source": "블루밍비트",
    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1GS3RUcmNxbFNta2JEbVRKSmNCSWpDM041YjRDQ0Y3Q28yejZUd3RIS2J2RW1JT01FVmxHLVRCaTZtUnV5eXpCdHFpcWxTZVV1?oc=5",
    "time": "2026-10-28T02:01:49Z"
   },
   {
-   "title": "당정, 가상자산 과세 결론 못 내…김민석 \"과세 유예 바람직 의견 많아\"",
-   "source": "아시아경제",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1CdW5GcDNtemZEUktROEl2TE5uaEpjdnZyY1Yxb0RGdGJ3d2RfR0xqcEdlZl9FN1JfWmI2eFVKanhXVWJESFZYblVFSGJBbFNfb25hT2dWMmMzYjJhSGMtbw?oc=5",
-   "time": "2026-10-28T01:58:39Z"
-  },
-  {
-   "title": "김민석 \"가상자산 과세, 유예 의견 많아…합리적 결과 도출\"(종합)",
-   "source": "뉴스1",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YNTA3ZmQ2TDkyb240d25rbEF6eVFQODlEZ0dWalVoZGI5ellMQW00aUhmdjZoUWF5Qm9CQkRHTkFubm5JcmFJdGJKY0hYQWxnSF9oNVZXaGkzQQ?oc=5",
-   "time": "2026-10-28T01:37:04Z"
+   "title": "당정, '가상자산 과세' 결론 못 내…與 “더 논의하겠다”",
+   "source": "전자신문",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4zejRJSWpVSFd1R2IxWW9HR2lqaEcxSXhFV2czVTlKUUFGWXQ3YUJ4WW9wbjQ2QWNiZHBwRlFsRTRibV9KSFNBWVp1cW96dw?oc=5",
+   "time": "2026-10-28T01:56:18Z"
   },
   {
    "title": "비트코인, 양자컴퓨터 우려에 기관 투자 제약…\"2028년까지 보안 로드맵 필요\"",
@@ -124,16 +148,10 @@
    "time": "2026-10-28T01:29:00Z"
   },
   {
-   "title": "비트코인, 10월 상승 공식 깨지나…美 매수세 약화에 2년 연속 하락 우려",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9wa1Mydy1CN1JMMXh2MzRYN1A3Ui12ODJGY1FGRWhiU1dBd0pUUnRpSjJWa2cwUjdlaUtWb2RQVVhsM0YtYkVubEJhMzUxbl85?oc=5",
-   "time": "2026-10-28T01:22:08Z"
-  },
-  {
-   "title": "당정, 가상자산 과세 유예 결론 못 내…“당 차원에서 좀 더 검토”",
+   "title": "김민석 “당정 협의서 ‘가상자산 과세 유예’ 의견 많이 나왔다”",
    "source": "한겨레",
    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBuX2lLRWpGMEUyU0NMUm1nbjNWXzFJeU1sUDFNT05pRGIzY2hJeGZPYVlOZnVObGYySlV6eTZRZmcwNWlNRERaNjdUZEJmLXVzSDlKem9PRUV2SE44OWNuVTN1ZXl4ZWxFcnNFU1pOMDJpU1F5?oc=5",
-   "time": "2026-10-28T01:17:00Z"
+   "time": "2026-10-28T01:29:00Z"
   },
   {
    "title": "코인베이스 비트코인 프리미엄 지표, 5달 만에 최저",
@@ -164,24 +182,6 @@
    "source": "머니투데이",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE41TEJzX1FVM1RtdkJXQmhTSVlreEtENFRDLWpXQlJid3RYQTFEeW5FdXRzWnEzeWNQRlhoM2RhVkU5SVhQVFdtaDBWN2RDY2tDSXA4TUoyR0tvNHRhRXZHSnFOZl92V3lScC1VMFc2aFlOd9IBckFVX3lxTE41TEJzX1FVM1RtdkJXQmhTSVlreEtENFRDLWpXQlJid3RYQTFEeW5FdXRzWnEzeWNQRlhoM2RhVkU5SVhQVFdtaDBWN2RDY2tDSXA4TUoyR0tvNHRhRXZHSnFOZl92V3lScC1VMFc2aFlOdw?oc=5",
    "time": "2026-10-28T00:30:57Z"
-  },
-  {
-   "title": "당정, 가상자산 과세 결론 못 내…\"점검 후 최종 판단\"",
-   "source": "아시아경제",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPNWlmbV9KejhYTXRLSDg4Ynp1T2dNWWotM0NDMjJrazhZRXd0c0NvUm9RanJFcFdqYlgwZFQydVhaQUMzWk5fWVRoWGxzMEh2R1F5NjZCOFZZb0tFZ3dCcQ?oc=5",
-   "time": "2026-10-28T00:26:44Z"
-  },
-  {
-   "title": "당정, 가상자산 과세 유예 결론 못 내…\"여러 가능성 열고 점검\"",
-   "source": "MTN 머니투데이방송",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ZeWRTMjRRV0V6dktYN0N5amZrUFNCNTRDOEcwU0sxRXJtYzF2MHU0SDhJdUo3a3dyMi04MnQ3d21hTTd5TjJGbWk2ZDNMVUp6TWJzSnZ5UG5WOW5oMDhr?oc=5",
-   "time": "2026-10-28T00:18:38Z"
-  },
-  {
-   "title": "이형일 \"가상자산 과세 방안 숙고\"…재경위원장 \"고시부터 유예해야\" - 머니투데이",
-   "source": "머니투데이",
-   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE12MU1iV3MzcnR2WTlGZzh5UmZ0UWIwcHZybGpwM3hsaEo4aU1OVjVEckQ3UnNUTnZSLWUwcGprZmh2aktNS1IzVjF6Mk54Vm5OODM1ckFtZWV6LTE4R0ZodU9ad190bkFya2h3blNBb3F2TkFHd18zRm5B0gF_QVVfeXFMTi1fVDJyV0NpUG50d1pZOWNQclAzRmZ0WGNnQmFWalVoZG1NdXB4NnBkdllCTTJsVEpCam0tT0g2MVd4OUFfT0dOR3dUY1I5c0hFc0NTNnpWS3VwQmRZeWxNUzBWd3Q1RGk1TnhFWERyYlh1bURBN3BMaDZJZWtLYw?oc=5",
-   "time": "2026-10-28T00:18:22Z"
   }
  ]
 }

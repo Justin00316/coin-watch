@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T07:59:03Z",
+ "updated": "2026-10-31T08:53:44Z",
  "en": [
   {
    "title": "Crypto expert comments on Binance hacking",
@@ -50,6 +50,12 @@
    "time": "2026-10-30T21:13:14Z"
   },
   {
+   "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart and Price History",
+   "source": "Yahoo Finance UK",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5NeVkwY1dKeWxrcExZc0dzcnlWSUZ4czQtZHIyX1JYUnp5cWE5WFcwNjl3clkxY3dyUjFtbG1FOU43Ny1leHhSaVpCMzFQREhacmFmaTRR?oc=5",
+   "time": "2026-10-30T21:02:59Z"
+  },
+  {
    "title": "Binance Says It Plans To Resume Withdrawals This Weekend After $6.3 Billion Hack",
    "source": "Forbes",
    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVmg4N2h2YTdmQ2Q1T3ptSVRRYnl0TjBkQWVON2c2RzltRTIzcGNBU1N4TjJuZ2tDelFGdXNQTnBJRzFka3h3eHBMSXhZcXEtUV93N2F4NmJySGZXUC1DWkpxZFZENGtmc0dtUjVXdkk5UFNhNC1xZ0lOLWNDYW1PQTE4RmMzT0VhYXZ2SDVuTkp4OFlDbnRyV2NVWHpPdXlzbFFzcEo3YkJUSEgydjBvMm9vcGdzbDJQMDZPNzBYd211UHZYZGV5cGZmLUhydTdDOHc?oc=5",
@@ -63,15 +69,9 @@
   },
   {
    "title": "Bitcoin Drops on Binance Hack as Stock Selloff Also Weighs",
-   "source": "Bloomberg.com",
+   "source": "Bloomberg",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb0NVZVAyRjB3SE5wZEVtS0dCaWcwdDJrcGczSElDR2l0QXpMV0N2UkN5MFkyMFUySzFUTTBwekx5UEY1d3V4NnZsZy1vTGwtNjhWUnVhMWxpYTBSVVIyeHp5RExWY3Fick9OZS14RWZYUkxPYkdtSFZkNHM5eWctOHFjOTVfaG1CdVlXX0pNdl9JMHcyRTNOTUdnTmdtd2VJbEZWcWJSSmhGeG5Zemc?oc=5",
    "time": "2026-10-30T20:21:52Z"
-  },
-  {
-   "title": "Crypto experts question double standard after issuers freeze billions in Binance hack",
-   "source": "CoinDesk",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOeDIxdTYzVE5KeGdyZ2JTQ0N0SWtJVjMxTlFIQWRyeGk0LUJ4VTM0MGpKVG42cWVsUElnNHlMMF9tcmI0a3BDM2l5NVlxakNOMmFhaXJjNnIyYnRpZHVvU2VybXg0TkJoMUllWDBvbnFzeUE5OGpVLWFDa2ItR3FmdXdwU05YZUY1TkREX3ZmODJuZXZmTy1YTXpPYnJaR0xjUlBrV0dzSHhqVndhQ1cyNk5xcTdBWHJWclBxdW9wSWpnQQ?oc=5",
-   "time": "2026-10-30T19:55:00Z"
   },
   {
    "title": "Binance loses $6.3 billion in crypto heist—what happens to your money when an exchange gets hacked",
@@ -93,6 +93,18 @@
   }
  ],
  "ko": [
+  {
+   "title": "체이널리시스 \"올해 가상자산 해킹 피해액 89% 북한 소행\"",
+   "source": "연합뉴스TV",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBxQzhWVXZfeWJLOW9BS1VFV0gtNUU2VjN4WFJpSTR2NjgzZUtpNVZUNFBUZUdJb2s4TERPczJpWWxEVUMzeXkxUVBYYlRuMlV1dUV0TDdDcG1pRHV6ZnJaZXZxT2Jlc3M?oc=5",
+   "time": "2026-10-31T08:48:00Z"
+  },
+  {
+   "title": "[분석] \"비트코인, 지지선은 7만6000달러…무너지면 6만7000달러\"",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5PQ1dZWC1jaF90Yi1mNS00MDA5T3R2c2dCM0NBWHBSdWRYTExLZlFpVnUwbjQ5cFNNZTYwX2dpb2p6WHJDd09BeVIxckxJUEFw?oc=5",
+   "time": "2026-10-31T08:47:28Z"
+  },
   {
    "title": "이스라엘, 280만달러어치 코인 탈취 용의자 미국으로 송환",
    "source": "블루밍비트",
@@ -119,14 +131,14 @@
   },
   {
    "title": "[자막뉴스] \"올해 가상자산 해킹 피해액 89% 북한 소행 추정\"",
-   "source": "SBS 뉴스",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTDZfVXRsYVIxck9LUkd6a0otQkItOWJMR2dPN1FTeXFVTDMtSVAtVlFBWkxfbGFsN1Vqdk1LTGhmaTRwbGEwMnpxS3lVcU1qYUpyM2tCeU5WaXluVzIxRWNVSzVZU1NIZDl0Yl9PU1BSY0Jha1c2NXQtVVZBUm1ybU03SGoyS3hCOWc5OEFoQnRha3VMT1VGRFJ4RWF0Z9IBZkFVX3lxTE1VM2tSSXpCWXZvSlBRdmtjWUJuckRVOFR1bXFsNlRqUXlmZl9NVGFTQnlUbVZVbDNQTDc1bm9oTGRXRjEwRGEtd0syWDcwa181SGdLd2dZcDROVmN0UTFnNko5dkRoZw?oc=5",
+   "source": "news.sbs.co.kr",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWjhDQjJzekt5NHJEazJINGd0NU9zaTF4VFB0aTdjc1ZVN2NFeHVkbDhQTndua2NmUmN5NWhxVk1icWF4WnF3ekFtOHNIczJPaG5QeTNzM05uQlh6YkZ2ZTQ2QUM1N3A0ZjFKdUtJWWg4dUtUZWRULWNqWWFPUzd2LW9TdEZpdUVydWRuUXpR?oc=5",
    "time": "2026-10-31T06:40:28Z"
   },
   {
    "title": "바이낸스 해킹에 화들짝…코인 거래소 부랴부랴 보안 강화",
-   "source": "매일경제 마켓",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1NbG9idmFtSVVWRGJ0LWtWSlVJT0xwSzA4dWxfV2VKanVxNUhYMGdhLU1UVUluaWNIZTVHM1ZGNzZVc2hfU1BWVkVmSUF5bHBPUXc?oc=5",
+   "source": "연합뉴스",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzUWhEaFNFWkg5eHJIVDdHMm9DaTNVSDV3QXBKd0NTeEhCb2JOQlUtaWpWRVl3bGZhQUNPM3lycTh2OHlJcGhIbE53b2NnSEZaM0E0QVJzY0pLejNhX2x6QtIBYEFVX3lxTFAzUWhEaFNFWkg5eHJIVDdHMm9DaTNVSDV3QXBKd0NTeEhCb2JOQlUtaWpWRVl3bGZhQUNPM3lycTh2OHlJcGhIbE53b2NnSEZaM0E0QVJzY0pLejNhX2x6Qg?oc=5",
    "time": "2026-10-31T06:34:11Z"
   },
   {
@@ -154,34 +166,22 @@
    "time": "2026-10-31T05:45:30Z"
   },
   {
-   "title": "체이널리시스 “올해 北 소행 가상자산 해킹 피해액 90% 육박”",
-   "source": "서울경제",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE00SzBOSHdvcjhGb3lpTzRkLTd3WWRNbC1KZHcwX05kd2NRQ3ozRk5MdkZOYl9reWd0SFZGSXlqcXZjbno0VDZXYzcxZmRRTHNLRGfSAVNBVV95cUxPb3V2YkczSEJ1ZkVhRHNGMnBHZWJfR2VvTldWdzBiSHMzTEtYc1oxbWlGdE16dnh0dnlDcGlUUm8ySDNQcmg0WE1yS0RObU40OFdvWQ?oc=5",
-   "time": "2026-10-31T05:38:30Z"
-  },
-  {
    "title": "비트코인, Binance 해킹 피해 복구 움직임 속 7만7,000달러 상회",
    "source": "Investing.com 한국어",
    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9JSnQzUVEwXy1VSjRackRXUWZoYXdySllMRm5LTU14TFhoZkxYT2RmbU43VThpS3cwcjZPRk1WRHdZYVRyUUNXOTNabzlnTnRwS3psNnItTVp3UTd2eUJmQi1SZ2p4Y0RWRDFsTXhyaWhvQ0E?oc=5",
    "time": "2026-10-31T05:35:00Z"
   },
   {
+   "title": "바이낸스, 8.4조 해킹 피해 전액 보상…오는 2일 준비금 증명 공개 - 머니투데이",
+   "source": "머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45UWk3bW1HZHhpMEZuQU5TWk91UTBCNmt5LU15WmdxbGQtelJKSkxzMXFBV1ZRUEREUEFXdUlxbDBEb2l2MTExZ0RHMTBZaFpfcVZUdDl4cDVHQUhHdXljOVVQdTZDUlFrbUVud2p30gFuQVVfeXFMTjlRaTdtbUdkeGkwRm5BTlNaT3VRMEI2a3ktTXlaZ3FsZC16UkpKTHMxcUFXVlFQRERQQVd1SXFsMERvaXYxMTFnREcxMFloWl9xVlR0OXhwNUdBSEd1eWM5VVB1NkNSUWttRW53anc?oc=5",
+   "time": "2026-10-31T05:23:10Z"
+  },
+  {
    "title": "배준영 “민주당, 가상자산 과세 유예 답해야…11월2일 법안 상정하자”",
    "source": "아시아경제",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5iZ1BMbThYM2ZKdzVIS1VCTUMzSnQ2ZzNXTkVvNHJkd3JmNk1WSkVMYlFCSTFSYnZuRDdBTldEQ3NqcW1aN2VUSEZuV1o3WVRlRFJ5eDlYVjZudGM1ZzNuZQ?oc=5",
    "time": "2026-10-31T04:57:13Z"
-  },
-  {
-   "title": "美 이더리움 ETF, 1.6억달러 이탈...5거래일 연속 순유출",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1pTU9rUkVFWGhuU2JETEhjZWFHYWVhV3EzNlA2WmVYd0xIc2lJeEJIa0d1QklDQ1J4THZ5MjFnUjNVWlZ0M2V2RUJlRUlNR2c5?oc=5",
-   "time": "2026-10-31T04:53:25Z"
-  },
-  {
-   "title": "국회 재경위 野간사, 與에 \"가상자산 과세 유예 결정해야\" 압박",
-   "source": "연합뉴스",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45c2N0OEFZeS1HUWR4Si1xRjlrZVVKNjlSdUhBSjlmYlN4ODE3am10ejMzSm9nMjg1aU9NcV9sYVhYLUpYdXpGa3RTb2l5RHV3clVNU0YtZ0hkbjjSAWBBVV95cUxOWVNCREF0YjIxdTBwV0h4cW5iRUlXQUN2Tkt0UGVqcFFGQlE0cXJSWVhFMVI1eHVqOFFzazkxUFZiM1pzZV9DV1JRbDFfSjhyX0lBMDlOTW9PTi12dzR2SzQ?oc=5",
-   "time": "2026-10-31T04:44:28Z"
   }
  ]
 }

@@ -1,6 +1,12 @@
 {
- "updated": "2026-10-31T03:55:12Z",
+ "updated": "2026-10-31T04:55:11Z",
  "en": [
+  {
+   "title": "World in Brief: Tech stock slump continues; Hackers attempt a crypto heist",
+   "source": "The Economist",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQkQ2X203MGdJbTJkTFI5Q3g5aDB1ampNRF9KTFBwR3BPQ0dIdUg1a1BQUURaQnBybmlwRHBncjUzVk5IVnZyaW9fQzhacjcybFJ6MTd1Mm5EalppeV83OUhzdTd4M256eXBDTjkyS2twbmFnckx2RDZaRHE5QzVhNURybGlacThNWEpzaTNySjVUMFloQmxF?oc=5",
+   "time": "2026-10-31T04:10:27Z"
+  },
   {
    "title": "$6bn hack by 'bad actors' hits crypto exchange Binance",
    "source": "Yahoo Finance",
@@ -21,9 +27,15 @@
   },
   {
    "title": "Watch Tech Selloff Deepens as AI & Bitcoin Slide",
-   "source": "Bloomberg.com",
+   "source": "Bloomberg",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNR3duOEMxTnItY2lKTXRxQkZmQ1lSV1lmZnpMdUh2T1YtNjJZYWhRc1A2UU11ak1PUnZVYjJXVjJnQ3dHNDBlN0Yxellsc0RLYkYzcy1RMmVfaG9jRnptQjhMRXM2bk42a0xSSUNodjd6WHlKT0JQakRhd19JRkpDUA?oc=5",
    "time": "2026-10-30T22:30:49Z"
+  },
+  {
+   "title": "Bitwise's Matt Hougan: $6.3 billion Binance hack won't hurt Bitcoin long-term",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPajFCREZZWjlidFVPY29BUU4zcm10UmhxdUgxeVZfbERKYVYxVnlRQjFNOVUyeURZUnRVdFdYa3pnUFF2TnBsc2tCb0dZNjVXTjRvLUF4ckxTY0dlNkxBNU9XWTc4Q1VlRHlGUXVkQ3ZEMjVfSzh5TXNaRXFtdVlfdl9ReXZuRVhNcE9PaldfQ05xRklSTllIV1J1WTJEMmtsekJYQzZqR3dLc21reGtieDZhLVE?oc=5",
+   "time": "2026-10-30T22:18:00Z"
   },
   {
    "title": "Watch Crypto Hack Reignites Regulatory Debate",
@@ -42,18 +54,6 @@
    "source": "Yahoo Finance",
    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUk91M0NvMWF6S2xLUktmbkcxQ1VBVDBDSnRZSVZZcjJxNVJ3a3VLZ3RxaWFTYWNlRE16bTRnV0VFRnM5b09LUnIzTVV5Slk2VDRaZ0Q5alFvclowelhHWUFXcXNwRUs3RmlxTkNDS0dBeHRCM2FyOXJtRmZicmJWSWZhNnR3QUJwWHU5UWU0OVZIY25S?oc=5",
    "time": "2026-10-30T22:00:07Z"
-  },
-  {
-   "title": "Bitwise's Matt Hougan: $6.3 billion Binance hack won't hurt Bitcoin long-term",
-   "source": "CNBC",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPajFCREZZWjlidFVPY29BUU4zcm10UmhxdUgxeVZfbERKYVYxVnlRQjFNOVUyeURZUnRVdFdYa3pnUFF2TnBsc2tCb0dZNjVXTjRvLUF4ckxTY0dlNkxBNU9XWTc4Q1VlRHlGUXVkQ3ZEMjVfSzh5TXNaRXFtdVlfdl9ReXZuRVhNcE9PaldfQ05xRklSTllIV1J1WTJEMmtsekJYQzZqR3dLc21reGtieDZhLVE?oc=5",
-   "time": "2026-10-30T21:51:55Z"
-  },
-  {
-   "title": "Cyber Chiefs’ Stormy Relationship With Crypto",
-   "source": "WSJ",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbkVMc3VGbEktZHRiX1A0dmRsLVlsb084azduRnhIeUluekVVZkxzc09kZTVDOXpMTUd4Yk91ZzlxcVRnUWlXd2k2UzNaZlhvX2xDN2NzSXpvN2pJZFIyaVRaeHpfS1lmbTNzbDlvVzBYREF2SnE1MEdPTDlGTUVUZml0ZEhyUjV4dmVpU3JzLWQxVGF3X0E?oc=5",
-   "time": "2026-10-30T21:37:18Z"
   },
   {
    "title": "How the Binance hack is rippling through markets from stocks to crypto",
@@ -75,15 +75,15 @@
   },
   {
    "title": "Binance’s $6 Billion Heist Rattles Crypto And Draws FBI Scrutiny",
-   "source": "Bloomberg.com",
+   "source": "Bloomberg",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVU5KekVzX0JRSzhSbkRIRXF2TGFkeE9hVzBOTVlIMXdGYVRBZXJQc3NGTk9uMGxFSFpXaEZBV3NpUWZBYjl2V0NrcWZZVGNjU1NnYVFTRXFHOWxtZW1Odjk2OHlWdV9aSFNCVFRneUNaenJFZ05Ecy1tMDhyQk9ZT1RycmdOMXA4d0JFM3ZhVmVFNWhaZ0ktTURGYzk1ZmR6WnE2cVZXZnJFT1RrVndrTENDdnU?oc=5",
    "time": "2026-10-30T20:31:04Z"
   },
   {
-   "title": "Bitcoin Falls To 6-Week Low As Binance Hack Accelerates Losses",
-   "source": "Forbes",
-   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUmNGbTFhaGxKUFU4NVpiTG1OTmM1NXFOLWpGX0JNRzFqUXlPNTZjYVRzdHZLLVgtSGp2bDdmS0U2NlpmTG9XOFplQXlWalFqN1FWek9iMjl2T05md29fcFVRVFgwZ01YWmxtYzFFa1gtNExyTF82WEdVX21tTUxUbWU0aHdGVHB0Si1jRi1pb0lQdmlNckd6VlpwYTlLRzN2U01odnhhOUprckljd1BxeVRFQUdWRTQ5U1E?oc=5",
-   "time": "2026-10-30T20:30:29Z"
+   "title": "Bitcoin Drops on Binance Hack as Stock Selloff Also Weighs",
+   "source": "Bloomberg",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb0NVZVAyRjB3SE5wZEVtS0dCaWcwdDJrcGczSElDR2l0QXpMV0N2UkN5MFkyMFUySzFUTTBwekx5UEY1d3V4NnZsZy1vTGwtNjhWUnVhMWxpYTBSVVIyeHp5RExWY3Fick9OZS14RWZYUkxPYkdtSFZkNHM5eWctOHFjOTVfaG1CdVlXX0pNdl9JMHcyRTNOTUdnTmdtd2VJbEZWcWJSSmhGeG5Zemc?oc=5",
+   "time": "2026-10-30T20:21:52Z"
   },
   {
    "title": "Crypto experts question double standard after issuers freeze billions in Binance hack",
@@ -93,6 +93,60 @@
   }
  ],
  "ko": [
+  {
+   "title": "국회 재경위 野간사, 與에 \"가상자산 과세 유예 결정해야\" 압박",
+   "source": "연합뉴스",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45c2N0OEFZeS1HUWR4Si1xRjlrZVVKNjlSdUhBSjlmYlN4ODE3am10ejMzSm9nMjg1aU9NcV9sYVhYLUpYdXpGa3RTb2l5RHV3clVNU0YtZ0hkbjjSAWBBVV95cUxOWVNCREF0YjIxdTBwV0h4cW5iRUlXQUN2Tkt0UGVqcFFGQlE0cXJSWVhFMVI1eHVqOFFzazkxUFZiM1pzZV9DV1JRbDFfSjhyX0lBMDlOTW9PTi12dzR2SzQ?oc=5",
+   "time": "2026-10-31T04:44:28Z"
+  },
+  {
+   "title": "美 비트코인 ETF서 6.4억달러 이탈…4개월來 최대 순유출",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5GLWlBS1FYX0NBSy12SjNadVFvbldhX2Q1S3YwYWxqLXp6bTQyb2hCQXFGeWJxRnhUM08zMVB1TkxIT25nVTNRSmlYUzR6d3dX?oc=5",
+   "time": "2026-10-31T04:40:17Z"
+  },
+  {
+   "title": "“바이낸스 해킹 여파”…비트코인, 7.7만 달러대로 후퇴",
+   "source": "매일경제 마켓",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9UaXZtUUJjS09TeWt0YzFEMURXTUJNU3Bqekx0N3pRODJVWjl4eHoxaVNobVhOWVBuR2Q2eFVNbl8yRGZPQklJVUl3czc5NUlTR0E?oc=5",
+   "time": "2026-10-31T04:40:12Z"
+  },
+  {
+   "title": "바이낸스, 8.4조 해킹 피해 전액 보상…다음 달 2일 준비금 증명 공개",
+   "source": "뉴스1",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBQTFpnaVJuQmw5Q1QyNWFkMHd5QmJRamxzNkZqblcxT2VsUWduQ1VfaHdEc1FkMk5WeXBVc0JyU3hKaU5UVTlUc3RHUUxZQUJ2YkJ3cHdWdnBwZVMyck1VX040TjZIQQ?oc=5",
+   "time": "2026-10-31T04:36:30Z"
+  },
+  {
+   "title": "해외 가상자산 사이트 12곳 공격 정황…\"지갑 연결 주의\"",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE52Tnk2a1JWdjZaejhJQzg3bjJJRzQwdkloRml0LWF2dmdsNWFyOEFEbjRnRDBKWFRnNWJEb3ZnX0NLV0hxMDRmMU1CZENNeHVz?oc=5",
+   "time": "2026-10-31T04:34:11Z"
+  },
+  {
+   "title": "'8.4조원 해킹' 바이낸스 \"북 소행\"…미, 수사 착수",
+   "source": "연합뉴스 한민족센터",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAyZVlOcVAyYklTQndwRGc3N19VZkx2cU1yZDY0alpLXzRzcnJOTGg1eHcxLWlDVHBZZ2RjMGVNTTJOY3J4R3R0bTFxMXdMVENlVG8tSlkyR3AyYS00cEVDM201R2diaUczMEVFYWtJaHdhWE5h?oc=5",
+   "time": "2026-10-31T04:27:33Z"
+  },
+  {
+   "title": "“북한, 코인 17조원 훔쳤다”…북한은 어떻게 ‘세계 1위 코인 도둑’이 됐나",
+   "source": "한겨레",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1fN29ab0xIblEzbHVzaEFXM2FzRGF2ZFhpdG5EbklRR2tsdHNKSE1qZ01mR1BaSHg3YVpSWDFKbGFoWFg3bGFibkl4R242WldtNzAwRnE4Ums3ZzlzcVN1M3o0QWxnUm8?oc=5",
+   "time": "2026-10-31T04:11:00Z"
+  },
+  {
+   "title": "가상자산 수탁사, 보관 넘어 운용으로…\"자산 활용방식이 경쟁력 가를 것\"",
+   "source": "연합인포맥스",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4xajV1LWlfT1JKNkdZRXR0ZDlTb0otNDIyWVdDNGVZekFpTVV0ZlduVTE1V29pRkxYZEF5Q1ZqaGdoWHFzYjgzVzh0RmlJa0JtQVNMcWFZOWpXTDUxcFRLS2Y0N3NnY1o5MTdtUkdKdVI?oc=5",
+   "time": "2026-10-31T04:00:10Z"
+  },
+  {
+   "title": "바이낸스 8조원대 해킹 배후 북한? 올 가상자산 피해 89% 연루 추정",
+   "source": "중앙일보",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5od1RlSGlGLWZUYmE0a25qZGFWdXRKM3hZSFVRd0J4LWkzbFZuOHRUSUhQdF9hQnY2UnlEYkFmYmZLUFpWdzM2ZEk4SHNGakpLcEFhNGJ3?oc=5",
+   "time": "2026-10-31T03:55:47Z"
+  },
   {
    "title": "미국 비트코인 현물 ETF, 하루새 6억4320만달러 순유출",
    "source": "디지털애셋",
@@ -119,69 +173,15 @@
   },
   {
    "title": "체이널리시스 \"올해 가상자산 해킹 피해액 89% 북한 소행\"",
-   "source": "매일경제 마켓",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9kRlhnMVZmYnY0Y3hwWEJXYjY5NnMzZ0RqZ0dYQXM0TlF5ZndaeHJkWVJWZFBrXzB3UGl1Z2Y4VHc1NXRyaktUQ2IyNHZsVnJhT0E?oc=5",
+   "source": "연합뉴스",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA2NlRVLWNqNWhzeEU4SHVMMUdIRDcwVnVHUWtrMUVRY3Rnc181ZU5FQmJyQUhvVG5oSHRmenZQVUh0RS13SFdFT0lieE43N3JISWItaE5IbUlDVXdzeTRwQtIBYEFVX3lxTFA2NlRVLWNqNWhzeEU4SHVMMUdIRDcwVnVHUWtrMUVRY3Rnc181ZU5FQmJyQUhvVG5oSHRmenZQVUh0RS13SFdFT0lieE43N3JISWItaE5IbUlDVXdzeTRwQg?oc=5",
    "time": "2026-10-31T02:57:09Z"
   },
   {
-   "title": "“단 20분 만에 8.4조원 털렸다”… 바이낸스 역대 최대 해킹, 北 수법은",
-   "source": "전자신문",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB6ZVdlUU9mS0VxSy12UkNDTWNNaVVteHlENmtjZ2tWU0lyVVBTdjFZUmNFbVVsdkpZb0stT2QySnAzbWx5THdTYlpmV0FUUQ?oc=5",
-   "time": "2026-10-31T02:30:00Z"
-  },
-  {
-   "title": "北 해커들, 바이낸스 코인 20분 만에 털었다",
-   "source": "이데일리",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYlJ6dk9qanlHS1ZPTUdqVFN0d3ZOMXNScjc0enFxSFVtTmxDMUFWSjd0Y2FROWpXLU8wekk4R0k2a1QwbXROY0NTQ3pOUjlrMEZFV0FuMUlQS3N2Ry1Ldk1iMmRLVFF3OWxoZlFCTUpsME5LNU9kX09OdUF2ZkxBaQ?oc=5",
-   "time": "2026-10-31T02:19:12Z"
-  },
-  {
-   "title": "바이낸스 8조원대 해킹에 북한 배후 지목…'코인 도둑질 산업화' 우려",
-   "source": "서울경제TV",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9TclM4eDIwNTRjOVZ3cXBCVUJvV3dIUXczYUg1c2t3R3kwWlBjU21fSHI0eWtzRnpuUTVScm1STVZHQVh0a2JHNm14N21XZHBKTXFpRmliZ3o1TEh5SkNFUHgwV2k?oc=5",
-   "time": "2026-10-31T01:39:22Z"
-  },
-  {
-   "title": "이틀째 비트코인 하락…바이낸스 해킹·나스닥 급락 충격[코인 모닝콜]",
-   "source": "이데일리",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQWDlrZ2dMSnhsSndza2JydUhYZWtDa2RibnpYd2VGYmtfQXZoaGxHWUZMTEhDR2QwSnJJZXVWbmhzVkNXRmFiRkZhUHNJdmNFSDdTUzF6Yno1ZWk1bmJZZEpna1FNYW9ydHNPdGQ3Tk4wRm5TV3dwcHJ4MzVNSnFDWQ?oc=5",
-   "time": "2026-10-31T00:21:19Z"
-  },
-  {
-   "title": "36시간 예행연습, 20분 만에 8.4조 털었다…北 해커 지목",
-   "source": "한국경제",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VdFUzcW41RG5OMjNHSDZhZ0hFem9WQTY2b0M1VmM4X0JBRnNyOURudjFpNW1WZlhqVW1aN2pJWVFrZFlDRmdQSE5SeEVRcGc4RTlXdHp0LXljQQ?oc=5",
-   "time": "2026-10-30T22:15:48Z"
-  },
-  {
-   "title": "\"일리노이 가상자산 세금 규정, 디파이 사실상 금지한 것\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0zRENKV3JuRUIwQUtIODBxQTBnZUhIaWktRldtQWlpTERRX0dnRF9lX1BNSzFxZ1JoM25pemNUdTgzYU54TkhTRFhFRXZBTEtf?oc=5",
-   "time": "2026-10-30T22:08:00Z"
-  },
-  {
-   "title": "스트라이브 CEO \"비트코인, 바이낸스 해킹에도 견조…향후 6~9개월 상승 전망\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4zT29ZSVVfNEMwRmw4aFpEM0sxaDNILWJKZTdfY3JReVd4b2VhMFRqQ2hHZ3NDVm5fTkR4amppUVdpRWpVQWNVMTh6TmlaTEFz?oc=5",
-   "time": "2026-10-30T20:56:03Z"
-  },
-  {
-   "title": "與, 가상자산 과세 논의 마무리 수순...또 한 번 유예로 가닥",
-   "source": "한국일보",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBHcW5lY2dLNnZqS1Y0c2U0dk9YMUlZR0hpcW5NR3JIenM0eUtMdzBkdzJCNUF3QUhFUURhT1RqTm9vaGx0aTJjUnpfWnpVSDRBY01FdlNyUDlzOHVkb0VJWHdZbHVRbHU5SUF3Z1dB0gFzQVVfeXFMUGt2ckdQNTJBSXNydHB2R1ZLVWd4TzVWejVLUHhrcVp6eEpBaERiYjZXMjNzaVBYWEJKNlpYWk11U1pMMWhvNkFuRlpHRXMtMkdJbVhzWWNhUFp6bXl3emdQczFwMGp1UUhXbkVQcTZ5YnBRYw?oc=5",
-   "time": "2026-10-30T19:30:00Z"
-  },
-  {
-   "title": "비트코인(BTC), 7만7000달러 일시 반납",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1YZUlJQ2hiVlF2Ti1UNWc2XzA5ZVZDMkYyMklVZC04dkMwX09iLTNMWlYyeXlkaUZFZDhaVFZseTZkZm9LX05FUS00Nkw3Z0Iy?oc=5",
-   "time": "2026-10-30T18:29:13Z"
-  },
-  {
-   "title": "iShares 비트코인 Trust ETF, 오늘 왜 하락하나?",
-   "source": "Investing.com 한국어",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE14R3IyY21tbzVvV0xCRGh0cVc3VjhkQUgxcUxRRGlMUFhwb0xUT195N3JkbUVrRHBxYi1lWUl5dzFwUHpSaWMydEtSMlFyZnM3S3pPR3RCbkl5aGdiZ0NndmpiLVFpNVJCaXZTVEt5NGFBRHlxaFNJ?oc=5",
-   "time": "2026-10-30T16:09:00Z"
+   "title": "배준영 \"與, 가상자산 과세 유예 요구에 묵묵부답…시행 전 결론내자\"",
+   "source": "뉴시스",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE11U2JJZjNQNUtBREZzM0o2RFpqS1hvOTRMMzQtNWV6V0NqOE1WbnZuemw3c1F3QUtUNkM4Q0hBS05UTEpKbHJxc05vLVNqQnVsWTZlV0ZIMlI0S2RjRFpwWE9SN2xPR1dnTzBad2hlSkFmbXR0d2FOTNIBeEFVX3lxTE11U2JJZjNQNUtBREZzM0o2RFpqS1hvOTRMMzQtNWV6V0NqOE1WbnZuemw3c1F3QUtUNkM4Q0hBS05UTEpKbHJxc05vLVNqQnVsWTZlV0ZIMlI0S2RjRFpwWE9SN2xPR1dnTzBad2hlSkFmbXR0d2FOTA?oc=5",
+   "time": "2026-10-31T02:49:41Z"
   }
  ]
 }

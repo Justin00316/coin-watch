@@ -1,6 +1,66 @@
 {
- "updated": "2026-11-02T11:10:49Z",
+ "updated": "2026-11-02T12:02:43Z",
  "en": [
+  {
+   "title": "Current price of Ethereum for MM-DD-YYYY",
+   "source": "Fortune",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAzMEpPR0c0WTFjNVF4U2oyLVlTblV5akxQUjk3QmRYWTdlZ1BEQkZocXgyS2l4TWdNNEZMcExrVnQydDAzNFdEY2JGd1prZXYzeTFaQ2NZMHRMejN1bk9jY0tCMFpScHJm?oc=5",
+   "time": "2026-11-02T11:45:00Z"
+  },
+  {
+   "title": "Current price of Bitcoin for Nov. 2, 2026",
+   "source": "Fortune",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tSlZVWFctdVZUZkZxTENyNGRpbkg3X1A3RzJpSXR1ZWtwc0F2d1Z6YkVUcGVuSHVYZVVleHlKeGRXQW5MRlRFOVJ5YzY0VWpiYWRrdFZERGF5QTRYeGVTNTh5VjdkYm8?oc=5",
+   "time": "2026-11-02T11:45:00Z"
+  },
+  {
+   "title": "Trump Questions FBI’s Assertion That North Korea Was Behind The $6.3 Billion Binance Heist As Bitcoin Payment Tool BTCPay Server Warns Hot Wallets Are Being Drained",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdDNscmFJbFpMTWZEOTFGRmhZTDM2TjhzSlh3UC1ncmRCQjNRdnhIMUtQUm4zUUdnRmtsRDNsbUZSeEZxQ3RYcTI1UTdHc3k2eEFzUlNKTE1pYVBSbmI4WTdZZV9NRk1RMkFWemhYdzFmM3czTEFZUXF1R3Jza0hkRHhFbE5oWjBzVEJIa043SzVlVHRRWndSLVVURVZCd0s3X2c?oc=5",
+   "time": "2026-11-02T11:34:33Z"
+  },
+  {
+   "title": "Bitcoin holds near $78,000 as Binance reopens withdrawals: Crypto Markets Today",
+   "source": "CoinDesk",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWlpFWmdfRE53cTgzMmdpbDVhOXZ0c213YWpxWm1UN1hVVHZjX1NieHhsZXQ0SlFtUUgwdVRJWXBpRUdzSktmT210YUhYQlk3SVFGQUNWYU5UUVlYSk10b2hVR3pyWVFEeHF3Znd1SHZmTHpraDRGX2luMl9ZZ2FSUUZQSERyVjRlLWQtRHNvWElYaGplaERIUXdheF82X3V2dmM1bllpdmtEenJTeGNlOWlrM2NvRzl1cjgwcnBoR3h0bFB2aDJjWWtJZHgyc2YzSUE?oc=5",
+   "time": "2026-11-02T11:30:00Z"
+  },
+  {
+   "title": "$3.6 billion pulled from Binance as withdrawals resume after massive crypto heist",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTTNyUVN0VGZBQ0VsSFFFYjRFS1F3cWVfeEhsV3dMRG14d3dUX2Z1Y094d3lHRHNYb25OZERuc0ZILXdYT0pYZGswTmlkbDNub1I3aDVfcV9SVXNNTmNOU0ZrR3dPRlR3T3dmSnVHQlItVXIwLVNkTTZrUnVKSG92V2hQQjlLUGRSNmcxR3pORlJoR0t2UjFXNHVNOU5zczN5TkdQZHlVTTY2MS05Ukl2X3lTMF85WHhJLWsya3JIZml0bHd6RFZ0MQ?oc=5",
+   "time": "2026-11-02T11:27:12Z"
+  },
+  {
+   "title": "Strategy's Michael Saylor Blames These 3 Factors for Bitcoin's Recent Sluggish Performance. The Most Important Is Treasury Yields.",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdFYtSmVIeUI3Znh3bW9YUTlmMjVPSlpuRmY1Vk1PNUJDWWFRNDNTOUdJcEh3Z3BGX0xtYUVfck5nQy1DbzRrc0NVQU8waTN1aV9SVUFoM3lCSDN2c1NGa055MXNTX0FEOERLX0xYSWNSYU5XMnBja1lqcTgtNDFmOHd4aTFoZHBkSXJCM0ZxSVJ6b1IwYmFqcjdSeGtSQm8?oc=5",
+   "time": "2026-11-02T11:20:00Z"
+  },
+  {
+   "title": "Bitcoin Steadies Near $78,000 as Binance Withdrawals Resume",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUUtpTU93QXFPeHVVYi1TUm1RZXl0VUlqSW11RWxQalFkZi1meF80NThrTmcyXzA4aW1LTm94SEVBdW1qTXNlM1N6LVlZLVU2R25xbEdZM1FFTFdPT3g4WlZuSHl1bFFrdng0LUFGN29zZ1h4M2pSTWRXbk83S2d2VU5DVHo0UnBJNHFGU2RGeElwNVJvZUU2SQ?oc=5",
+   "time": "2026-11-02T11:15:56Z"
+  },
+  {
+   "title": "Defense, healthcare, crypto and AI: How the midterm election could affect stocks",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNTJxMVlLZVJ1YmQwOGw0Y2R0b3JqQS04aWZzVl9xU0J4cS1SRXBoZmlSSDhqNWtCODRlMEdtdWNEZ0U3Q3BYbVhJQjZ3UE5ZV05UMUpuQXJDMms4MHBZWS1nbkRqRnZXbXlySXVPVGpTZHB5X2RSWU1ib1JHM1BBOUxwb1BvYWRXMVJiSDhPSjBEcjTSAZgBQVVfeXFMTjlfeHpPbmxGR2lCLXhKS2lvQWotNV9HYmhKTEhvVUJMemRQbnBpOUg3Zkd6Vzc1M1g4X2pDWFU1WGZnaEdTTElnZDJlOEFrMDNMbnBuRjR1eFFYcnZodzFsSXNZVjNVVm41aE82UVlsRTVlZ2tYMllib1hQRjBZT0drLUpIdV9OY1lWV0pUNUNGZG95cS0xZFc?oc=5",
+   "time": "2026-11-02T11:00:01Z"
+  },
+  {
+   "title": "Binance's record-shattering $6.3 billion hack puts crypto's security promises under pressure",
+   "source": "Business Insider",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUW1rTS00cDBOaDRRYWMxTWZOdWpMTW11VXdab2hQUlJoYnNJWXJyTkcyVl9ZTjhyM3I2X3lBUTg5dEhiZmRHdzNkXzhzUzYwNTFOU0xQUms1Zi1QdUpzWXdVaEFWQ0JXZ01tTnZjb1ZQTm9QbkU2SFktVmdyTmczSTlZZGM1U1ljU3VydHVuVHhPWkhMeVpqckF0MjA2cVQtR1dUb0pHamhDcWRjWF9JbG14ay1xZw?oc=5",
+   "time": "2026-11-02T10:50:00Z"
+  },
+  {
+   "title": "Binance users pull $5bn as crypto exchange restarts services after heist",
+   "source": "Financial Times",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQlloX05EbUI3SE9LYTBaVUhkdHhGaUpta09vWi1EcUdfcEFXVGJicU1uUnhrRE1qNG5Gc1JFZnV1emwwRVJMRXRvQ3lpMVJ2RGMzYjJJSEU1MllpNXE4ek5sMWg3VnE1VU1hVjk3YS1WWUExcTRaUTJNQml5YlIyeFhiNjc?oc=5",
+   "time": "2026-11-02T10:01:58Z"
+  },
   {
    "title": "Binance hack fallout, U.S. midterms and jobs report: Crypto Week Ahead",
    "source": "CoinDesk",
@@ -14,102 +74,102 @@
    "time": "2026-11-02T08:41:28Z"
   },
   {
-   "title": "Crypto vs. traditional banks: What Binance’s $6.3B hack reveals about vulnerability",
-   "source": "CoinDesk",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQckNldGFTUGd6bjB0dEE1UXFyVFRLVkpmRGdSZGpRVi1zOTN5cjFPZFdMNDVTYTI0cHpSU3YxU3dJZmNaNzBqYmhqSEhISk5UeXZJSkI2enQ5c1hTaWpnSEJIN2p2akdOMXpKREluYXZhYU1wU0gyNmRxSmJrR1pPMXVJZnh4YUhhUHY0NXRNY1VzYW91SmFyQzhSSmRGTTNwZHNBVVJyTDE4ZkZ3VUVsSF9SZ0NqZw?oc=5",
-   "time": "2026-11-02T08:32:01Z"
-  },
-  {
    "title": "Bitcoin’s Resilience After Binance Hack Masks Market Jitters",
    "source": "Bloomberg",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxON015ekNBYXdIZHd2dExpZHUxWW9VcTAyWDFjREtEWWRHcG5STzV5MVdkdjRqdVIyT01jak9Cek1vVE1Rb2w2QW4ydzRYak51X1J5anRfaEh3enVhVGUyZFR4emgySTBhUFJsWG84TGdlVlptanlwckdmbk9aR2cyYjlsRHBQYVRFdG1ENEFUdG1YQ3daZkxJRDB0WnNTQmpfa0ZXWlRQNTlnSGI4dmtCOA?oc=5",
    "time": "2026-11-02T08:01:11Z"
   },
   {
-   "title": "North Korea’s Hackers Supercharge Crypto Heists With AI Skills",
-   "source": "Bloomberg",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOekRBR0dKanh1bXRKMVJuNGdsODV4NUZpaDJueC1leGRvVkVUeHhhdkdzVHdzMmM2TWpwYXBfaTZ6WEdlWk92R0JROEZ5d2FfLXNqaUQ3WEJHWTJEdnZuRUN6MnhVLUw0UlFaUDRiUGJ6Z3RjWmxsWnFhWHE0cE4tblNHd2dWTHExc3NSWGZIMjlpZnpKdi1VLW0wczRtOGg5OGkzbzEtTy1pbUZPZ0RoWGZ6OA?oc=5",
-   "time": "2026-11-02T06:22:00Z"
-  },
-  {
-   "title": "Binance Hack Shows ‘Everyday Is Zeroday,’ Says Elon Musk: Attack on Platform Biggest Financial Heist in Crypto History",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPb21yUF9CcmcwTmZzV3AtOTBrVHhXLXhQVU5GYlVmcE9MUFhWVHRKYlIwQWtkTmRvNVI3aDBjVVdjM3VHWWxlWGhwb0M2anRpLVRjVmZubG5vTDBYbklHRzBzU1VtR1hlX3hrRDI2ZVVNWVhpaUxJbnZ0UmktRUg3QUxxLTNYM1I5WTFHc0xuMlU3QmdiVXdTNWtSM01aajR5VUE?oc=5",
-   "time": "2026-11-02T04:30:00Z"
-  },
-  {
-   "title": "Ethereum ETFs Log Their Worst Month for Flows Since 2024 Launch",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWjdlaXc2dUdad1RuWVNzcjVqYW5pTkQzWU8yV0Qta0FiY2Z0ZzdOVFhLM3BDcGtfMXpVZjQxTWViLUY3RWd0TWswb3JLQWo2WmpkVTlQWU1oX0dJTmE3X1pTTG5zRml6V19QSk5oa08xSFU3Zm5EeVJmUVFvNUZTNUNPNHotYUstMEg1ZlNZejNadWNUdDc4Vmp3?oc=5",
-   "time": "2026-11-02T04:17:00Z"
+   "title": "Binance hack: Users withdraw $3.6bn after record crypto heist",
+   "source": "BBC",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBabVFHSUg2RlNyUVdrekNWMk1UMGhiVmtrOTRiSGNJaDk4N2RUeXhCekNacnFEYjRDR1Z3SkNDeHJVUWJMcFE2V1JMLVRlSThCZmx2TmxNNm5JQjQ?oc=5",
+   "time": "2026-11-02T07:42:33Z"
   },
   {
    "title": "Spot bitcoin ETFs see largest daily outflows in four months following record Binance hack",
    "source": "The Block",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNFV5N2hBRXFMZ0VTalVBR0tKT2wxT3NqYUxKb2lLMktyTXV3WTFEWEVObjlqdW5OVGVHS09iQlFjaU1zanpkb0h2TFhBaEFWOTlsQm84V2xPZ1FwVkRveVFoejFYVDJBLXZzdXdsVmwwVi14Q1lLVW9ITTJVZjlBZkRaT1U1T3NtSGFpcHdtYVA0SVAtOGZUOER2eUdlZFYybDhVNlk5eXJHaWxiMTJBQkQ2NGYtUQ?oc=5",
    "time": "2026-11-02T04:11:00Z"
-  },
-  {
-   "title": "Binance hack: Users withdraw $3.6bn after record crypto heist",
-   "source": "BBC",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBabVFHSUg2RlNyUVdrekNWMk1UMGhiVmtrOTRiSGNJaDk4N2RUeXhCekNacnFEYjRDR1Z3SkNDeHJVUWJMcFE2V1JMLVRlSThCZmx2TmxNNm5JQjQ?oc=5",
-   "time": "2026-11-02T03:32:14Z"
-  },
-  {
-   "title": "$3.64 billion pulled from world's largest crypto exchange Binance after $6.3 billion heist",
-   "source": "The Times of India",
-   "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQei1STGQ4ZWJjWmdMZnZmcjVUTmdMR3BIYlFORFVWMzU4Wl96cTRCdjRSUU1QcEZCT0FVSGxwUTkxT3c5MGxHSmhEYmEwdFVxaU9TakN3bG9WZWtzVW5WRE9KQkwzQjN6Szg3ZG51dDRwbmRrbzEwMEJ4NW9lUUVsMmR4UWdmdWRDRzBkTkZYaFUxbVJFVDlhTTJDQWpHY0NleWt3WnJBR1dpZGU2TW5PTDdKaS1rNmtjZkJ6dmQ3VWJKWjlBcWZpVzdyaXVyNVNvRzhCOTR3eWZndmVLTjBSeG5VX1FRdkVxU2E3ME1lQm40S2tORXZrZjg4dTNqWTBjb2F4Sm01SlMtS1BaSkHSAZMCQVVfeXFMT2V5dHRqZW1yQmlGa0RQNFRtOGZZRkdNZkVNTkVHU2FwcTlKT3lQVGhNdkdxZDZpQjN6QmpaUkt0ZnpkNmpjQ210NjRjYkVCLUxlMHM4ZmluUS1aaUlnanZyMjlQeWJ1TkRFT29GWWd4d0w3QTBnY2h4bDNKV3hoY3ZyTV9CdzdKSTJhTXNyQjZLdm04d0VUdW1xbF9DNmhHcVlRUHZIdXI3dTVNWWhVaWZOMXl3MkR6V3ZmWnlicXRJcXBQdDZ1MkhiMmRaUDdhNk9uOEZIc292cDFRQ25ISW9vYmxlYk9VV2d0Yjd6LVo3MUw1eGhpSVZxb0dERmFlWllodHFrbTNuSWNJeU5nbGltdVE?oc=5",
-   "time": "2026-11-02T02:25:00Z"
-  },
-  {
-   "title": "Binance says exit rush slowing down as users weigh security risk",
-   "source": "Reuters",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdXY4a011WkVOZHRKb3FKU2lMRzNwbGlwOUFPWFdMWVcycnhkeVd2aDZpc0tfclNqYTFsS1lkR1JGT1dqYXJkU1pIeDhITThrWm43QldpMFEwNnItS0k2a1hSckF4TU5rdlkxMnBjUnRfTThHY1AyVDlkaFFrRElKOUppaDU1NXg3a0dEUmY1VWtCNDVKM3pHLUlyOHV1TjZHdElqRUUzR1g5VThQcDYyV3NQSTNkYkFZMEVzM0ZHV2dYRGFsV1NLWWpWeGxyQQ?oc=5",
-   "time": "2026-11-02T01:53:00Z"
-  },
-  {
-   "title": "Dollar dithers ahead of US midterms; bitcoin under pressure from crypto heist",
-   "source": "Reuters",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb2NfWVhRd1dsZXVELVl6emxWenVBSzdWTFVpcjlPaUtVNmgwbklnaHctbWF2VjdTTTJxQ3c4NzZZSGpSTG1QaThQQUZHY1RmeENqcTZNend0eDBla0dFNThjejRfM2dTdm1JYW9vd0duUnZFVUNWQUhETi1RVmZxNWxBZ2gzZEdBWTdGNnVqMmxVeUlKVUZPX0ttc3pnLUUxOGpoa1hpdVZNWWZrVkx6c3FoTkluMDRB?oc=5",
-   "time": "2026-11-02T00:57:00Z"
-  },
-  {
-   "title": "Investors pull billions in funds from Binance after record $6.3bn hack",
-   "source": "The Guardian",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaENiZkNSRGNUNkQ5SWhKRTE1dkhMVUVCM3dSVWY4X2EzWFl2WkN1SnhKb3g0S0pCOW1YNWU4Und2MDdPenZRdUJoTWpaNzUzRGZkNWRCeWlOU0xITHQ4WTlLR2Z6dGhCMlZzSDl3YWFWYURqX0RBWEtWVlNWMXhuMnllWk13ckMxTEFwMkVWY1J1dmR5V1otVGVTUnVjLVlCT2dwaE1ILWktVXJia1pSbEtiNE1FM0JFenp0SW5na1M?oc=5",
-   "time": "2026-11-01T18:08:00Z"
-  },
-  {
-   "title": "Bitcoin ETF Investors Head for the Exits After Record Binance Hack",
-   "source": "Decrypt",
-   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1hRDFtc0xfbXJNejNUQjdvM1VQYTlmWXhVVTZQV1F3N3cyMWcxYndhdUFRZnV6V29KUHhveWZzMmdqVDh3d1NhVExCNV9Sdm8wZzRmVlN1ZHpSNFVUVkpjSkxDU1lFSUtyZ2p4SGdUdWdZLUUxUURXMjFKNWpKdw?oc=5",
-   "time": "2026-11-01T16:01:02Z"
-  },
-  {
-   "title": "Investors pull more than $4bn from crypto exchange hacked by North Korea",
-   "source": "The Telegraph",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVVJNc1dBQk90V1lOTzdMTUxNd3pQWTBBcHgwUUdDRmk1ejU3T2JLZHJoLVoxRkdJc015a29oWFRmcEgyc2lhc2huV21GLWFhMGc5SHVqelpVM245eG1CeUs0TXk4UkMxS01aVHhUM3pKSUtxeDJyaUpPNnEzYVJ0RnJqSEZqcEhlY2NnakdQRExUcmxoNl9YVnE5ODJiQTkwd2tpekRaUlk?oc=5",
-   "time": "2026-11-01T14:23:00Z"
   }
  ],
  "ko": [
   {
-   "title": "금융위 \"디지털자산기본법 최대한 신속 추진…샌드박스 테스트도 검토\"",
+   "title": "\"北, 바이낸스 탈취 비트코인 믹싱 시작…28 BTC 추적 회피\"",
    "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE42M3JzN2ZVRTRsbFpua3kzVVp1a1Q0U0dCbUFEWGRiY1hnbHZkd2hnb1NiMV8yeHMyV25LZnhsNmQxTTAzdFl5Uy1EcGRYSDdz?oc=5",
-   "time": "2026-11-02T09:14:30Z"
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBKVGxtbnd4LXZJV1llZ0hsb3FXVTZfUUtuRkJrUUFFQV9reDdUSl9LNWR1SEpyVEswRGlYZGU0NlJyeWNqNDlkSTMzbnJTQkw4?oc=5",
+   "time": "2026-11-02T11:56:19Z"
   },
   {
-   "title": "김재진 DAXA 부회장 \"가상자산 과세, 국내 이용자만 불리할 수 있어\"",
+   "title": "바이낸스 8조원 해킹에…금융위, 국내 가상자산 거래소 긴급점검",
+   "source": "한겨레",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QZWdkdFBlcmlGdDRYZk9HWFdKeVQ5TEE1bUVRa29tZVNIeWRSZ0d2VmRVeWd5T3FNYnJvcTVkeGZHNnd0SFI1ME42YUo1Q0V2WHFvaFVVenItVzVpbFZzVUtrYktCTEk?oc=5",
+   "time": "2026-11-02T11:25:00Z"
+  },
+  {
+   "title": "금융위, 바이낸스 해킹에 가상자산거래소 긴급 소집‥보안 강화 조치 당부",
+   "source": "MBC 뉴스",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Nd2tWMUd1VW9Ra0tQSXM4T2FzOGxLckxhUHVUZWJ3em15bl91Q1M5MTc5WXpSUFVMNWYtRWlaaFZrX1Z6SHFpcm9GeS1kd0g1QXBJSEpvWTBJNVNsa0g1b0daQm9JaVJPZWxqRHZWcG1DM0120gF0QVVfeXFMT1VvRXRzMXUtV0N3NzZPaDZrdWE5QmtFTlkyN1V5QVoyZlBmUU1JZkhtc3lVS1dTY2pENXhwcXlQTERmNHhsb05Wc0pIOEhCdEhMTnFYQm9BTHRQMGVKbFJDNjZHTE5UWVM2NVBfZ3JLMVp5Vmc?oc=5",
+   "time": "2026-11-02T10:52:21Z"
+  },
+  {
+   "title": "금융위 \"가상자산기본법 신속 추진...전자금융거래법 개정도 검토\"",
    "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB5OHBkdXdmRENKR2ozeTFzSUctR1RCQjgyb2ozQmVXTzA4d1hDQWlWQ3o3Z3cyc1EyeXBpT1BwSWp3RWNPNWJldFJ1eW5fTmdiQ1JSeWhJQ2g2MzhjMlYyQTBxZThYOC0tbkM5aEd4dVpkQQ?oc=5",
-   "time": "2026-11-02T08:40:00Z"
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9QaFNoeWUzcUhFaUVUX1JNZVlXSjBCZW1sU0ItcGhwaDN6Q2NkRzhpcnNZTy1vYWhwNHE5TkxxaHd2TFFmWHlseWI1SndPeE8wRThQdFkzYmwwQi15WUNXQWRKTFlENzJFbFdtc3o0MjFDZw?oc=5",
+   "time": "2026-11-02T10:50:00Z"
   },
   {
-   "title": "AWS, 클라우드 기반 가상자산 거래소 설계안 공개…속도·수탁 보안 강화",
+   "title": "바이낸스 해킹 파장…금융위, 국내 가상자산 거래소 긴급점검",
+   "source": "연합뉴스TV",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBTNmoxU3hndTZKZlpaRFk5VzQ3bHlyRGtydXpYRHA0NzdtRlZ4Z2MzVGNNamFVTzJfN3NYWG9NQW9mZDhxa25xUjVzRkhwcnM4SEYtVVZEX0lLNVRtc1QtZnBVdHBEYUk?oc=5",
+   "time": "2026-11-02T10:19:00Z"
+  },
+  {
+   "title": "4대 거래소 비트코인 김프 평균 '0.05%'",
+   "source": "디지털애셋",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBqeUpHUzYzQU1HcldpUWRrU3hpOUxzSVdZOFloYlRLX0hxOVFBT2RnOFlCMktEbDVob2U5SjczT2JXVUtKUC03N3hrN0VhVnNKQ19lSEVnT2J1eHFDbGdETjZtdlBrSV9oWVllQVRrekxMUQ?oc=5",
+   "time": "2026-11-02T10:00:00Z"
+  },
+  {
+   "title": "\"비트코인, 美 중간선거·고용·빅테크 실적 앞두고 지지선 방어\"",
    "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5TYnRaSG5ScVY5RDllZWVIN0hLc3o3Q2oxVEVhQzZkZ1U4X1JZRVdNTElGZzV2Ymh6OUlzUmpIV2kwLVJ2a1ZpUmcwU0haYUot?oc=5",
-   "time": "2026-11-02T08:36:59Z"
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBKbVAwVGJGMS1SZnZYeExfUjN2dVNmM3FobXA2cXIyTjdJOTNqMDdBUG1XYWdWeEdVVVBKY0p4T1VhVC14dzlnNEhPTHpKWFlV?oc=5",
+   "time": "2026-11-02T09:54:40Z"
+  },
+  {
+   "title": "與 민병덕 \"가상자산, 기본법도 없는데 과세할 수 없어\"",
+   "source": "연합뉴스",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xS044eExPNG5ZVkxQUFZ6UXh1T3RxT3YzanJtV3JGSlhyVE11WC1iQ1FWaERDWHUwUDI2TE9DVzFLVl9BWERSajBEbU1MSjZlWnRsazh5TFBlQ0nSAWBBVV95cUxPcnoxR1R5M0JwSEUySmJyQmNqTEZ1LTI1LTRhN0dYLV9HYmE3SFVXMTZOazB6cDBmbjZGMWRRYk50UXh5anhtMjQwQXpkZzR4bWNFODcyUEM1VVVxNWdrMUQ?oc=5",
+   "time": "2026-11-02T09:51:22Z"
+  },
+  {
+   "title": "바이낸스 해킹에…금융위, 가상자산거래소 신속 출금제한 방안 검토(종합)",
+   "source": "매일경제 마켓",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9STXBvUy1uYlNqMUxxMzRjSU1XQXVSRjREQlNneWR1M21KVkhETVhGWkZmaDROT0FSU1ZIdVUxS04xVS1jb0JDSzhVQm5nWjRUa2c?oc=5",
+   "time": "2026-11-02T09:51:09Z"
+  },
+  {
+   "title": "바이낸스 유출에 금융당국, 가상자산업권 긴급 소집",
+   "source": "YTN",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9PYkQ1cmZBWVo2X3BYeHNzZzFrVHlJeGkwdGFadklvdFpUUVV2dnU3dE51dXBDUU0zWFUtY2E5U0VRdnVWekVxRUZEM3RpN0Q5UGZyQUZqLTVHSzJqUlE?oc=5",
+   "time": "2026-11-02T09:46:00Z"
+  },
+  {
+   "title": "美 비트코인 현물 ETF, 하루 만에 연간 순유입 64% 증발…6억4300만달러 유출",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE05TjZJOVdLM1VnTXhyYm9rczJ3X25CeXhyMzA4UXhYb1Y2YmdnSDVoOS1uMWlWWUpja3lja0hzZnhrQU8tUTJpdmdpd3F3c2tq?oc=5",
+   "time": "2026-11-02T09:45:14Z"
+  },
+  {
+   "title": "[전문] \"가상자산 과세 전 기준 정비·기본공제 상향 필요\"",
+   "source": "디지털애셋",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBHTV9XZU9lN0ZodS1LRVJhem0tZVRISUJSUkc2VmZSeTlIX1NZVDA4MHpWd1hNMFA0bmJKd1F5VC1hVzAyaGtGbjRtWkMtX0pEVFlFQm92dUhTNzhKRGo2SjI3bDdQY3hwSE8tX2ZydmxOUQ?oc=5",
+   "time": "2026-11-02T09:20:00Z"
+  },
+  {
+   "title": "바이낸스 쇼크 후유증…7만8천달러대 갇힌 비트코인",
+   "source": "파이낸셜뉴스",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ZazVULXpKdVo2aTEwWVJYdTUzZVNKeGQ2bjRQcmNPUGkwVUtSemJheG1UNDdUQXY4SEJWSzV3Y0p2Qmg1eU5KdWllbE8wdmoxcXBKUHpFelRyUQ?oc=5",
+   "time": "2026-11-02T09:15:30Z"
   },
   {
    "title": "재경부 \"가상자산 과세, 합리적 방안 숙고…국회와 협의해 결론\"",
@@ -122,66 +182,6 @@
    "source": "MTN 머니투데이방송",
    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zaldTdUJQVmhuX21KX28wZ3ExcHhJTDFaWWxVOElXU1h5TlRjZmtqQm9LNTcwT1ZtWVdsVjAyX3M4TjREV0I4aWJ6Y3BSM1ZwOWFrczZsaS1JeWhtU1RB?oc=5",
    "time": "2026-11-02T08:21:21Z"
-  },
-  {
-   "title": "전문가들이 짚은 '코인 과세' 전 풀어야 할 숙제",
-   "source": "아시아경제",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtRTVuT3U2RXVtUWlTVFVtOUNLMW5jYzNtSGV1Q1Zock1RVVZTa1pEdmFxY25qRnV3N2xCM19oendvd3BkYTJ6TS1xbG5JR2RHYzdqZXFTWmk2VHI3VDNteW9R?oc=5",
-   "time": "2026-11-02T08:20:00Z"
-  },
-  {
-   "title": "금융위, 바이낸스 해킹에 가상자산업계 긴급 점검…보안체계 강화 주문",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5BQklwUGJlWXhhMDRtWkhVd1NVemhSblo5a0pMR2FhMHZXSm5uaXgxRzA3eG5nUTJhTmlDTTNjZlgzZnlpUGM5T0ZaTDhvN0RL?oc=5",
-   "time": "2026-11-02T08:19:10Z"
-  },
-  {
-   "title": "재경부 \"가상자산 과세 합리적 방안 숙고…국회와 긴밀히 협의해 결론\"",
-   "source": "아시아경제",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FcmRKN2U0SUZvcXdyeXZCdGZGY29aQkZRVlM0VFBLX1hhZ2Z6ZlFPNTRleEJiSXJBRTJzMjFmVTR4cFh0WXoyT0twUnl2NXdXaURXWjc1YjE1X3BRRGtIUw?oc=5",
-   "time": "2026-11-02T08:09:48Z"
-  },
-  {
-   "title": "[구민정의 크립토포커스] 바이낸스, 북한 해킹 한방에 '8조원' 유출…금융위 긴급회의 개최",
-   "source": "매일경제 마켓",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tNkJqNjF4bXRsQnJTcVFLRHJCU2hwZXlhWVhmXzRDLThkMTU4OGduTkZvVXpEaU1WWGZUc29yaXJrZjBqb1ZIZlRPX0ZaWFNCOHc?oc=5",
-   "time": "2026-11-02T07:56:39Z"
-  },
-  {
-   "title": "민주당 \"가상자산기본법, 이달 국회 제출 예상\"",
-   "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1IaERYZWxsWGlWZDRITWEwWTlnOXVPNkFabnAxZFJjdElJV1Y1MmttNVhjc2phM0NnS2JKc25ZZmRwSXcyTm95QUpIc3EwT1ByMUlKek8ydE5tbjJ1WC11WlpOVzdGV1hScDhoelNTZm9kQQ?oc=5",
-   "time": "2026-11-02T07:55:00Z"
-  },
-  {
-   "title": "\"코인 700조 해외로 빠졌다\"…민주당서 가상자산 과세 유예론",
-   "source": "파이낸셜뉴스",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5EenFMZjBYVi1NdjNVc292WEhlNUZYWnhJUTM2UG43U0FIOXZVdjlpdURsWXQ0bHJDS24xSHNCdm8wY3BFRGsyV09jN0NyOU9qekdBVFdhZWttQQ?oc=5",
-   "time": "2026-11-02T07:24:12Z"
-  },
-  {
-   "title": "빗썸, 버튜버 '누눙지'와 투자 콘텐츠 '가상자산훈련소' 공개",
-   "source": "MTN 머니투데이방송",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Ick5oRGJkQUNoblR3bUJTTXZsQ0hic0xyTGkzaXozZzlLWU8taGw1eWRKVEtfTTlwSUJSNEw0ZGNwLTdGRHV1OERPNkpqaWduaVZTN2JKVWRDcGNTSE80?oc=5",
-   "time": "2026-11-02T07:17:51Z"
-  },
-  {
-   "title": "금융당국, 가상자산거래소 해킹 대책 회의 열고 수시 점검",
-   "source": "한겨레",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QZWdkdFBlcmlGdDRYZk9HWFdKeVQ5TEE1bUVRa29tZVNIeWRSZ0d2VmRVeWd5T3FNYnJvcTVkeGZHNnd0SFI1ME42YUo1Q0V2WHFvaFVVenItVzVpbFZzVUtrYktCTEk?oc=5",
-   "time": "2026-11-02T07:17:00Z"
-  },
-  {
-   "title": "코인시장 하향안정…바이낸스 출금재개에 패닉 면했다 - 머니투데이",
-   "source": "머니투데이",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE02akFVdEtNVTBkYVFHakFQT3lLVEgwMFRHV2k1dE5VRkxEN1E5cC1hbjRFaV9qLVFQLWtVd1hpdTFLWk1OZzVsV05TdlpLc2l6YjNNNXB5YzFzdmRyZDZoQ0Z2Nk9SUFdZOFF5aUxn0gFuQVVfeXFMTTZqQVV0S01VMGRhUUdqQVBPeUtUSDAwVEdXaTV0TlVGTEQ3UTlwLWFuNEVpX2otUVAta1V3WGl1MUtaTU5nNWxXTlN2WktzaXpiM001cHljMXN2ZHJkNmhDRnY2T1JQV1k4UXlpTGc?oc=5",
-   "time": "2026-11-02T07:11:47Z"
-  },
-  {
-   "title": "직원 속여 가상자산 탈취…북한 '트레이더트레이터' 실체는",
-   "source": "연합뉴스",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5UNEUta2VyRmFFcWxnTHpLX1N3Q2F4bmdIRDBfTEtHY3NsTnBHRGtkdUlKQ0kxN2ZxN3V5WXZndWh0ZnBaMDlYX1c1R2xIQXJwaWhReWxQMGNVN3NOOG94etIBYEFVX3lxTE5UNEUta2VyRmFFcWxnTHpLX1N3Q2F4bmdIRDBfTEtHY3NsTnBHRGtkdUlKQ0kxN2ZxN3V5WXZndWh0ZnBaMDlYX1c1R2xIQXJwaWhReWxQMGNVN3NOOG94eg?oc=5",
-   "time": "2026-11-02T07:07:05Z"
   }
  ]
 }

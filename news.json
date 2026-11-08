@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-08T21:47:42Z",
+ "updated": "2026-11-08T22:48:36Z",
  "en": [
+  {
+   "title": "Cryptocurrencies slide to two-month lows after US midterms",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaUN4VVh0QmcwWE9VOXVLckdBTnRyQmF3SDdycDNSRWJMSDlpUGQ4WENsbER2WVM0RURhd3FBWDFxend0bUF3V3BYVlRGX0JLZ18xamhDSzNWUVFza0c0WVczTUVZekJUYk15YlBVRXRpNVFTYlVZNzItcWQ1eXFOeFRDSnN2NndSNFhRbkl0SGdVbmF5QTllbEpSaVlsczNmelB1NQ?oc=5",
+   "time": "2026-11-08T22:26:47Z"
+  },
   {
    "title": "What the election results mean for crypto: State of Crypto",
    "source": "CoinDesk",
@@ -33,7 +39,7 @@
   },
   {
    "title": "Binance Says Kaiser Ng Leaving, Names Justin Yek New CFO",
-   "source": "Bloomberg.com",
+   "source": "Bloomberg",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOW9hU1RVd3huMjFvVFc2OGpScjMyT1Zzdl9YVlVwRDVoRVlsaE44b2hvNFNlaUtFNzcwR0MzRmozRmRVU0NCTDVxQnl5SXhvRHhmZXhMOHF0dnFHZktuVm02aEVxaEdzNnZ6OXlfRVFPY1ZWYU1mcE4yQXFMdGtvc2J6b2l3RkYxWDRhTU5HdW5Scng4MlBVY3FCdmJkM1JSSjV3dnI4bU5sUQ?oc=5",
    "time": "2026-11-07T17:41:35Z"
   },
@@ -42,12 +48,6 @@
    "source": "CoinDesk",
    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPV3dLTVBIT2tvTkJKR0RTd1lIVEJ3a2pWZlBxVkozZ1ZNeFhTdEpXX2pUZHNvUk5QSDV3S1FwRC1uVlhueEo0VW11WHgzMVdxc2xicXJsejNRVkVaa1V5U0RYZVc3a0FnbERkRmloRUhmUnp6U0c3WXFkN2dQS3ZUQmg2OGR6WEpmR210QXpVbzBsYlJPR0NoSndXZVh0eDRKbk5xYWd1bnQ4QnQyejVHVHJIRld3S1YyUjdHdlJjWWJoN010aVM3dWlucFlLR3lhLVhSUDZB?oc=5",
    "time": "2026-11-07T17:36:46Z"
-  },
-  {
-   "title": "Crypto’s Trump-Fueled Washington Boom Reaches Its Endgame",
-   "source": "Bloomberg",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWDExNUNVYUxJcVdMUy1GZ1pfMFFVVVkwdlBfY2FYWmZTa2RpOEhkbExNZE03NDhrbFVJczJ5WTBmRy1WOVcwa0s2SDBGWVNNZ2ljRXR5U2R4RFNaemo1Y2p2YkFuMzhRdUFkbXZIVzVRdVhCXzMtX2V1SS1talB4ZVBtQ1psemJVQ3JqT3hOTVp3YlBOOWxNT2ZqMUJpSUllT2xNTGc3SUx2Mnh6?oc=5",
-   "time": "2026-11-07T13:00:00Z"
   },
   {
    "title": "In 5 Years, One of These Cryptocurrencies Could Be Worth More Than Bitcoin",
@@ -64,34 +64,34 @@
  ],
  "ko": [
   {
+   "title": "케플러 지갑 로그인 시스템 취약점 발견…560만달러 자산 긴급 보호",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtVWYwRFpfbWhzUTdWVlo5NVF5VmZfaU9BaWthWkxHQUwyRkFKQVNJVlNoQWs5UWVUYmozbjkyc0JiNExOTEVLOFpVUmdFT0g5?oc=5",
+   "time": "2026-11-08T22:26:11Z"
+  },
+  {
+   "title": "[XRP/USDT] 시세 급하락 (바이낸스)",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5abV8tcHpWYzgxU2xhZHZWdDQ0NmtpWW1Tc2tkRGE5bXB1UFoydXF3eVYyOTJadkIycWllcUVQWDY2YXlFbWRfYkpKbUwyeWtC?oc=5",
+   "time": "2026-11-08T21:56:16Z"
+  },
+  {
+   "title": "[ETH/USDT] 시세 급하락 (바이낸스)",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5STmUxazhobGdpX0poLUhwV2FlM0tLR3ZKZi1GWDNvZ0JicXdoLV9jUy0yR2xka3U5akZQT2RheGlIWTJEemFHMzhOMWZ5Tlla?oc=5",
+   "time": "2026-11-08T21:56:15Z"
+  },
+  {
    "title": "퇴출 코인이 범죄자금 세탁 수단으로…장외거래 '사각지대'",
    "source": "매일경제 마켓",
    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5qRUFwUnVHX0FRdVY0bWpqVDRlSVNkLTc4M19YOWl6ZXRLNjJsa3J2Uk9rR21YU3ZabTVvNEtpN2lyb01kQ1luOUNVZWZLYXl1bVE?oc=5",
    "time": "2026-11-08T20:57:00Z"
   },
   {
-   "title": "CZ \"소셜 로그인 이용 가상자산 지갑 사용자, 웹3오스 보안 문제 주의\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ud3YwZ0lTOEc1bUJhOGF6cGFldENaazBGOU1UbE9RNkJtSWdPelhleVRUM1pjT0s4akZ6eDBGRmtOZkRlaHV2My1GNWVHcUFZ?oc=5",
-   "time": "2026-11-08T19:12:29Z"
-  },
-  {
    "title": "24시간 거래되는 가상자산 맞춰 연중무휴 상담",
    "source": "조선일보",
    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWmEtMlBxTl8tYzRTM3phcFhxOTZJSXdHVkhFQkpFcnV3bEZQRVFhLTNoSmpFbkk2UUxEZGZnMklHSmZCSlpRaVdhNTZvVkpEMThXaG9WYlV4QmdJYlVXYVo4RTI3VE5UUDZ1UFBqaU03M1JpTWhsLUluemVCaDJ3TFlaR0JMUk9MWEkyb3dudw?oc=5",
    "time": "2026-11-08T16:12:49Z"
-  },
-  {
-   "title": "트럼프 \"선거 결과로 증시 하루 만에 3조달러 손실…더 강하게 회복할 것\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4Zkk3WHJzMFBST3RyRF9HVGdEUUZ2Tlo5ckoyVWVpOEFYeVFCTEQ3SW1hc3NHcnNHNU54dE9nSXpMSTlyaF9ZQ2h1WWtWVDF6?oc=5",
-   "time": "2026-11-08T15:53:43Z"
-  },
-  {
-   "title": "글래스노드 \"하이퍼리퀴드 고래, 7개월 만에 비트코인 순매도 포지션 전환\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5Vd0tUY3pJTV9GOHJ2aHdWT1FoM0g3djZhMzhVMEtFMDFtMDluT2kyczg1S1UyYlRZN2VxbGtteTJrSXZFNlJTcmZWY3JESzRJ?oc=5",
-   "time": "2026-11-08T14:11:17Z"
   },
   {
    "title": "디지털자산법 정부안 이달 나온다",
@@ -136,12 +136,6 @@
    "time": "2026-11-08T04:00:49Z"
   },
   {
-   "title": "월급 오른 군 장병, 도박·가상자산 투자 위험↑…금감원 교육 강화",
-   "source": "뉴스1",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9zbjF0d3dIb3BpTnRfZV9yVnNueTBienA4ZnUxRERybDhfc1pKNnFEdXRpT0hPa0VWcXdCRFFzbmljNjhTZEVMUGNjNzBCRTlINGp4czFMRUhDVFRLVWJ3WTV3?oc=5",
-   "time": "2026-11-08T03:00:00Z"
-  },
-  {
    "title": "비트코인 1억341만 원대 하락, 미국 연방준비제도 금리 인상 가능성 영향",
    "source": "비즈니스포스트",
    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yY1VWdjhGR2p4YzZMWUg2ZTdWcFFkR2s1c3hEbmc3YmkwM1RvUFVhWmhzZ0FpTUZzbWRqY0dTMEQ5T1lwTGRqNW1QZzZEUkVXX0NQeG5haXhMMElNdmZFTV9kUWEtWWwtUk1WbHRXX3lBa1k?oc=5",
@@ -152,6 +146,12 @@
    "source": "연합뉴스TV",
    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92cnBYbEpobjJIMVl1bTdaQ096Zng5Nlc3TGVCa3VLVlpoMlYtNmhEeVFFRnhyWHNkZi1KMFRnTU9TTkhrNDlPazQ1VDJFRWdEelpLdEJNaFBkRFFUeVp1bVNsSW5naEk?oc=5",
    "time": "2026-11-08T02:26:00Z"
+  },
+  {
+   "title": "비트코인 7만5천불 횡보…美 고용지표 호조에 금리 인상 '우려'",
+   "source": "지디넷코리아",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Kcl9OcVZJMS1WcEhvVWhtV3FqTk9mZXpEWGEtem1tc3pxS1hqR1R2QTBGM3BaMTFCNTdTNDhmamVrZDN5Ti1zRVRiM09KelF1RENXb2Fn?oc=5",
+   "time": "2026-11-08T02:02:29Z"
   }
  ]
 }

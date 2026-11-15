@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-15T21:50:39Z",
+ "updated": "2026-11-15T22:51:11Z",
  "en": [
+  {
+   "title": "CZ denies Binance sold crypto as Bitcoin bounces from four-month low near $62,000",
+   "source": "The Block",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVnFlRm0wd0VaX0lVemtCQ2Y4anhyNm1vazZzYWNMRTJrTGIzWE1rNERXbzFaem1ZcVJoWXlHUjRQY2RsVlFYYW1DazQ2R1M3STd6S3l2M1UtVHl6ckktcHljMUVHQ055SkQxVTNNVjlpd2tLUU1CR3VTWVVPRVlrdjRUdVp5amE0ZmtXZkdSZVZwd25zNXVzWkQ1T3l3bFg2bFFBMVdLTWtjM0w3NElSN0cwUHM4cTdaeGZzMk0xSWJ3S0ZwOTcwQm1pRUY5VDQ?oc=5",
+   "time": "2026-11-15T21:57:00Z"
+  },
   {
    "title": "Prediction: When Will Bitcoin Get Back to Its All-Time High?",
    "source": "Yahoo Finance",
@@ -64,22 +70,46 @@
  ],
  "ko": [
   {
-   "title": "가상자산 시총 1300억달러 증발…비트코인 급락에 17억달러 강제청산",
+   "title": "창펑 자오, 바이낸스 가상자산 매도설 부인…\"비트코인 급락, ETF 자금 유출 영향\"",
    "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5hNm5rUDd5UjVueDloX19YY1NLcTdpNWJzbjFZSkVKR1RQZlAyck94RHIxdXBtcFIwZWlFeVRxMmJfRmE4NE50bDA1TU85c21j?oc=5",
-   "time": "2026-11-15T21:44:47Z"
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0tbVdBcVBaLUFtT2tmR1JKTHdBOWd3R2RBQWpVaHktblR3MWtkRnZUTWRXdmNnb2Q3OVRjTzdZV1lfUXRvSWNhU1BvZmhTTkhP?oc=5",
+   "time": "2026-11-15T22:45:52Z"
+  },
+  {
+   "title": "젠슨 황, 美 의회 비공개 증언 동의…中 스파이 연루 의혹 조사",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtRl93X0pqY0RXbVF3ODJiM3RBa09pSENaa21IeWNtZjhoOURlR1cxOUNaNmZzaThDaWxIRkVmZDlaaEtNWmhwY19mbW0xbVgy?oc=5",
+   "time": "2026-11-15T22:30:06Z"
+  },
+  {
+   "title": "세일러, 비트코인 추매 가능성 시사…스트래티지 평가손실 84억달러",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9HRmhobThIVGdJajc5U1FmXzRsbHU3ZFVZU0NBdjNxQ3plYVlFYmRPRVZtRmU4azB0TlJVcF9jSXZsQXpjTk84bFRnRHd5QjI4?oc=5",
+   "time": "2026-11-15T22:19:42Z"
+  },
+  {
+   "title": "텅 바이낸스 CEO \"비트코인 매도세, 거시 불안 따른 정상적 반응\"",
+   "source": "이데일리",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE54bm9tM1BiRFd3YWVRSUl5cFNSWGpYYmpGYjZZalhhMWRVSTh3U3VaR05yMmtmbjZTUW5GOTZyanNmb1paV2xTcTRfZ0J4NHJ6aFQwdVk0VVZwc0JTcUFReUR5Y28wbUJ2UTlv?oc=5",
+   "time": "2026-11-15T22:10:10Z"
+  },
+  {
+   "title": "무더기 악재에 비트코인 휘청…6.2만 달러까지 추락 [글로벌 머니플로우]",
+   "source": "한국경제TV",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9mTG1TUDdxUUwxRUl2bnZvbWlaMURrdWZjTFE2Q3p1eUF0UThobjVPVnZXMkFrTjB4NlZNdjBjTVh5VDF5dm9QWVF4cHV4ZElPS2dZbmNtLW1EcVpuS090RjN6elF3YXlpbjJuQmIydWllYUFaUFBz?oc=5",
+   "time": "2026-11-15T22:08:00Z"
+  },
+  {
+   "title": "비트코인 4개월 만 최저치…“앤트로픽 IPO 앞두고 자금 이동”｜Global Money Club",
+   "source": "중앙일보",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBuSmFRNmFYVFZieTFzQk5hb2pPRHcyMl95NnpteDliQlREVDk4c2RKZzEzejRndWJ5am44NkhFd0NMeDVuSVdXUDBqLU5KdEVuV2ZjTlo0X0l0c3c?oc=5",
+   "time": "2026-11-15T21:56:44Z"
   },
   {
    "title": "디지털자산기본법은 왜 필요할까요[금알못]",
    "source": "뉴시스",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5LTG5HM1pZUFQ2WkN1anhwY1FEZnJjUWpNZFI3VUpXNE1rbVlGbHNFYi1DQVdpN2x1VmRhM0daVWM0Ym5tSU5sRnRWRm54VksxR1otYkVVbG1TMFNlM2VlTnhndWZfWTJwQ2NVc3AxRUNMNnQ5TVU2WdIBeEFVX3lxTE5LTG5HM1pZUFQ2WkN1anhwY1FEZnJjUWpNZFI3VUpXNE1rbVlGbHNFYi1DQVdpN2x1VmRhM0daVWM0Ym5tSU5sRnRWRm54VksxR1otYkVVbG1TMFNlM2VlTnhndWZfWTJwQ2NVc3AxRUNMNnQ5TVU2WQ?oc=5",
-   "time": "2026-11-15T21:06:24Z"
-  },
-  {
-   "title": "창펑자오 \"바이낸스 매도 안 해…최근 며칠간 가상자산 매수\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5WaU1NVFh4aVR4Nk1uV1hKcmV4QkNSRHA5VEZ3elJkVEVXaXNSbHZTelk4eHd6U0FGMktnbFdMeVJZNVhSb3A4OEtIVjQ1Rlpp?oc=5",
-   "time": "2026-11-15T21:05:00Z"
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1YMk5VZXdlNkFuRDA4Rm96TEg0Uk82SXg4NmxyTEhfQV9pandwMHlJUHVEUUk1bW5qeDIxb2dWV1lUQVQ5UHBWNTZ2ZE9neFRPWXNQdUpoQktiUXlUd3pkUNIBeEFVX3lxTE5LTG5HM1pZUFQ2WkN1anhwY1FEZnJjUWpNZFI3VUpXNE1rbVlGbHNFYi1DQVdpN2x1VmRhM0daVWM0Ym5tSU5sRnRWRm54VksxR1otYkVVbG1TMFNlM2VlTnhndWZfWTJwQ2NVc3AxRUNMNnQ5TVU2WQ?oc=5",
+   "time": "2026-11-15T21:00:00Z"
   },
   {
    "title": "가상자산 매매·중개업도 기업부설연구소 인정 가능 - 머니투데이",
@@ -98,12 +128,6 @@
    "source": "파이낸셜뉴스",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE00dDFYekMtcko0TXlkQldfZHc1M1Y2UkQ4S1hSeGdnNVYxa2dqRUJJdHZiaTZ1RDRWMXBCU1NiN3IxZlphNG1CWXliY2JWZ2p4d21yN0l6MExBQQ?oc=5",
    "time": "2026-11-15T10:25:46Z"
-  },
-  {
-   "title": "[분석] \"비트코인 급락 이유는 유동성 부족 때문\"",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ybmV6NEYydFowSXJrSmxyZFZkSWN5aVdwXzZUVnhUb1hSaGJJdER1TWk3NmwtdW80c3MyOFhxeHhLUmhiNjFJOHRqa09MSlhv?oc=5",
-   "time": "2026-11-15T08:32:36Z"
   },
   {
    "title": "비트코인, 1억원선 무너진 지 닷새만에 9000만원선마저 붕괴",
@@ -134,24 +158,6 @@
    "source": "동아일보",
    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE50RmRiaDRHa1B1eEZmdFRBTjVIeG51VGtiZHB3NFhXY1ZrNFp3WkEtLTBKNVJNMjRzWE1oSW55V2dKZ0F3VGFscUhRcUtwTFJvblVKRHFaTW1fejZjV01wS3BiaFlfR200d3o0Z1RVNGg5bFd2cnfSAWZBVV95cUxPaTB2Mm1ienRFLWFTa00yb1BpODh2T1lUR0s3RkRhc2tmSG1WY2I1akg5NVBPdDR5REJnY0dSU01ZTTdaUW9JZ2JpbmpuX0YyZ3RXcmdrVnpnTHYtbkd5UlE2SlVqRXc?oc=5",
    "time": "2026-11-15T05:35:50Z"
-  },
-  {
-   "title": "코인원 고객상담 수탁사 해킹…주민번호·계좌번호 등 개인정보 유출",
-   "source": "지디넷코리아",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pQTFnYW95el9zM2o4X1Z5SUY0cWVkX2p3TzI2UU1La2t5LUhKaGNOYXBVeURaRGlEZHBPUS1maXpNV2ludkFIZklXUjVZYzFIdExXNWxB?oc=5",
-   "time": "2026-11-15T04:16:16Z"
-  },
-  {
-   "title": "법인 가상자산 거래 허용 지연…원화 거래소 영업조직 축소",
-   "source": "서울경제TV",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BR01FVFluUVk2VVBlRFAwdHJDNGxmUXkwdmt0WHBzN3VrczJsTTJ6TGFZNHZJMGhRVjZ1T0QwcU1ZeV9WUVBpVjRheF9GbnI1TVd3ckxlMXVWbktiU243T2xlUm0?oc=5",
-   "time": "2026-11-15T02:44:12Z"
-  },
-  {
-   "title": "\"당하고 또 당했다\" 가상자산업계 5번째 해킹…코인원 수탁업체 뚫려",
-   "source": "뉴스1",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9hM0JBbVhpanNDWUZyN3l6VmZuSjMwcWdqRFF2UjBaemhPQ21wUkpCMkx3WWU5cGo0NHlaTjZsVjZCMmRuWnltQU45Rkl6eWlPenJvdHZqUll6U1pWMUtiQm5MX3R1Zw?oc=5",
-   "time": "2026-11-15T02:38:57Z"
   }
  ]
 }

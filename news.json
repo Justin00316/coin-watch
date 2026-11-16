@@ -1,23 +1,53 @@
 {
- "updated": "2026-11-16T04:39:04Z",
+ "updated": "2026-11-16T06:36:55Z",
  "en": [
+  {
+   "title": "Bitcoin may drop 40% or more as it nears technical warning level, strategist says",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE96VHBpdnJhWWhGQXB1MjNQWkR1cU1IZ0NiTWdVbVBCN21SaTZtV2hWdlRfTFFrZ0huY1hBMEd5bUJCcE1KdkZwQmI0dGZ2aGVILV9BclEyQWNjR0hweUswbEtGLXpxQU41X21DMzhCcl9yajRaTE5N?oc=5",
+   "time": "2026-11-16T06:17:57Z"
+  },
+  {
+   "title": "Bitcoin Options Traders Brace for Slide to $60,000 After Selloff",
+   "source": "Bloomberg.com",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPLWdwVWxaMG5xZ2JlN1c1dURPTENWQjBQa2R0TC1PMUNybXczejBzSTMxWXg5NVhkUTBBTmRrVUozZ2M3bGdYNDVNd3Z0eTVIUlNpb0JCel9LbW8wM0dfZUhfWEh3MTdOUzV5MzgyVHNyWXhWd1Y3N3IwV25DUjQ2X0J2Z1h2VWxWWFhVTlJ4Y2tLX3ZaU1lSLWFMTEF5N0ZWaVF1ZkN5bE4?oc=5",
+   "time": "2026-11-16T06:14:00Z"
+  },
+  {
+   "title": "Bitcoin pinned below $65k as crypto sentiment dithers, ETF outflows persist",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcXN1cHU3LUg4Y21uSHZ0ald6WjZ2QXVyYlprOGFCb01pSVhVNUdHRGRyb3pMdXJSM2VYc3FHcGpGNHNlVUV4a192b3pCZDFJZVd5bFBRTHJVeENLeVBRTk1odWlKUlY2T0d2UV9sbVBkZE1lY2ZLeHhiOXU5enQ0dnUtb1N4Z3dBRGFKa0VQSmRFY3BWbmowNEIzYWg?oc=5",
+   "time": "2026-11-16T06:11:00Z"
+  },
+  {
+   "title": "Is Anthropic IPO Really Hurting Bitcoin? Analyst Points To A Bigger Problem Behind BTC’s Slide",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYmFKbUVqVFZZTVBKdHpCcThhNnpjLXhxVjJRaFUtVTdlUGdMYXNjcUFwbzZmNUJ4aFJUM3F1dkhidENCLVk2UTFmck5YcWR3ZzhYMENJU2xLS000djlHMENuNXBSdXNkbzd1NkJ4RlB4MlZBOHdGWGx6dk96SkdoM0VWN2tnZGkxQmJKeS1WS3hFWHlmSmYtNk9LS2xmbGZGREdz?oc=5",
+   "time": "2026-11-16T05:59:00Z"
+  },
+  {
+   "title": "Crypto off to Downbeat Start This Week After Selloff",
+   "source": "WSJ",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNemJKTlE0N1hQT0Z3amttWTkyZmJNMi1rQlZKSkVGeUpvWFlEUl9QY0pZVGVvWjQ2dWZOemtNdjVULUpsNjNWdlBCZHBMUndmZ0pfazNhT2hRZDBqUmkxbEc0VDk2ZVNxYzBLTUhsSEdWMG1GbEZ3a1plN2dDRkx2UnNFdXJhZ1g0blU4YkV5T29FUG80QkE0a3pjc2ZSM29adWc?oc=5",
+   "time": "2026-11-16T05:37:00Z"
+  },
+  {
+   "title": "BTC news: $60K put is the top options bet with $900M in open interest",
+   "source": "CoinDesk",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNREVpcUFSN29DdTdvMnhUTWd6UjdfZEVoYXkyVVMyRWZoRTM1NjVFbFVES3hud2lpUFEzN1pkZmFrYWRLMEtKbkhSX0NEWWMtQW9LWmh2M2xOSEVaVERfNXQ2ZkhOQkZGOW5kTnI0VEpsMGRxZDZobWhkcm9DaFJFSFY0ZmhjVFF6MnF6akdmeldPcTNZS2VQSy0wZDdCMFZOX3hEYzhTZzB4VmlIRUVtY1U3ZVJGTDVscG45SHVSazI3QQ?oc=5",
+   "time": "2026-11-16T05:01:17Z"
+  },
+  {
+   "title": "On the Chain: Bitcoin rebounds towards US$65,000 after US$2 billion liquidation shock",
+   "source": "Yahoo Finance Australia",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcjB2c3NzZURSdm4ya0dERnFubXg4cnZkVVNsNjB1bzVueWVCWW9SLW9LcEN6Tm1SYmtSbzliUTJQZnRzdTM3cVdGelFpWDVXemZSMHNFNHhBdUltTmxTNlloX1IwLUMtaTBmc2VMRmZXeXJuODRFQW1RYm53eVE0VHJXR1dKVVdNNWc?oc=5",
+   "time": "2026-11-16T04:30:00Z"
+  },
   {
    "title": "Coinbase Global (COIN) Is Upgrading Custody After 35% Of Bitcoin Was Flagged At Risk",
    "source": "Yahoo Finance",
    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNa1V1cE12ZzdTSzNjME5BX2gyY3ZjcWVFQ0U1aTEtbGE2Mm1PcHBGREt2MFV5c0J5VWpGMVNPSG1GbUVZU2RlMFhlRHlkMWktRDFrdXhVUFFlNkIySEJrTWM3djFCU3Rmcm5RVzFDX3kwczN0SFYteFpGSHg0Tkxfa0hLNzlIODY2UktCZUVHZ3lvMy00OENWRlRzT0xVUXNzbXZ3LXBB?oc=5",
    "time": "2026-11-16T03:31:07Z"
-  },
-  {
-   "title": "Bitcoin Rebounds From $62,000 But 3 Bearish Signals Hang Over the Market",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUlN2QnU3cjlQUGRUVmRUbjZfOXhVMm1uLTRMVTh4eGFVNVlTbXJqZGFrLTV5RjR4MDJ1eXdrMXRBcnpfTUczTGk4SVpucklhUDV4bXhOVUxrNGtmX3JIZjAyYkJac3BrUnZFeVBUZzdIanY0c3EtX2xrVXAwWXk4bHBnUWdDZ09EaTlYMnJKSWs3SkF2?oc=5",
-   "time": "2026-11-16T03:24:00Z"
-  },
-  {
-   "title": "Bitcoin Hopes Anthropic’s IPO Plays Out Like SpaceX. One Piece of That Story Is Missing",
-   "source": "Yahoo Finance",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPY0ZjWnpLY200a2FtLWRYSHhzNk42VXZ3RVBIZjNiaFJKd1A2M3dZaGdFa2UzaFd4amVRQjJ6MTRKMk9iaXktcFVXeFVxWmc4UFZzMWY5OUlQOTlnQzl3UmllSFR1cVlONEI5MTVBbng3ZE5rd3ZtN1Y5Zy1Ud05ZRDg2RDZkY2l5RXVsSXgtcmZ6M1IzUnJQWkl0YXZ4RE0?oc=5",
-   "time": "2026-11-16T03:13:05Z"
   },
   {
    "title": "Bitcoin Holds Below $70,000 as Risk-Off Mood Pressures Crypto",
@@ -56,18 +86,6 @@
    "time": "2026-11-15T04:01:00Z"
   },
   {
-   "title": "XRP news: Ripple coin crashes below $1 as money leaves crypto",
-   "source": "CoinDesk",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVGpwSUxwZjlmaE9MMTZqMmplUGYxX3lkVC1xN3Izc1V5bVRVNDNCOUtNUldOSWNGdTM5MG0yc0VzU3haVmExU1FhdDZEN0J0V2VuSXJmWktFYTZIdHRoSVlvVFRybU9SU3VleC1teXNCbzdYVzZDNm4tSGlvYlhEV2pSaFAxdVJpSkxSRnVqajctUWhZM3V6aWFjZzlNU3R1eHlWQkRzN25fRXdBTm9JRjRB?oc=5",
-   "time": "2026-11-15T02:50:00Z"
-  },
-  {
-   "title": "Bitcoin price analysis: BTC continues to decline Saturday, entering 'deep value zone'",
-   "source": "CoinDesk",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPREhQQTJ6T1M4cmdyMzU2SUhaYWszWDZOOWp0TzJ1M240RnY3RjI4OEpCQmlHR0pFbU1FekdXMXE1dzVjVHJlZ2ZMUjdOYXZIem5JY01DQ3JyYnIyUWxnZWNoR25TTG9DdExHNjNGMTdSNzJLZ3pKQ0JJeWxzMjV5cUlid3JkR0czV3ZmWlRnWXZ5QVBaSFJYZmltaU1Caks4NkdPTHo2bjE?oc=5",
-   "time": "2026-11-15T02:01:00Z"
-  },
-  {
    "title": "Trump Media group stares down $1bn debt crunch as bitcoin bet fades",
    "source": "Financial Times",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeFZqX2ZESVVsSVVJMU1kR3czUU9wYzdyN3lpTkZsMms4azhnTVRyTkpEZ055c1BjQ1RiTDNLVWZTcHFLYkNQY0RhQVIydEthXzFpTFVvMGxPaXZPM0VFdzEzY1psNi1xOE5ZYzlaRjBrWVZQU1oyRkdCMzRfX2VyUVkwbXQ?oc=5",
@@ -76,94 +94,94 @@
  ],
  "ko": [
   {
-   "title": "美 휩쓴 '블루웨이브'…디지털자산 입법 제동",
-   "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE85VjRRZnA1aklPVmlfQmtFNHlLMktSWHQtLVlQdmtEWE13VV9OVHhDWU5iUkdzLXNfMDV0Q0pxc3FRSG5fRmRDMnZGbHpkQms5OEJTOEtYVTc5TmlRVWczM1p0U21fdWxsVmtieHpPWHlLdw?oc=5",
-   "time": "2026-11-16T04:00:00Z"
-  },
-  {
-   "title": "토스, 이번주 비수탁형 가상자산 지갑 출시...\"예금자보호 미적용\"",
-   "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5tdkpfRDlhVnhkaDlzb25haE80VDJJWXJOMHFGUUVra3lPODZYX2pYSUhZZ1hSNFdCU0syUmNlZmdpbUdpeTdseTBPenBzbnpNbDRaX1NTZ0ozenpjTmV0QS1YdEtXb1J2Q0pROHhxdjFDUQ?oc=5",
-   "time": "2026-11-16T02:57:07Z"
-  },
-  {
-   "title": "토스, USDT·USDC·이더리움 지원 가상자산 지갑 출시…디지털자산 사업 본격화",
+   "title": "[분석] \"비트코인 7만3000달러 회복이 반등 관건…하락 시 5만3000달러 주목\"",
    "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1JQmRNWWxiaEhMa0xmMmltcnZjWFlpUG1FY2hxWUtRU1p3cGstdHFCMlVkLWdNbGpFZWtvOWgyeGEydThHeHNHd3VoTzl0Yldy?oc=5",
-   "time": "2026-11-16T02:30:57Z"
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5CaGcxUGVBMWFyeF9MdkJSUl9OalJXRThoTHJ0bE1tS3VMenVpaVR0Q3JqeElieDBlR1NTdzZxci0wbnhsdHJ6YU9vS1lMRVNp?oc=5",
+   "time": "2026-11-16T06:32:13Z"
+  },
+  {
+   "title": "안랩 보유 가상자산 26억원어치, 장부엔 7억원만 남았다",
+   "source": "디지털애셋",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAwbWtkTjNVWG5Xb3JzTlFwQmpXTlFERFZ6bF9DWDl1YmtSYWx1bVk2T1VtdHJZYWUzejFnUjhxd2hKYmdPS2F0U0hNaGgtRWUxTEFEYVlabTQzbnhWSXRWbGQ4ODJpeno3eXpMZW5yMHhxZw?oc=5",
+   "time": "2026-11-16T06:25:00Z"
+  },
+  {
+   "title": "\"가상자산도 기초연금 수급 기준에 반영\"...국힘 김기웅, 개정안 발의",
+   "source": "디지털애셋",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9jWnVyOUNFT0JhMWFjZV9iWHd5Ymd1SzhwTHByZFp5LWxVRDF4VmJpVTROS21qMDBoVlh0U3dXZUpyTllUbE85WkExMnQzMjBHSWJwUDVsczdfbzFpRG5BbG1KaU9hdU1EMVJQUlYxeEJPdw?oc=5",
+   "time": "2026-11-16T06:05:00Z"
   },
   {
    "title": "앤트로픽 IPO 앞두고 현금 확보전?...아시아 증시·비트코인 전방위 약세",
    "source": "한국경제",
    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VamY4b2Y4TkFsZDlVSUlsQlM2QmpTRGtHLWlpS1MybGtoUmhMdDNrZGM0cC15dy1MZlBIQ3YxUk9xbzRpUlQyMjV1UnlETWVHUmsxa2ZnZUV4QQ?oc=5",
-   "time": "2026-11-16T02:18:41Z"
+   "time": "2026-11-16T06:00:00Z"
   },
   {
-   "title": "[단독]'3000만 금융앱' 토스, 코인지갑 출시…이더·테더·USDC 주고받는다",
-   "source": "이데일리",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRGtOWnk3U0NUZ3B1dUp5MjVGRmNvbXRPbmVxN1k4XzBGUllUU041Yy11QXFqMzNPbVFtM3ZQaWIzMDJGZU5Vbk4yR1lTYlpoajFaRnJLMVVFelR5NFRnUWZpMnZkbFg4QXlJdVllRHdITk9Yc01tSEZMdG1CRFNBeQ?oc=5",
-   "time": "2026-11-16T02:15:28Z"
+   "title": "트럼프의 트루스소셜, 10억 달러 빚에 파산 위기...비트코인도 파나",
+   "source": "한국일보",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8yMjJoWW9nUVBuWFU4NnptMTlrTWxxM3VFbmZyX25WU3N3T1pXR2loRnhpcVptMXNleVVxVzVzd09jUGt1VlNTV0dzM0twUk45aWN1T1RpMGQ3MVh1R1hMOEF2bkdYYUF5a0hEeDBR0gFzQVVfeXFMUGpOVExEMENNN3NJVE85Y3ZKT3VOQmhjZnJwYUVNcFFSWWVNeFVWZUVvRXM3a2JjM29oZ1FLNEU1emtCLS1EbkVxM1RUbGpsUEdUNG9ZWDN2TDUxSlo2T182NWROZ29kWm9PYjh6cXlhSDg5Zw?oc=5",
+   "time": "2026-11-16T05:53:00Z"
+  },
+  {
+   "title": "김현정 의원 \"가상자산 자금세탁 차단\"…법 개정안 발의",
+   "source": "뉴시스",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9OeW02di1lSEZBSHdmREc3RS1ZSk5HSHprdXZYVWFhejBqVDI2U3cxRzVkY2FSOUZuUk5xRGpPN0gteHJ0TXFGNUJuSXlCbElXY2ZlODZpT2ZsaHVJY2RQSw?oc=5",
+   "time": "2026-11-16T05:48:18Z"
+  },
+  {
+   "title": "비트코인, 6만5천 달러 아래 횡보…ETF 자금 유출 지속",
+   "source": "Investing.com 한국어",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBkdXVZb1lqRXNsY2trR2JlZ3FuZDFnTC10amN6Rk83X1pjQTY0dHRqS1FmQ0w3SHVtdW8zbmR2S2RhOW40dHhNUkxkVVhqbFVzZXMwZm1Cckt6WGF1NzVtaXZOemFqVmxFbHhPZ0Nob0FMS1E?oc=5",
+   "time": "2026-11-16T05:41:00Z"
+  },
+  {
+   "title": "김현정 의원, 가상자산 자금세탁 방지법 발의…거래소·개인지갑 검증 강화",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8zQVpSR083MW9FUC16RERrSFdEYmIzd21HZlRmS1c3NmtzQVIzSDU4LWtySXRTc2IwYXNQaTBnM0RBYTR5MnY2d2ZhYVh2TUpz?oc=5",
+   "time": "2026-11-16T05:34:41Z"
+  },
+  {
+   "title": "美 비트코인 현물 ETF, 지난주 10억6500만달러 순유출…3주 연속 자금 이탈",
+   "source": "블루밍비트",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Xc01XSlEtSmZMX3VReHZQZDl5RDhNQjVybjBlMVBuT0VtcGh5V3VKNW1PZkhvNlJxNE9XWGwxNFl0VFhicmxqbzk0Qnh3N253?oc=5",
+   "time": "2026-11-16T05:29:52Z"
+  },
+  {
+   "title": "김현정 의원, 가상자산 자금세탁 차단 법안 발의",
+   "source": "뉴스1",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9GWlQ0RFlWSDlNRmVWbEN6RGFLLWpsSFVlek1NYWhUNDlial9IQnozdzdhNEhqSHBHaW54RUMwQUg3Um9HRkJrUm83dURPaWNfdlhhTWVn?oc=5",
+   "time": "2026-11-16T05:25:34Z"
+  },
+  {
+   "title": "\"비트코인 단기 고래, 미실현 손실 10조원 돌파...역대 최대\"",
+   "source": "디지털애셋",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5lNVVueDdXS0hwSXFMUDZuOVhTdmNBcndCbDgxV3FRLUJabHk0MDN5OGJnVFJRcUFSNUpCb2REVTFfdk5rdV9qNFN0QmNTZnlQWElpZE04RG9FSWdvalMwc29JT3MtV3NQY3Q5VzhGRXRPZw?oc=5",
+   "time": "2026-11-16T05:20:00Z"
+  },
+  {
+   "title": "두나무·빗썸 실적 반등 난망…법인 시장 개방 요구 커진다",
+   "source": "전자신문",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yaE1qempuNVN6UjQtcmZRUVZSVk1VQlUzNm1oS1RxR3kwYXllc1JXT1VOdnBkcGN4YU5Odlhta3RhT1huYXJwODRacF9Mdw?oc=5",
+   "time": "2026-11-16T05:09:14Z"
+  },
+  {
+   "title": "'국민 앱' 토스, 디지털 자산 진출 본격화…이더리움·테더·USDC 품는다",
+   "source": "지디넷코리아",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8yekRnZmdJeHB3aDNqalk1LWJQUlJxR2NTaXRxOFB5S3pSNkpaUm1uUldzSG9ZTVZia1ctMmZPZHk1T0RkUUhPQ2oyamh0Q2lTQ0hScG9n?oc=5",
+   "time": "2026-11-16T04:44:54Z"
+  },
+  {
+   "title": "비트코인 급락, 2018·2022년 중간선거 때와 닮았다…이번에도 반등할까",
+   "source": "뉴스1",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBzRVk3NXRuNlBjOEVSMkdiQ0pZM1Rzbmx5WnFTTHAzalRGT2paX2dRVEVxaV9YMUhyZ0JsNF8tNm9YV3RqcGJoWlg1aWhJc21iSDNScV8tMDE2Y3B6SUZ4dm5uYnVXUQ?oc=5",
+   "time": "2026-11-16T04:40:36Z"
   },
   {
    "title": "[크립토 레이더]악재에 악재 하락세 지속하는 '비트코인'",
    "source": "아시아경제",
    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9vYzc4X2xicFZrbnVXbm5RR2d4cVhZaDFvTWJqVHRRV080eFVIRGtrMXBBMnBmTXFDcmY1UWwyNThMcVFOV2haZXFXM2IwM1FzU2N0UGFjOGRQZWVKTGZ3Qg?oc=5",
    "time": "2026-11-16T02:14:07Z"
-  },
-  {
-   "title": "'극단적 공포'까지 간 비트코인, 저가매수에 6만4000달러선 회복 [크립토브리핑]",
-   "source": "부산파이낸셜뉴스",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE85bXl0azB1d2NZRGZsNl92VmNIM1dLWkFoSmxiNm1RUm9KdTdQcVZaZ3JGd3RXX3pBQzdMNmNCRFVtVlRNNlBmMHZKQjNkUjJpOUd3T3UwQnJFTHV2?oc=5",
-   "time": "2026-11-16T01:44:00Z"
-  },
-  {
-   "title": "얼어붙은 투자 심리…비트코인, 한 주간 13% 하락해 8900만원대[코인브리핑]",
-   "source": "뉴스1",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ua1BzNlVZakIzcnBwRDZqWklWT3hLdDVBOXY3RDdVa05TemRjaEpWaV9DVnRhbUQ3Ym5IbG4tRFNLSUIzMTE0dzA0Sl8tNkxvR2pWckVuemJrQmRCc3I2UHRlWW4zdw?oc=5",
-   "time": "2026-11-16T01:17:51Z"
-  },
-  {
-   "title": "이더리움, 양자컴퓨터 대비 새 서명 검증 코드 개발",
-   "source": "디지털애셋",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1KQzc2TDh3RHBWeWJjZmJ0VnRSR2lqQUZKYXNNMXhQNXJEZUUySWNzSU5KVGxBTGY3SXJXR0RkcnZhdy02WmEySnRQdkJGNmY5c0k2T20wa2dWaEJYVk9sTDhYVDkza25aYWl1N2htZ1JMQQ?oc=5",
-   "time": "2026-11-16T01:15:00Z"
-  },
-  {
-   "title": "스테이블코인 공급량 23조원 급감…4년 만에 최대 감소폭",
-   "source": "지디넷코리아",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0wSC14YTlXcWhzMnppYklJRnQ5azJTN19SZlJEeS1ENWp4ZjhLTDJaSXVrZXl0RGVCc3ZPV0Y4X09lN2l2Q2ZzRktfUkFNV3FyRks4Ukd3?oc=5",
-   "time": "2026-11-16T01:13:07Z"
-  },
-  {
-   "title": "[크립토하나] ETF 자금 이탈에 비트코인 약세…두나무 합병 심사 촉각",
-   "source": "지디넷코리아",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBVjU3SmJSZTc2M3VDQkxzdUhXa25COXFtQ0o0eTUwdlNwdUJ5bFhfOWdGc3JlakJKTXFKSHFiQnVsYjJGODFfTHVjaEhCQ20zeW9uSC1R?oc=5",
-   "time": "2026-11-16T00:48:48Z"
-  },
-  {
-   "title": "美 비트코인 현물 ETF, 2주간 23억5000만달러 순유출…블랙록 중심 자금 이탈",
-   "source": "블루밍비트",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1qVUgyWDBSWGVjcDM4VVFGRGRVMVpHVHZkT3dkelpSZzVpbERBNy12Q0JzSzVXV3ZRaUZ4WVFRWE5ZQUhqeUMxNVBseDhFREh5?oc=5",
-   "time": "2026-11-16T00:40:36Z"
-  },
-  {
-   "title": "비트코인, 9000만원선 밑에서 약세 지속…투심은 '극도의 공포'",
-   "source": "뉴시스",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE42YlNYNzVjRHRrYUNvRVNXWkNrbnlEY290dDhTd2RoemljYUcybVptdjBMQ0ZvOWFpQ1I1TnhNaTl3aEd2UkhWOTAxX2V6QTRXQ2tISExUbVZmX2dydkpSbFpmTjlxN2k2ZFR4SkxacHkxbFl4SzNaZNIBeEFVX3lxTE42YlNYNzVjRHRrYUNvRVNXWkNrbnlEY290dDhTd2RoemljYUcybVptdjBMQ0ZvOWFpQ1I1TnhNaTl3aEd2UkhWOTAxX2V6QTRXQ2tISExUbVZmX2dydkpSbFpmTjlxN2k2ZFR4SkxacHkxbFl4SzNaZA?oc=5",
-   "time": "2026-11-16T00:33:59Z"
-  },
-  {
-   "title": "스트래티지 회장, 비트코인 추매 시사…\"하락장엔 주황색 점 더 필요\"",
-   "source": "연합인포맥스",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wOXNWNmx0ejZ0WnBRUFo5dVg2NzhpcVM0U19lNkZiSGp6ZW9CbzA0NU5qd2NNN1ZuUGpINFNiMkluQWhNQTBaSExvZktrdjBzLXNqa0c2YW9Jck95MFh5OWtpemNlZ3pfY2wtRzRFSm_SAXRBVV95cUxNTG9QWkNkdUdPZnFZNldYRVlqYUd4MDRWRDFESzVKQy04M1g5WFJTUW42TDNrZEJTdTVtVVBoUmptblNrOW5mZ3RoTWl5T3VLa1pFSmg5LWZRa1dKazFZV3VYdXNJLVJFY0lnMWppME5wa3lrZA?oc=5",
-   "time": "2026-11-16T00:24:14Z"
-  },
-  {
-   "title": "비트코인 8983만 원대 상승, 바이낸스 CEO \"거시경제 상황에 따른 정상 반응\"",
-   "source": "비즈니스포스트",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9hdUlkM3ZyVkdPSUtROEJsZXFEUU1COVBDX3hoSExiWEdHbEUxZ05fYkFHVEVlRGJubXZ2cU9ENXZhVi11NlloNEgtVlcxUjRWT1NrUGFQZy1Ha2pWUDZCbzdJeE5BX3ktbkhHV0JnbVFxUDQ?oc=5",
-   "time": "2026-11-16T00:02:21Z"
   }
  ]
 }
